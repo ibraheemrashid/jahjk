@@ -1,0 +1,2166 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jamiat Ahle Hadees JK | Official Digital Platform</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Cinzel:wght@400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gd:#0d2818;--gk:#133a22;--gm:#1a5c34;--ga:#2a8a52;
+  --gold:#c9a84c;--glt:#e8c97a;
+  --cream:#faf7ef;--cdk:#f0eadb;
+  --ink:#1a1208;--inkm:#3d3018;--inkf:#7a6a4a;
+  --w:#ffffff;
+  --sg:0 4px 32px rgba(201,168,76,.15);--sd:0 8px 40px rgba(13,40,24,.22);
+  --r:6px;--rl:12px;--nh:68px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Cormorant Garamond',Georgia,serif;background:var(--cream);color:var(--ink);overflow-x:hidden;}
+.geo-bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg width='80' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23c9a84c' stroke-width='.5'%3E%3Cpolygon points='40,4 76,22 76,58 40,76 4,58 4,22'/%3E%3Cpolygon points='40,14 66,28 66,52 40,66 14,52 14,28'/%3E%3Cline x1='40' y1='4' x2='40' y2='14'/%3E%3Cline x1='76' y1='22' x2='66' y2='28'/%3E%3Cline x1='76' y1='58' x2='66' y2='52'/%3E%3Cline x1='40' y1='76' x2='40' y2='66'/%3E%3Cline x1='4' y1='58' x2='14' y2='52'/%3E%3Cline x1='4' y1='22' x2='14' y2='28'/%3E%3C/g%3E%3C/svg%3E");background-size:80px;}
+/* NAV */
+nav{background:var(--gk);position:sticky;top:0;z-index:200;box-shadow:0 2px 24px rgba(0,0,0,.35);border-bottom:1px solid rgba(201,168,76,.2);}
+.nav-in{max-width:1240px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:8px;height:var(--nh);}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;flex-shrink:0;cursor:pointer;}
+.nav-emb{width:42px;height:42px;flex-shrink:0;}
+.nl-title{font-family:'Cinzel',serif;font-size:.92rem;font-weight:600;color:var(--gold);display:block;letter-spacing:.03em;line-height:1.2;}
+.nl-sub{font-size:10px;color:var(--glt);opacity:.6;letter-spacing:.08em;text-transform:uppercase;display:block;font-family:'Amiri',serif;}
+.nav-links{display:flex;align-items:center;gap:2px;margin-left:auto;list-style:none;}
+.nav-links>li{position:relative;}
+.nav-links>li>a,.nav-links>li>button{color:rgba(250,247,239,.85);text-decoration:none;font-family:'Cinzel',serif;font-size:.65rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;padding:8px 11px;border-radius:var(--r);display:flex;align-items:center;gap:4px;transition:background .2s,color .2s;border:none;background:none;cursor:pointer;white-space:nowrap;}
+.nav-links>li>a:hover,.nav-links>li>button:hover{background:rgba(201,168,76,.14);color:var(--gold);}
+.chevron{font-size:.48rem;opacity:.55;transition:transform .2s;}
+.nav-links>li:hover .chevron{transform:rotate(180deg);}
+.dropdown{position:absolute;top:calc(100% + 6px);left:0;background:var(--gd);border:1px solid rgba(201,168,76,.2);border-radius:var(--rl);min-width:230px;box-shadow:var(--sd);opacity:0;visibility:hidden;transform:translateY(-8px);transition:all .2s;z-index:300;list-style:none;padding:6px 0;}
+.nav-links>li:hover .dropdown{opacity:1;visibility:visible;transform:translateY(0);}
+.dropdown li a,.dropdown li button{display:block;width:100%;text-align:left;padding:9px 18px;color:rgba(250,247,239,.75);text-decoration:none;font-family:'Cormorant Garamond',serif;font-size:.95rem;border-left:2px solid transparent;transition:background .15s,color .15s,border-color .15s;background:none;border-top:none;border-right:none;border-bottom:none;cursor:pointer;}
+.dropdown li a:hover,.dropdown li button:hover{background:rgba(201,168,76,.1);color:var(--gold);border-left-color:var(--gold);}
+.nav-sep{width:1px;height:16px;background:rgba(201,168,76,.22);margin:0 3px;flex-shrink:0;align-self:center;}
+.nav-home-btn{color:var(--gold)!important;}
+.nav-cta{background:var(--gold)!important;color:var(--gd)!important;font-weight:700!important;border-radius:var(--r)!important;}
+.nav-theme-btn{
+  color:rgba(250,247,239,.85);
+  text-decoration:none;
+  font-family:'Cinzel',serif;
+  font-size:.65rem;
+  font-weight:500;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  padding:8px 11px;
+  border-radius:var(--r);
+  display:flex;
+  align-items:center;
+  gap:4px;
+  transition:background .2s,color .2s;
+  border:none;
+  background:none;
+  cursor:pointer;
+  white-space:nowrap;
+}
+
+.nav-theme-btn:hover{
+  background:rgba(201,168,76,.14);
+  color:var(--gold);
+}
+.login-layout{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
+@media(max-width:800px){.login-layout{grid-template-columns:1fr!important;}}
+.nav-cta:hover{background:var(--glt)!important;}
+.nav-ham{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;border-radius:var(--r);}
+.nav-ham span{display:block;width:22px;height:2px;background:var(--gold);border-radius:2px;transition:transform .3s,opacity .3s;}
+.nav-ham.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav-ham.open span:nth-child(2){opacity:0;}
+.nav-ham.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.mob-drawer{display:none;position:fixed;inset:0;z-index:190;background:var(--gd);padding-top:calc(var(--nh) + 4px);overflow-y:auto;transform:translateX(100%);transition:transform .3s ease;}
+.mob-drawer.open{transform:translateX(0);}
+.mob-a,.mob-gb{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;font-family:'Cinzel',serif;font-size:.78rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:rgba(250,247,239,.75);text-decoration:none;background:none;border:none;width:100%;cursor:pointer;border-bottom:1px solid rgba(255,255,255,.06);transition:background .15s,color .15s;text-align:left;}
+.mob-a:hover,.mob-gb:hover{background:rgba(201,168,76,.08);color:var(--gold);}
+.mob-sub{display:none;background:rgba(0,0,0,.15);}
+.mob-sub.open{display:block;}
+.mob-sub a,.mob-sub button{display:block;width:100%;text-align:left;padding:11px 24px 11px 40px;font-family:'Cormorant Garamond',serif;font-size:.97rem;color:rgba(250,247,239,.55);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.04);transition:background .15s,color .15s;background:none;border-left:none;border-right:none;border-top:none;cursor:pointer;}
+.mob-sub a:hover,.mob-sub button:hover{background:rgba(201,168,76,.08);color:var(--gold);}
+.mob-cta-w{padding:20px 24px;display:flex;flex-direction:column;gap:10px;}
+.mob-cta{display:block;width:100%;text-align:center;background:var(--gold);color:var(--gd);font-family:'Cinzel',serif;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:14px 24px;border-radius:var(--r);border:none;cursor:pointer;}
+@media(max-width:1060px){.nav-links{display:none;}.nav-ham{display:flex;}.mob-drawer{display:block;}}
+@media(max-width:480px){.nl-sub{display:none;}.nl-title{font-size:.8rem;}}
+/* SALAH BAR */
+.salah-bar{background:var(--w);border-bottom:1px solid var(--cdk);position:sticky;top:var(--nh);z-index:100;transition:transform .32s cubic-bezier(.22,1,.36,1);}
+.salah-bar.hidden{transform:translateY(calc(-100% - var(--nh)));pointer-events:none;}
+.sb-in{max-width:1240px;margin:0 auto;padding:0 24px;}
+.sb-tabs{display:flex;border-bottom:1px solid var(--cdk);overflow-x:auto;}
+.sb-tabs::-webkit-scrollbar{height:0;}
+.s-tab{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;padding:10px 16px;background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;color:var(--inkf);transition:all .2s;margin-bottom:-1px;white-space:nowrap;flex-shrink:0;}
+.s-tab.active{color:var(--gm);border-bottom-color:var(--gold);}
+.s-tab:hover:not(.active){color:var(--gm);}
+.s-panel{display:none;padding:10px 0;align-items:center;gap:12px;flex-wrap:nowrap;}
+.s-panel.active{display:flex;}
+.s-lbl{font-family:'Cinzel',serif;font-size:.62rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gm);flex-shrink:0;}
+.s-times{display:flex;flex:1;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;}.s-times::-webkit-scrollbar{display:none;}
+.s-item{display:flex;flex-direction:column;align-items:center;padding:4px 14px;border-right:1px solid var(--cdk);min-width:74px;position:relative;}
+.s-item:last-child{border-right:none;}
+.s-item.next::after{content:'';position:absolute;top:0;left:4px;right:4px;height:2px;background:var(--gold);border-radius:0 0 2px 2px;}
+.s-item.next .s-time{color:var(--gm);font-weight:700;}
+.s-en{font-family:'Cinzel',serif;font-size:.48rem;letter-spacing:.08em;text-transform:uppercase;color:#9a7a2e;}
+.s-ar{font-family:'Amiri',serif;font-size:.96rem;color:var(--gm);}
+.s-time{font-family:'Cormorant Garamond',serif;font-size:.85rem;font-weight:600;color:var(--inkm);}
+.s-right{margin-left:auto;display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.live-clock{font-family:'Cinzel',serif;font-size:.72rem;color:var(--gm);opacity:.6;}
+.salah-date{font-family:'Cormorant Garamond',serif;font-size:.82rem;color:var(--inkf);font-style:italic;margin-left:4px;}
+@media(max-width:768px){.s-lbl{width:100%;text-align:center;}.s-times{justify-content:center;}.s-right{width:100%;justify-content:center;}}
+@media(max-width:420px){.s-item{padding:3px 7px;min-width:50px;}.s-ar{font-size:.82rem;}.s-time{font-size:.72rem;}}
+/* PAGE SYSTEM */
+.page{display:none;}.page.active{display:block;}
+/* PAGE BANNER */
+.pb{background:var(--gk);padding:56px 24px;text-align:center;position:relative;overflow:hidden;}
+.pb::before{content:'';position:absolute;inset:0;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cdefs%3E%3Cpattern id='p' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath d='M40 0L80 40 40 80 0 40Z' fill='none' stroke='%23e8c97a' stroke-width='.8'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23p)'/%3E%3C/svg%3E");}
+.pb-ar{font-family:'Amiri',serif;font-size:clamp(1.6rem,4vw,2.4rem);color:var(--gold);margin-bottom:10px;position:relative;z-index:1;}
+.pb-title{font-family:'Cinzel',serif;font-size:clamp(1.8rem,5vw,3rem);font-weight:600;color:var(--w);letter-spacing:.04em;position:relative;z-index:1;margin-bottom:8px;}
+.pb-gold{font-family:'Cormorant Garamond',serif;font-size:clamp(.9rem,2vw,1.1rem);color:var(--gold);font-style:italic;position:relative;z-index:1;margin-bottom:6px;}
+.pb-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,2.5vw,1.2rem);color:rgba(255,255,255,.6);font-style:italic;position:relative;z-index:1;}
+/* SHARED */
+.sec{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:72px 32px;}
+@media(max-width:768px){.sec{padding:52px 20px;}}
+@media(max-width:480px){.sec{padding:40px 16px;}}
+.sh{text-align:center;margin-bottom:48px;}
+.sh.lft{text-align:left;}
+.stag{display:inline-block;font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;padding-bottom:5px;border-bottom:1px solid var(--gold);}
+.stitle{font-family:'Cinzel',serif;font-size:clamp(1.4rem,3.5vw,2.2rem);font-weight:500;color:var(--gm);line-height:1.3;margin-bottom:12px;}
+.stitle em{color:var(--gm);font-style:italic;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:1.1em;}
+.sdesc{font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,2vw,1.12rem);color:var(--inkm);font-style:italic;max-width:580px;margin:0 auto;line-height:1.75;}
+.sh.lft .sdesc{margin:0;}
+.orn{display:flex;align-items:center;justify-content:center;gap:12px;margin:14px auto 0;width:fit-content;}
+.orn.lft{justify-content:flex-start;margin-left:0;}
+.ol{width:50px;height:1px;background:var(--gold);}
+.od{width:7px;height:7px;background:var(--gold);transform:rotate(45deg);}
+.sep{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.28;}
+.bgc{background:var(--cream);}.bgw{background:var(--w);}.bgk{background:var(--gk);}.bgd{background:var(--gd);}
+/* BUTTONS */
+.btn{font-family:'Cinzel',serif;font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:12px 26px;border-radius:var(--r);border:none;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s,transform .15s;}
+.btn-p{background:var(--gm);color:var(--w);box-shadow:0 4px 20px rgba(26,92,52,.35);}
+.btn-p:hover{background:var(--ga);transform:translateY(-2px);}
+.btn-g{background:var(--gold);color:var(--gd);box-shadow:0 4px 20px rgba(201,168,76,.4);}
+.btn-g:hover{background:var(--glt);transform:translateY(-2px);}
+.btn-o{background:transparent;color:var(--glt);border:1.5px solid rgba(201,168,76,.5);}
+.btn-o:hover{background:rgba(201,168,76,.12);border-color:var(--gold);transform:translateY(-2px);}
+.btn-od{background:transparent;color:var(--gm);border:1.5px solid var(--gm);}
+.btn-od:hover{background:rgba(26,92,52,.06);transform:translateY(-2px);}
+.btn-sm{background:var(--gm);color:var(--glt);font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;padding:8px 16px;border-radius:var(--r);border:none;cursor:pointer;text-decoration:none;white-space:nowrap;display:inline-block;transition:background .2s;}
+.btn-sm:hover{background:var(--ga);}
+/* DARK SECTION VARIANTS */
+.dk-title{color:var(--glt)!important;}.dk-tag{color:rgba(232,201,122,.7)!important;border-color:rgba(201,168,76,.5)!important;}.dk-desc{color:rgba(255,255,255,.62)!important;}.dk-orn .ol,.dk-orn .od{background:var(--gold)!important;}
+/* REVEAL */
+.rv{opacity:0;transform:translateY(32px);transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1);}
+.rvl{opacity:0;transform:translateX(-44px);transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1);}
+.rvr{opacity:0;transform:translateX(44px);transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1);}
+.rv.in,.rvl.in,.rvr.in{opacity:1;transform:none;}
+.d1{transition-delay:.05s;}.d2{transition-delay:.12s;}.d3{transition-delay:.19s;}.d4{transition-delay:.26s;}
+.d5{transition-delay:.33s;}.d6{transition-delay:.4s;}.d7{transition-delay:.47s;}.d8{transition-delay:.54s;}
+/* HERO */
+.hero{position:relative;overflow:hidden;min-height:90vh;display:flex;flex-direction:column;justify-content:center;background:var(--gk);}
+.hero-pat{position:absolute;inset:0;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cdefs%3E%3Cpattern id='p' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath d='M40 0L80 40 40 80 0 40Z' fill='none' stroke='%23e8c97a' stroke-width='.8'/%3E%3Ccircle cx='40' cy='40' r='16' fill='none' stroke='%23e8c97a' stroke-width='.5'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23p)'/%3E%3C/svg%3E");}
+.hero-arch{position:absolute;bottom:-2px;left:50%;transform:translateX(-50%);width:130%;height:90px;background:var(--cream);border-radius:60% 60% 0 0/100% 100% 0 0;}
+.hero-arch::before{content:'';position:absolute;top:-5px;left:50%;transform:translateX(-50%);width:calc(100% - 60px);height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 28px rgba(201,168,76,.6);}
+.hero-con{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:80px 32px 140px;text-align:center;}
+.hero-bis{font-family:'Amiri',serif;font-size:clamp(2rem,6vw,3.8rem);color:var(--glt);line-height:1.35;margin-bottom:18px;text-shadow:0 2px 16px rgba(0,0,0,.35);animation:fD .9s ease both;}
+.hero-div{width:100px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:0 auto 22px;animation:fD 1s .12s ease both;}
+.hero-t{font-family:'Cinzel',serif;font-size:clamp(1.4rem,4.5vw,2.6rem);font-weight:600;color:var(--w);letter-spacing:.05em;line-height:1.3;margin-bottom:14px;animation:fD 1s .22s ease both;}
+.hero-s{font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,2.5vw,1.2rem);color:rgba(255,255,255,.68);font-style:italic;margin-bottom:40px;animation:fD 1s .32s ease both;}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;animation:fD 1s .48s ease both;}
+@keyframes fD{from{opacity:0;transform:translateY(-18px);}to{opacity:1;transform:translateY(0);}}
+@media(max-width:480px){.hero-con{padding:56px 20px 120px;}.hero-btns{flex-direction:column;align-items:center;}.hero-btns .btn{width:100%;max-width:280px;text-align:center;}}
+/* STATS */
+.stats-strip{background:var(--w);border-top:1px solid var(--cdk);}
+.stats-g{max-width:1200px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:repeat(4,1fr);}
+@media(max-width:700px){.stats-g{grid-template-columns:repeat(2,1fr);}}
+.stat-i{padding:24px 16px;text-align:center;border-right:1px solid var(--cdk);}
+.stat-i:last-child{border-right:none;}
+.stat-n{font-family:'Cinzel',serif;font-size:2rem;font-weight:600;color:var(--gm);display:block;line-height:1;}
+.stat-l{font-family:'Cormorant Garamond',serif;font-size:.9rem;color:var(--inkf);margin-top:5px;font-style:italic;}
+/* QUICK NAV */
+.qn-g{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+@media(max-width:900px){.qn-g{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:520px){.qn-g{grid-template-columns:1fr;}}
+.qn-card{background:var(--w);border:1px solid var(--cdk);border-radius:var(--rl);padding:26px 22px;display:flex;gap:18px;align-items:flex-start;transition:transform .22s,box-shadow .22s;cursor:pointer;}
+.qn-card:hover{transform:translateY(-4px);box-shadow:var(--sg);}
+.qn-ico{width:46px;height:46px;border-radius:10px;border:1.5px solid var(--gm);display:grid;place-items:center;flex-shrink:0;}
+.qn-ico svg{width:20px;height:20px;stroke:var(--gm);fill:none;stroke-width:1.6;}
+.qn-tag{font-family:'Cinzel',serif;font-size:.55rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;}
+.qn-t{font-family:'Cinzel',serif;font-size:.88rem;font-weight:600;color:var(--gm);margin-bottom:6px;line-height:1.3;}
+.qn-d{font-family:'Cormorant Garamond',serif;font-size:.94rem;color:var(--inkm);line-height:1.6;margin-bottom:14px;}
+.qn-btn{display:inline-flex;align-items:center;gap:6px;font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--w);background:var(--gm);padding:7px 14px;border-radius:var(--r);transition:background .2s;border:none;cursor:pointer;}
+.qn-btn:hover{background:var(--ga);}
+.qn-btn.ol{background:transparent;color:var(--gm);border:1.5px solid var(--gm);}
+.qn-btn.ol:hover{background:rgba(26,92,52,.06);}
+/* CAROUSEL */
+.car-sec{background:var(--gk);padding:0 0 52px;}
+.car-hdr{max-width:1200px;margin:0 auto;padding:0 32px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+.car-lbl{font-family:'Cinzel',serif;font-size:.7rem;color:var(--glt);letter-spacing:.14em;text-transform:uppercase;opacity:.8;}
+.car-nav{display:none;}
+.car-btn{width:38px;height:38px;border-radius:50%;border:1.5px solid rgba(201,168,76,.35);background:rgba(255,255,255,.04);color:var(--gold);font-size:1rem;cursor:pointer;display:grid;place-items:center;transition:all .2s;}
+.car-btn:hover{background:rgba(201,168,76,.15);border-color:var(--gold);}
+.car-vp{overflow:hidden;}
+.car-track{display:flex;gap:16px;transition:transform .52s cubic-bezier(.25,.46,.45,.94);will-change:transform;padding:0 32px 2px;}
+.car-slide{flex:0 0 calc((100% - 16px) / 2);border-radius:10px;overflow:hidden;position:relative;aspect-ratio:4/3;background:rgba(255,255,255,.05);border:1px solid rgba(201,168,76,.12);display:flex;align-items:center;justify-content:center;}
+.car-slide img{width:100%;height:100%;object-fit:contain;display:block;background:var(--gk);}
+@media(max-width:900px){.car-slide{flex:0 0 calc(50% - 8px);}}
+@media(max-width:560px){.car-slide{flex:0 0 calc(90% - 8px);}}
+.slide-ph{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,rgba(13,56,30,.85),rgba(10,40,22,.95));}
+.slide-ph .icon{font-size:2.6rem;color:var(--gold);opacity:.4;}
+.slide-ph .lbl{font-family:'Cormorant Garamond',serif;font-size:.9rem;color:rgba(255,255,255,.38);text-align:center;padding:0 18px;line-height:1.5;}
+.slide-cap{position:absolute;bottom:0;left:0;right:0;padding:10px 14px;background:linear-gradient(to top,rgba(0,0,0,.75),transparent);}
+.slide-cap .ctag{display:block;font-family:'Cinzel',serif;font-size:.54rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:2px;}
+.slide-cap .ctext{font-family:'Cormorant Garamond',serif;font-size:.86rem;color:rgba(255,255,255,.88);line-height:1.3;}
+.car-dots{display:flex;gap:7px;justify-content:center;margin-top:16px;}
+.c-dot{width:7px;height:7px;border-radius:50%;background:rgba(201,168,76,.2);border:none;cursor:pointer;transition:all .25s;padding:0;}
+.c-dot.active{background:var(--gold);width:22px;border-radius:4px;}
+/* PILLARS */
+.pillars-g{display:grid;gap:22px;grid-template-columns:repeat(4,1fr);}
+@media(max-width:900px){.pillars-g{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:480px){.pillars-g{grid-template-columns:1fr;}}
+.pillar{background:var(--w);border:1px solid var(--cdk);border-top:3px solid var(--gold);border-radius:8px;padding:28px 18px;text-align:center;box-shadow:0 2px 16px rgba(13,40,24,.06);transition:transform .2s,box-shadow .2s;}
+.pillar:hover{transform:translateY(-4px);box-shadow:var(--sd);}
+.p-ico{width:52px;height:52px;margin:0 auto 14px;background:linear-gradient(135deg,var(--gm),var(--ga));border-radius:50%;display:grid;place-items:center;box-shadow:0 4px 14px rgba(13,40,24,.22);}
+.p-ico svg{width:24px;height:24px;fill:var(--glt);}
+.p-t{font-family:'Cinzel',serif;font-size:.88rem;font-weight:600;color:var(--gm);margin-bottom:9px;letter-spacing:.03em;}
+.p-d{font-family:'Cormorant Garamond',serif;font-size:.97rem;color:var(--inkm);line-height:1.65;}
+/* SERVICES */
+.svc-g{display:grid;gap:18px;grid-template-columns:repeat(3,1fr);}
+@media(max-width:900px){.svc-g{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:520px){.svc-g{grid-template-columns:1fr;}}
+.svc-card{background:rgba(255,255,255,.055);border:1px solid rgba(201,168,76,.18);border-radius:10px;padding:24px 20px;transition:background .2s,border-color .2s,transform .2s;cursor:pointer;}
+.svc-card:hover{background:rgba(255,255,255,.1);border-color:rgba(201,168,76,.45);transform:translateY(-3px);}
+.svc-n{font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.2em;color:var(--gold);opacity:.6;margin-bottom:11px;}
+.svc-t{font-family:'Cinzel',serif;font-size:.96rem;font-weight:600;color:var(--w);margin-bottom:9px;}
+.svc-d{font-family:'Cormorant Garamond',serif;font-size:.95rem;color:rgba(255,255,255,.58);line-height:1.6;}
+.svc-arr{display:inline-block;margin-top:13px;font-size:1.1rem;color:var(--gold);transition:transform .2s;}
+.svc-card:hover .svc-arr{transform:translateX(5px);}
+/* EVENTS */
+.ev-g{display:grid;grid-template-columns:2fr 1fr;gap:28px;}
+@media(max-width:900px){.ev-g{grid-template-columns:1fr;}}
+.ev-feat{background:var(--w);border:1px solid var(--cdk);border-radius:var(--rl);overflow:hidden;}
+.ev-img{height:240px;background:linear-gradient(135deg,var(--gk),var(--gm));position:relative;display:flex;align-items:flex-end;overflow:hidden;}
+.ev-img-pat{position:absolute;inset:0;opacity:.08;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M30 5L55 30 30 55 5 30Z' fill='none' stroke='%23e8c97a' stroke-width='.8'/%3E%3C/svg%3E");}
+.ev-img-ar{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Amiri',serif;font-size:clamp(1.6rem,5vw,2.8rem);color:var(--glt);opacity:.5;white-space:nowrap;width:100%;text-align:center;padding:0 16px;}
+.ev-badge{background:var(--gold);color:var(--gd);font-family:'Cinzel',serif;font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:3px;margin:0 0 14px 18px;position:relative;z-index:1;display:inline-block;}
+.ev-body{padding:22px;}
+.ev-date{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:7px;}
+.ev-title{font-family:'Cinzel',serif;font-size:1rem;font-weight:600;color:var(--gm);margin-bottom:8px;line-height:1.4;}
+.ev-desc{font-family:'Cormorant Garamond',serif;font-size:.96rem;color:var(--inkm);line-height:1.65;margin-bottom:16px;}
+.ev-item{background:var(--w);border:1px solid var(--cdk);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:13px 14px;margin-bottom:11px;transition:transform .15s,box-shadow .15s;}
+.ev-item:hover{transform:translateX(3px);box-shadow:var(--sg);}
+.ev-item .ev-title{font-size:.84rem;margin-bottom:3px;}
+.ev-item .ev-desc{font-size:.86rem;margin:0;}
+/* FRIDAY */
+.fri-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;}
+.fri-card{background:rgba(255,255,255,.055);border:1px solid rgba(201,168,76,.16);border-radius:8px;padding:15px 16px;transition:background .2s,border-color .2s;}
+.fri-card:hover{background:rgba(255,255,255,.1);border-color:rgba(201,168,76,.38);}
+.fri-masjid{font-family:'Cinzel',serif;font-size:.74rem;font-weight:600;color:var(--w);margin-bottom:3px;line-height:1.35;}
+.fri-khatib{font-family:'Cormorant Garamond',serif;font-size:.9rem;color:rgba(255,255,255,.5);}
+.fri-time{font-family:'Cinzel',serif;font-size:.58rem;letter-spacing:.08em;color:var(--gold);margin-top:5px;}
+/* INSTITUTIONS */
+.inst-g{display:grid;gap:16px;grid-template-columns:repeat(4,1fr);}
+@media(max-width:900px){.inst-g{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:620px){.inst-g{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:360px){.inst-g{grid-template-columns:1fr;}}
+.inst-card{background:var(--w);border-radius:10px;padding:22px 14px;text-align:center;border:1px solid var(--cdk);box-shadow:0 2px 12px rgba(13,40,24,.05);transition:transform .2s,box-shadow .2s;cursor:pointer;}
+.inst-card:hover{transform:translateY(-4px);box-shadow:var(--sd);}
+.inst-ico{width:48px;height:48px;margin:0 auto 13px;background:rgba(26,92,52,.08);border-radius:12px;display:grid;place-items:center;}
+.inst-ico svg{width:24px;height:24px;stroke:var(--gm);fill:none;stroke-width:1.8;}
+.inst-t{font-family:'Cinzel',serif;font-size:.72rem;font-weight:600;color:var(--gm);letter-spacing:.03em;line-height:1.4;margin-bottom:4px;}
+.inst-m{font-family:'Cormorant Garamond',serif;font-size:.84rem;color:var(--inkm);}
+/* PUB */
+.pub-g{display:grid;gap:20px;grid-template-columns:repeat(3,1fr);}
+@media(max-width:800px){.pub-g{grid-template-columns:1fr;max-width:460px;margin:0 auto;}}
+.pub-card{background:rgba(255,255,255,.06);border:1px solid rgba(201,168,76,.17);border-radius:10px;overflow:hidden;transition:background .2s,border-color .2s;cursor:pointer;display:flex;flex-direction:column;}
+.pub-card:hover{background:rgba(255,255,255,.11);border-color:rgba(201,168,76,.42);}
+.pub-thumb{height:112px;background:linear-gradient(135deg,rgba(201,168,76,.14),rgba(255,255,255,.03));display:flex;align-items:center;justify-content:center;border-bottom:1px solid rgba(201,168,76,.14);}
+.pub-thumb svg{width:42px;height:42px;stroke:var(--gold);fill:none;stroke-width:1.2;}
+.pub-body{padding:18px 18px 22px;flex:1;}
+.pub-type{font-family:'Cinzel',serif;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);opacity:.7;margin-bottom:6px;}
+.pub-ttl{font-family:'Cormorant Garamond',serif;font-size:1.06rem;font-weight:600;color:var(--w);margin-bottom:7px;line-height:1.4;}
+.pub-desc{font-family:'Cormorant Garamond',serif;font-size:.9rem;color:rgba(255,255,255,.52);line-height:1.6;}
+.pub-lnk{display:flex;align-items:center;gap:6px;margin-top:12px;font-family:'Cinzel',serif;font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);transition:gap .2s;}
+.pub-card:hover .pub-lnk{gap:10px;}
+/* WAQF CTA */
+.waqf-wrap{background:linear-gradient(135deg,var(--gk) 0%,var(--gd) 100%);border-radius:var(--rl);padding:52px 44px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;position:relative;overflow:hidden;box-shadow:var(--sd);}
+.waqf-wrap::before{content:'';position:absolute;right:-60px;top:-60px;width:280px;height:280px;border-radius:50%;border:40px solid rgba(201,168,76,.06);}
+.waqf-text{position:relative;z-index:1;flex:1;min-width:220px;}
+.waqf-btns{display:flex;gap:14px;margin-top:24px;flex-wrap:wrap;}
+.waqf-stats{position:relative;z-index:1;display:flex;gap:14px;flex-shrink:0;flex-wrap:wrap;}
+.waqf-stat{background:rgba(255,255,255,.06);border:1px solid rgba(201,168,76,.2);border-radius:10px;padding:18px 26px;text-align:center;min-width:126px;}
+.waqf-num{font-family:'Cinzel',serif;font-size:1.8rem;font-weight:600;color:var(--gold);display:block;line-height:1;}
+.waqf-lbl{font-family:'Cormorant Garamond',serif;font-size:.85rem;color:rgba(255,255,255,.52);margin-top:5px;}
+@media(max-width:700px){.waqf-wrap{padding:32px 22px;}.waqf-stats{width:100%;justify-content:center;}}
+@media(max-width:420px){.waqf-btns{flex-direction:column;}.waqf-btns .btn{text-align:center;}}
+/* SMERT */
+.smert-lay{display:grid;grid-template-columns:1fr 2fr;gap:48px;align-items:start;}
+@media(max-width:900px){.smert-lay{grid-template-columns:1fr;}}
+.smert-sb{background:var(--gm);border-radius:var(--rl);padding:36px 28px;position:sticky;top:calc(var(--nh) + 60px);}
+@media(max-width:900px){.smert-sb{position:static;}}
+.smert-sb h3{font-family:'Cinzel',serif;font-size:1.3rem;font-weight:600;color:var(--w);margin-bottom:8px;}
+.smert-sb p{font-family:'Cormorant Garamond',serif;font-size:.97rem;color:rgba(255,255,255,.65);line-height:1.7;margin-bottom:24px;}
+.smert-row{display:flex;align-items:flex-start;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.1);}
+.smert-row:last-child{border-bottom:none;}
+.smert-L{font-family:'Cinzel',serif;font-size:1.8rem;font-weight:700;color:var(--gold);line-height:1;min-width:28px;}
+.smert-word{font-family:'Cinzel',serif;font-size:.84rem;font-weight:600;color:var(--w);display:block;margin-bottom:2px;}
+.smert-mean{font-family:'Cormorant Garamond',serif;font-size:.88rem;color:rgba(255,255,255,.55);}
+.goals-g{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:40px;}
+@media(max-width:600px){.goals-g{grid-template-columns:1fr;}}
+.goal-card{background:var(--cream);border-radius:var(--r);padding:20px;border-left:3px solid var(--gold);}
+.goal-card h4{font-family:'Cinzel',serif;font-size:.84rem;font-weight:600;color:var(--gm);margin-bottom:7px;}
+.goal-card p{font-family:'Cormorant Garamond',serif;font-size:.94rem;color:var(--inkm);line-height:1.65;}
+.trust-box-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:20px;}
+.trust-box{flex:1;min-width:130px;background:var(--w);border:1px solid var(--cdk);border-radius:var(--r);padding:16px;text-align:center;}
+.trust-box-n{font-family:'Cinzel',serif;font-size:1.4rem;font-weight:600;color:var(--gm);}
+.trust-box-l{font-family:'Cormorant Garamond',serif;font-size:.8rem;color:var(--inkf);margin-top:4px;font-style:italic;}
+/* FATWA */
+.fatwa-lay{display:grid;grid-template-columns:2fr 1fr;gap:40px;align-items:start;}
+@media(max-width:800px){.fatwa-lay{grid-template-columns:1fr;gap:32px;}}
+.fatwa-frame{background:var(--gm);border-radius:var(--rl);padding:48px 30px;text-align:center;position:relative;overflow:hidden;box-shadow:var(--sd);}
+.fatwa-frame-pat{position:absolute;inset:0;opacity:.08;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cdefs%3E%3Cpattern id='q' width='60' height='60' patternUnits='userSpaceOnUse'%3E%3Cpath d='M30 5L55 30 30 55 5 30Z' fill='none' stroke='%23e8c97a' stroke-width='.8'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23q)'/%3E%3C/svg%3E");}
+.fatwa-ar{font-family:'Amiri',serif;font-size:clamp(2rem,5vw,3rem);color:var(--glt);position:relative;z-index:1;line-height:1.4;text-shadow:0 2px 12px rgba(0,0,0,.3);}
+.fatwa-frame p{font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:rgba(255,255,255,.58);position:relative;z-index:1;margin-top:12px;}
+.fatwa-badge{position:absolute;top:-10px;right:-10px;width:60px;height:60px;background:var(--gold);border-radius:50%;display:grid;place-items:center;font-family:'Cinzel',serif;font-size:.54rem;font-weight:700;color:var(--gd);text-align:center;line-height:1.3;letter-spacing:.05em;text-transform:uppercase;box-shadow:0 4px 14px rgba(201,168,76,.4);}
+.ff{background:var(--cream);border:1px solid var(--cdk);border-radius:var(--rl);padding:32px;}
+.fg{margin-bottom:18px;}
+.fl{display:block;font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--inkm);margin-bottom:7px;}
+.fi,.fs,.fta{width:100%;padding:11px 15px;border:1.5px solid var(--cdk);border-radius:var(--r);font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--ink);background:var(--w);outline:none;transition:border-color .2s;appearance:none;}
+.fi:focus,.fs:focus,.fta:focus{border-color:var(--gm);box-shadow:0 0 0 3px rgba(26,92,52,.08);}
+.fta{min-height:120px;resize:vertical;}
+.fatwa-recent{background:var(--gd);border-radius:var(--rl);padding:28px;}
+.fatwa-recent h3{font-family:'Cinzel',serif;font-size:1rem;font-weight:600;color:var(--gold);margin-bottom:16px;}
+.f-item{border-bottom:1px solid rgba(255,255,255,.07);padding:11px 0;}
+.f-item:last-child{border-bottom:none;}
+.f-q{font-family:'Cormorant Garamond',serif;font-size:.95rem;color:rgba(250,247,239,.85);line-height:1.5;margin-bottom:4px;}
+.f-meta{font-family:'Cinzel',serif;font-size:.55rem;letter-spacing:.08em;color:var(--gold);opacity:.6;}
+.track-c{background:var(--cream);border:1px solid var(--cdk);border-radius:var(--rl);padding:24px;margin-top:20px;}
+.track-c h3{font-family:'Cinzel',serif;font-size:.9rem;font-weight:600;color:var(--gm);margin-bottom:10px;}
+.track-c p{font-family:'Cormorant Garamond',serif;font-size:.94rem;color:var(--inkm);margin-bottom:14px;line-height:1.6;}
+/* WAQF PAGE */
+.waqf-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px;}
+.waqf-card{background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.15);border-radius:var(--rl);padding:28px;transition:all .2s;cursor:pointer;}
+.waqf-card:hover{background:rgba(201,168,76,.08);border-color:rgba(201,168,76,.3);}
+.wc-num{font-family:'Cinzel',serif;font-size:2.8rem;font-weight:300;color:var(--gold);opacity:.3;line-height:1;margin-bottom:12px;}
+.wc-t{font-family:'Cinzel',serif;font-size:1rem;font-weight:600;color:var(--glt);margin-bottom:8px;}
+.wc-d{font-family:'Cormorant Garamond',serif;font-size:.95rem;color:rgba(250,247,239,.5);line-height:1.6;}
+.waqf-reg{background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.2);border-radius:var(--rl);padding:40px;margin-top:48px;}
+.waqf-reg h3{font-family:'Cinzel',serif;font-size:1.4rem;font-weight:600;color:var(--gold);margin-bottom:10px;}
+.waqf-reg p{font-family:'Cormorant Garamond',serif;font-size:.97rem;color:rgba(250,247,239,.55);line-height:1.75;margin-bottom:26px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+@media(max-width:600px){.form-row{grid-template-columns:1fr;}}
+.fid,.fsd,.ftad{width:100%;padding:11px 15px;border:1.5px solid rgba(201,168,76,.2);border-radius:var(--r);font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--cream);background:rgba(255,255,255,.05);outline:none;transition:border-color .2s;appearance:none;}
+.fid:focus,.fsd:focus,.ftad:focus{border-color:var(--gold);}
+.fid::placeholder,.ftad::placeholder{color:rgba(250,247,239,.3);}
+.ftad{min-height:100px;resize:vertical;}
+.fld{display:block;font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);opacity:.7;margin-bottom:7px;}
+/* TABLE */
+.tbl{width:100%;border-collapse:collapse;}
+.tbl thead tr{background:var(--gm);}
+.tbl th{padding:14px 18px;font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);text-align:left;font-weight:500;}
+.tbl td{padding:13px 18px;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--inkm);border-bottom:1px solid var(--cdk);}
+.tbl tr:nth-child(even) td{background:rgba(250,247,239,.5);}
+.badge-green{background:rgba(26,92,52,.1);color:var(--gm);font-family:'Cinzel',serif;font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:100px;}
+.badge-gold{background:rgba(201,168,76,.12);color:#9a7a2e;font-family:'Cinzel',serif;font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:100px;}
+/* INST DETAIL */
+.inst-dg{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;}
+.idc{background:var(--w);border:1px solid var(--cdk);border-radius:var(--rl);overflow:hidden;transition:transform .22s,box-shadow .22s;}
+.idc:hover{transform:translateY(-4px);box-shadow:var(--sd);}
+.idc-hdr{background:var(--gk);padding:24px 20px;position:relative;overflow:hidden;}
+.idc-hdr::after{content:'';position:absolute;bottom:-20px;right:-20px;width:90px;height:90px;border-radius:50%;border:2px solid rgba(201,168,76,.15);}
+.idc-badge{display:inline-block;font-family:'Cinzel',serif;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.25);padding:3px 10px;border-radius:100px;margin-bottom:8px;}
+.idc-t{font-family:'Cinzel',serif;font-size:1.1rem;font-weight:600;color:var(--cream);position:relative;z-index:1;line-height:1.3;}
+.idc-body{padding:20px;}
+.idc-d{font-family:'Cormorant Garamond',serif;font-size:.94rem;color:var(--inkm);line-height:1.7;margin-bottom:14px;}
+.idc-more{font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gm);display:flex;align-items:center;gap:6px;cursor:pointer;}
+/* PUB FULL */
+.pub-fg{display:grid;gap:24px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));}
+.pfc{background:var(--w);border:1px solid var(--cdk);border-radius:var(--rl);overflow:hidden;transition:transform .22s,box-shadow .22s;cursor:pointer;}
+.pfc:hover{transform:translateY(-4px);box-shadow:var(--sd);}
+.pfc-cover{height:180px;background:linear-gradient(135deg,var(--gk),var(--gm));display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.pfc-ar{font-family:'Amiri',serif;font-size:2.4rem;color:var(--gold);position:relative;z-index:1;opacity:.7;}
+.pfc-pat{position:absolute;inset:0;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M30 5L55 30 30 55 5 30Z' fill='none' stroke='%23e8c97a' stroke-width='.8'/%3E%3C/svg%3E");}
+.pfc-body{padding:20px;}
+.pfc-badge{display:inline-block;font-family:'Cinzel',serif;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);padding:3px 10px;border-radius:100px;margin-bottom:8px;}
+.pfc-t{font-family:'Cinzel',serif;font-size:1rem;font-weight:600;color:var(--gm);margin-bottom:8px;line-height:1.3;}
+.pfc-d{font-family:'Cormorant Garamond',serif;font-size:.93rem;color:var(--inkm);line-height:1.65;margin-bottom:14px;}
+.pfc-l{font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gm);display:flex;align-items:center;gap:6px;}
+/* INST INNER */
+.inst-inner{display:grid;grid-template-columns:2fr 1fr;gap:48px;}
+@media(max-width:800px){.inst-inner{grid-template-columns:1fr;}}
+/* ABOUT LAYOUT */
+.about-lay{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start;}
+@media(max-width:800px){.about-lay{grid-template-columns:1fr;}}
+
+/* INFO PANEL */
+.info-panel-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+@media(max-width:900px){ .info-panel-grid { grid-template-columns:1fr 1fr; } }
+@media(max-width:560px){ .info-panel-grid { grid-template-columns:1fr; } }
+.info-col { background:var(--w); border:1px solid var(--cdk); border-radius:var(--rl); overflow:hidden; }
+.info-col-hdr { display:flex; align-items:center; gap:10px; padding:16px 18px; background:var(--gk); border-bottom:2px solid var(--gold); }
+.info-col-icon { font-size:1.1rem; }
+.info-col-title { font-family:'Cinzel',serif; font-size:.78rem; font-weight:600; color:var(--gold); letter-spacing:.06em; text-transform:uppercase; flex:1; }
+.info-col-more { font-family:'Cinzel',serif; font-size:.6rem; letter-spacing:.08em; text-transform:uppercase; color:rgba(232,201,122,.65); background:none; border:none; cursor:pointer; transition:color .15s; white-space:nowrap; }
+.info-col-more:hover { color:var(--gold); }
+.info-col-body { padding:8px 0; }
+.info-item { padding:12px 18px; border-bottom:1px solid var(--cdk); cursor:pointer; transition:background .15s; }
+.info-item:last-child { border-bottom:none; }
+.info-item:hover { background:rgba(201,168,76,.04); }
+.info-item-date { font-family:'Cinzel',serif; font-size:.55rem; letter-spacing:.1em; text-transform:uppercase; color:var(--gold); margin-bottom:4px; opacity:.75; }
+.info-item-title { font-family:'Cinzel',serif; font-size:.78rem; font-weight:600; color:var(--gm); margin-bottom:3px; line-height:1.35; }
+.info-item-desc { font-family:'Cormorant Garamond',serif; font-size:.9rem; color:var(--inkf); line-height:1.5; }
+
+/* FOOTER */
+footer{background:var(--ink);color:rgba(255,255,255,.5);padding:52px 32px 28px;position:relative;z-index:1;}
+.ft-in{max-width:1200px;margin:0 auto;display:grid;gap:36px;grid-template-columns:2fr 1fr 1fr 1fr;}
+@media(max-width:900px){.ft-in{grid-template-columns:1fr 1fr;}}
+@media(max-width:520px){.ft-in{grid-template-columns:1fr;gap:26px;}}
+@media(max-width:480px){footer{padding:40px 20px 24px;}}
+.ft-name{font-family:'Cinzel',serif;font-size:.95rem;font-weight:600;color:var(--glt);letter-spacing:.06em;margin-bottom:4px;}
+.ft-tag{font-family:'Amiri',serif;font-size:1.05rem;color:rgba(201,168,76,.55);margin-bottom:12px;}
+.ft-desc{font-family:'Cormorant Garamond',serif;font-size:.9rem;line-height:1.7;color:rgba(255,255,255,.35);max-width:260px;}
+.ft-ct{font-family:'Cinzel',serif;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;padding-bottom:7px;border-bottom:1px solid rgba(201,168,76,.18);}
+.ft-lks{list-style:none;}
+.ft-lks li{margin-bottom:8px;}
+.ft-lks a,.ft-lks button{font-family:'Cormorant Garamond',serif;font-size:.9rem;color:rgba(255,255,255,.38);text-decoration:none;transition:color .15s;background:none;border:none;cursor:pointer;padding:0;}
+.ft-lks a:hover,.ft-lks button:hover{color:var(--glt);}
+.ft-div{max-width:1200px;margin:36px auto 16px;height:1px;background:rgba(255,255,255,.07);}
+.ft-bot{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.ft-copy{font-family:'Cormorant Garamond',serif;font-size:.84rem;color:rgba(255,255,255,.22);}
+.ft-blks{display:flex;gap:16px;list-style:none;}
+.ft-blks a{font-family:'Cormorant Garamond',serif;font-size:.84rem;color:rgba(255,255,255,.22);text-decoration:none;transition:color .15s;}
+.ft-blks a:hover{color:var(--glt);}
+
+
+/* ================= DARK THEME ================= */
+body.dark{
+  --cream:#0f1115;
+  --cdk:#2a3140;
+  --w:#161a22;
+  --ink:#f4f1e8;
+  --inkm:#d8d2c2;
+  --inkf:#a79d85;
+  --gd:#07110b;
+  --gk:#0d1d14;
+  --gm:#1d4730;
+  --ga:#2d6b48;
+  --gold:#d4b15a;
+  --glt:#f1d58b;
+  background:#0f1115 !important;
+  color:#f4f1e8 !important;
+}
+body.dark .bgc,
+body.dark .sec,
+body.dark .stats-strip{
+  background:#0f1115 !important;
+  color:#f4f1e8 !important;
+}
+body.dark .bgw,
+body.dark .salah-bar,
+body.dark .qn-card,
+body.dark .pillar,
+body.dark .inst-card,
+body.dark .info-col,
+body.dark .ev-feat,
+body.dark .goal-card,
+body.dark .track-c,
+body.dark .ff,
+body.dark .tbl tr:nth-child(even) td{
+  background:#161a22 !important;
+  color:#f4f1e8 !important;
+  border-color:#2a3140 !important;
+}
+body.dark .stitle,
+body.dark .qn-t,
+body.dark .p-t,
+body.dark .inst-t,
+body.dark .ev-title,
+body.dark .info-item-title,
+body.dark .goal-card h4,
+body.dark .track-c h3,
+body.dark .tbl th{
+  color:#e8c97a !important;
+}
+body.dark .sdesc,
+body.dark .qn-d,
+body.dark .p-d,
+body.dark .inst-m,
+body.dark .ev-desc,
+body.dark .info-item-desc,
+body.dark .goal-card p,
+body.dark .tbl td,
+body.dark p{
+  color:#d8d2c2 !important;
+}
+body.dark input,
+body.dark select,
+body.dark textarea{
+  background:#161a22 !important;
+  color:#f4f1e8 !important;
+  border-color:#2a3140 !important;
+}
+body.dark .hero-arch{
+  background:#0f1115 !important;
+}
+/* GLOBAL DARK THEME TEXT FIX - ALL PAGES */
+
+/* Base dark theme */
+body.dark{
+  --cream:#0f1115;
+  --cdk:#2a3140;
+  --w:#161a22;
+  --ink:#ffffff;
+  --inkm:#f2f2f2;
+  --inkf:#d6d6d6;
+  --gd:#07110b;
+  --gk:#0d1d14;
+  --gm:#1d4730;
+  --ga:#2d6b48;
+  --gold:#e8c97a;
+  --glt:#f1d58b;
+  background:#0f1115 !important;
+  color:#ffffff !important;
+}
+
+/* Any normal page/card section */
+body.dark .page,
+body.dark .sec,
+body.dark .bgc,
+body.dark .bgw,
+body.dark .qn-card,
+body.dark .pillar,
+body.dark .inst-card,
+body.dark .idc,
+body.dark .pfc,
+body.dark .ev-feat,
+body.dark .ev-item,
+body.dark .goal-card,
+body.dark .trust-box,
+body.dark .info-col,
+body.dark .track-c,
+body.dark .ff,
+body.dark .waqf-reg{
+  background:#161a22 !important;
+  color:#ffffff !important;
+  border-color:#2a3140 !important;
+}
+
+/* All text inside those sections */
+body.dark .page *,
+body.dark .sec *,
+body.dark .bgc *,
+body.dark .bgw *,
+body.dark .qn-card *,
+body.dark .pillar *,
+body.dark .inst-card *,
+body.dark .idc *,
+body.dark .pfc *,
+body.dark .ev-feat *,
+body.dark .ev-item *,
+body.dark .goal-card *,
+body.dark .trust-box *,
+body.dark .info-col *,
+body.dark .track-c *,
+body.dark .ff *,
+body.dark .waqf-reg *{
+  color:#ffffff !important;
+}
+
+/* Keep important headings gold */
+body.dark .stitle,
+body.dark .stag,
+body.dark .qn-tag,
+body.dark .qn-t,
+body.dark .p-t,
+body.dark .svc-n,
+body.dark .inst-t,
+body.dark .ev-date,
+body.dark .ev-title,
+body.dark .info-item-date,
+body.dark .info-col-title,
+body.dark .pfc-badge,
+body.dark .wc-t,
+body.dark .wc-num{
+  color:#e8c97a !important;
+}
+
+/* Inputs */
+body.dark input,
+body.dark select,
+body.dark textarea{
+  background:#0f1115 !important;
+  color:#ffffff !important;
+  border-color:#2a3140 !important;
+}
+
+/* Tables */
+body.dark .tbl td,
+body.dark .tbl th{
+  color:#ffffff !important;
+  border-color:#2a3140 !important;
+}
+
+body.dark .tbl tr:nth-child(even) td{
+  background:#1b1f27 !important;
+}
+/* DARK THEME FOOTER FIX */
+body.dark footer{
+  background:#0b0b0b !important;
+  color:rgba(255,255,255,.65) !important;
+}
+
+body.dark footer *{
+  color:rgba(255,255,255,.65) !important;
+}
+
+body.dark footer .ft-name,
+body.dark footer .ft-ct,
+body.dark footer .ft-tag{
+  color:var(--gold) !important;
+}
+
+body.dark footer a,
+body.dark footer button{
+  color:rgba(255,255,255,.65) !important;
+}
+
+body.dark footer a:hover,
+body.dark footer button:hover{
+  color:var(--gold) !important;
+}
+
+body.dark footer .ft-div{
+  background:rgba(255,255,255,.12) !important;
+}
+
+
+/* ═══════════════════════════════════════
+   TOPBAR
+═══════════════════════════════════════ */
+.topbar-new{background:var(--gd);padding:8px 0;position:relative;z-index:300;border-bottom:1px solid rgba(201,168,76,.12);}
+.topbar-new-in{max-width:1240px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;}
+.topbar-ar{font-family:'Amiri',serif;font-size:.95rem;color:var(--gold);letter-spacing:.02em;}
+.topbar-links{display:flex;align-items:center;gap:6px;}
+.topbar-links button{font-family:'Cinzel',serif;font-size:.6rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:rgba(250,247,239,.65);background:none;border:none;cursor:pointer;padding:5px 10px;border-radius:4px;transition:color .15s,background .15s;white-space:nowrap;}
+.topbar-links button:hover{color:var(--gold);background:rgba(201,168,76,.08);}
+.topbar-donate{background:var(--gold)!important;color:var(--gd)!important;font-weight:700!important;border-radius:4px!important;padding:6px 16px!important;}
+.topbar-donate:hover{background:var(--glt)!important;}
+@media(max-width:768px){.topbar-ar{display:none;}.topbar-new-in{justify-content:center;}.topbar-links{flex-wrap:wrap;justify-content:center;}}
+@media(max-width:480px){.topbar-new{display:none;}}
+
+/* ═══════════════════════════════════════
+   HERO V2 — Full bleed with prayer card
+═══════════════════════════════════════ */
+.hero-v2{
+  position:relative;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
+  padding:60px 60px 80px;
+  overflow:hidden;
+}
+@media(max-width:1024px){.hero-v2{flex-direction:column;justify-content:center;padding:40px 32px 60px;min-height:auto;}}
+@media(max-width:480px){.hero-v2{padding:32px 20px 48px;}}
+
+/* BG image*/
+.hero-v2-bg{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      105deg,
+      rgba(5,12,7,.86) 0%,
+      rgba(5,12,7,.62) 48%,
+      rgba(5,12,7,.35) 100%
+    ),
+    url('./src/assets/images/mosque.png') center center / cover no-repeat;
+  z-index:0;
+}
+
+/* Dark overlay for text readability */
+.hero-v2-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    105deg,
+    rgba(5,12,7,.82) 0%,
+    rgba(5,12,7,.55) 50%,
+    rgba(5,12,7,.3) 100%
+  );
+  z-index:1;
+}
+
+/* LEFT side */
+.hero-v2-left{
+  position:relative;
+  z-index:2;
+  flex:1;
+  max-width:520px;
+}
+.hero-v2-arabic{
+  font-family:'Amiri',serif;
+  font-size:clamp(.9rem,2vw,1.1rem);
+  color:var(--gold);
+  letter-spacing:.04em;
+  margin-bottom:20px;
+  opacity:.85;
+}
+.hero-v2-title{
+  font-family:'Cinzel',serif;
+  font-size:clamp(2.4rem,6vw,4.5rem);
+  font-weight:700;
+  color:var(--w);
+  line-height:1.08;
+  letter-spacing:.04em;
+  margin-bottom:24px;
+  text-shadow:0 2px 20px rgba(0,0,0,.4);
+}
+.hero-v2-desc{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(.95rem,1.8vw,1.1rem);
+  color:rgba(255,255,255,.72);
+  line-height:1.8;
+  margin-bottom:36px;
+  max-width:440px;
+}
+.hero-v2-btns{display:flex;gap:16px;flex-wrap:wrap;}
+.btn-v2-primary{
+  font-family:'Cinzel',serif;font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  background:var(--gold);color:var(--gd);border:none;border-radius:6px;padding:14px 32px;cursor:pointer;
+  transition:background .2s,transform .15s;box-shadow:0 4px 20px rgba(201,168,76,.35);
+}
+.btn-v2-primary:hover{background:var(--glt);transform:translateY(-2px);}
+.btn-v2-outline{
+  font-family:'Cinzel',serif;font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;
+  background:transparent;color:rgba(255,255,255,.88);border:1.5px solid rgba(255,255,255,.45);
+  border-radius:6px;padding:14px 32px;cursor:pointer;transition:all .2s;
+}
+.btn-v2-outline:hover{background:rgba(255,255,255,.1);border-color:var(--w);transform:translateY(-2px);}
+@media(max-width:480px){.hero-v2-btns{flex-direction:column;}.btn-v2-primary,.btn-v2-outline{text-align:center;}}
+
+/* RIGHT side — Prayer Card */
+.hero-v2-right{
+  position:relative;
+  z-index:2;
+  flex-shrink:0;
+}
+@media(max-width:1024px){.hero-v2-right{width:100%;max-width:420px;margin:0 auto;}}
+
+.prayer-card{
+  background:rgba(10,28,16,.88);
+  border:1px solid rgba(201,168,76,.3);
+  border-radius:16px;
+  padding:0;
+  width:340px;
+  overflow:hidden;
+  box-shadow:0 20px 60px rgba(0,0,0,.5);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+}
+@media(max-width:400px){.prayer-card{width:100%;}}
+
+.prayer-card-hdr{
+  display:flex;align-items:flex-start;justify-content:space-between;
+  padding:20px 22px 16px;
+  border-bottom:1px solid rgba(201,168,76,.18);
+  background:rgba(201,168,76,.06);
+}
+.prayer-card-title{
+  font-family:'Cinzel',serif;font-size:.82rem;font-weight:600;
+  color:var(--gold);letter-spacing:.06em;margin-bottom:5px;
+}
+.prayer-card-date{
+  font-family:'Cormorant Garamond',serif;font-size:.85rem;
+  color:rgba(255,255,255,.5);font-style:italic;
+}
+.prayer-card-icon{font-size:1.3rem;opacity:.7;}
+
+.prayer-list{padding:6px 0;}
+.prayer-row{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:11px 22px;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  transition:background .15s;
+}
+.prayer-row:last-child{border-bottom:none;}
+.prayer-row.next-prayer{
+  background:rgba(201,168,76,.12);
+  border-left:3px solid var(--gold);
+  padding-left:19px;
+}
+.prayer-row.next-prayer .prayer-name{color:var(--gold);font-weight:600;}
+.prayer-row.next-prayer .prayer-time{color:var(--gold);font-weight:700;}
+.prayer-row-left{display:flex;align-items:center;gap:10px;}
+.prayer-icon{font-size:1rem;width:22px;text-align:center;opacity:.75;}
+.prayer-name{font-family:'Cinzel',serif;font-size:.72rem;font-weight:500;letter-spacing:.06em;color:rgba(255,255,255,.82);text-transform:uppercase;}
+.prayer-time{font-family:'Cormorant Garamond',serif;font-size:.96rem;font-weight:600;color:rgba(255,255,255,.9);}
+
+.prayer-card-footer{
+  display:flex;align-items:center;gap:8px;
+  padding:14px 22px;
+  background:rgba(201,168,76,.06);
+  border-top:1px solid rgba(201,168,76,.18);
+  font-family:'Cinzel',serif;font-size:.7rem;color:var(--gold);letter-spacing:.08em;
+}
+.prayer-card-footer-right{margin-left:auto;opacity:.6;}
+
+/* Bottom ornament line */
+.hero-v2-bottom-ornament{
+  position:absolute;bottom:24px;left:50%;transform:translateX(-50%);
+  z-index:2;display:flex;align-items:center;gap:12px;
+}
+.hero-v2-line{width:80px;height:1px;background:rgba(201,168,76,.35);}
+
+</style>
+</head>
+<body>
+<div class="geo-bg"></div>
+<!-- TOPBAR -->
+<div class="topbar-new">
+  <div class="topbar-new-in">
+    <span class="topbar-ar">جمعیت اہل حدیث جموں و کشمیر</span>
+    <div class="topbar-links">
+      <button onclick="go('ifta-board')">Fatwa Board</button>
+      <button onclick="go('waqf')">Waqf Board</button>
+      <button onclick="go('books')">Media</button>
+      <button onclick="go('about')">Contact</button>
+      <button class="topbar-donate" onclick="go('login')">Donate</button>
+    </div>
+  </div>
+</div>
+<!-- NAV -->
+<nav><div class="nav-in">
+  <div class="nav-logo" onclick="go('home')">
+  <img src="/src/assets/images/logo.png" alt="Jamiat Ahle Hadees JK" class="nav-emb" style="object-fit:contain;">
+    <div><span class="nl-title">Jamiat Ahle Hadees</span><span class="nl-sub">جمعیت اہل حدیث جموں و کشمیر</span></div>
+  </div>
+  <ul class="nav-links">
+    <li><button onclick="go('home')" class="nav-home-btn">Home</button></li>
+    <li class="nav-sep" aria-hidden="true"></li>
+    <li>
+      <button>About Jamiat <span class="chevron">▼</span></button>
+      <ul class="dropdown">
+        <li><button onclick="go('aims')">Aims &amp; Objectives</button></li>
+        <li><button onclick="go('about')">About Us</button></li>
+        <li><button onclick="go('constitution')">Our Constitution</button></li>
+        <li><button onclick="go('events')">Events</button></li>
+      </ul>
+    </li>
+    <li>
+      <button>SMERT <span class="chevron">▼</span></button>
+      <ul class="dropdown">
+        <li><button onclick="go('smert')">Structure &amp; Aims</button></li>
+        <li><button onclick="go('schools')">Schools</button></li>
+        <li><button onclick="go('colleges')">Colleges</button></li>
+        <li><button onclick="go('madarsa')">Madarsas</button></li>
+        <li><button onclick="go('masjid')">Masjids</button></li>
+        <li><button onclick="go('kuliyat-boys')">Al Kulyat us Salafia (Boys)</button></li>
+        <li><button onclick="go('kuliyat-girls')">Al Kulyat us Salafia (Girls)</button></li>
+        <li><button onclick="go('markaz-ibn')">Markaz Ibn Masood</button></li>
+        <li><button onclick="go('markaz-aisha')">Markaz Aisha</button></li>
+        <li><button onclick="go('sunday')">Sunday / Vocational Classes</button></li>
+      </ul>
+    </li>
+    <li>
+      <button>Fatwa / Q&amp;A <span class="chevron">▼</span></button>
+      <ul class="dropdown">
+        <li><button onclick="go('ifta-board')">Ifta Board</button></li>
+        <li><button onclick="go('fatwa-form')">Submit a Question</button></li>
+        <li><button onclick="go('fatwa-status')">Check Status</button></li>
+      </ul>
+    </li>
+    <li>
+      <button>Waqf-I-Tanzeem <span class="chevron">▼</span></button>
+      <ul class="dropdown">
+        <li><button onclick="go('waqf')">Register Property</button></li>
+        <li><button onclick="go('waqf-reg')">Registered Masajid</button></li>
+        <li><button onclick="go('waqf-unreg')">Unregistered Masajid</button></li>
+        <li><button onclick="go('waqf-darasgah')">Darasgah &amp; Institutions</button></li>
+        <li><button onclick="go('waqf-other')">Other Properties</button></li>
+      </ul>
+    </li>
+    <li>
+      <button>Publications <span class="chevron">▼</span></button>
+      <ul class="dropdown">
+        <li><a href="https://mmtt.blob.core.windows.net/jahjk/PublicationsPDF/aceda4e8-c80f-4654-82f0-2524fa0ca2c8.pdf" target="_blank">Download Meeqat ↓</a></li>
+        <li><button onclick="go('books')">Books Published</button></li>
+        <li><button onclick="go('new-pub')">New Publications</button></li>
+        <li><button onclick="go('weekly')">Weekly Muslim Archive</button></li>
+      </ul>
+    </li>
+    <li><button class="nav-cta" onclick="go('login')">Login / Account</button></li>
+   <button id="themeToggle" class="nav-theme-btn">Dark Theme</button>
+  </ul>
+  <button class="nav-ham" id="ham"><span></span><span></span><span></span></button>
+</div></nav>
+<!-- MOBILE DRAWER -->
+<div class="mob-drawer" id="drawer">
+  <button class="mob-a" onclick="go('home')">Home</button>
+  <button class="mob-gb" data-t="m-about">About Jamiat <span>▾</span></button>
+  <div class="mob-sub" id="m-about"><button onclick="go('aims')">Aims &amp; Objectives</button><button onclick="go('about')">About Us</button><button onclick="go('constitution')">Our Constitution</button><button onclick="go('events')">Events</button></div>
+  <button class="mob-gb" data-t="m-smert">SMERT <span>▾</span></button>
+  <div class="mob-sub" id="m-smert"><button onclick="go('smert')">Structure &amp; Aims</button><button onclick="go('schools')">Schools</button><button onclick="go('colleges')">Colleges</button><button onclick="go('madarsa')">Madarsas</button><button onclick="go('masjid')">Masjids</button><button onclick="go('kuliyat-boys')">Al Kulyat us Salafia (Boys)</button><button onclick="go('kuliyat-girls')">Al Kulyat us Salafia (Girls)</button><button onclick="go('markaz-ibn')">Markaz Ibn Masood</button><button onclick="go('markaz-aisha')">Markaz Aisha</button><button onclick="go('sunday')">Sunday / Vocational Classes</button></div>
+  <button class="mob-gb" data-t="m-fatwa">Fatwa / Q&amp;A <span>▾</span></button>
+  <div class="mob-sub" id="m-fatwa"><button onclick="go('ifta-board')">Ifta Board</button><button onclick="go('fatwa-form')">Submit a Question</button><button onclick="go('fatwa-status')">Check Status</button></div>
+  <button class="mob-gb" data-t="m-waqf">Waqf-I-Tanzeem <span>▾</span></button>
+  <div class="mob-sub" id="m-waqf"><button onclick="go('waqf')">Register Property</button><button onclick="go('waqf-reg')">Registered Masajid</button><button onclick="go('waqf-unreg')">Unregistered Masajid</button><button onclick="go('waqf-darasgah')">Darasgah &amp; Institutions</button><button onclick="go('waqf-other')">Other Properties</button></div>
+  <button class="mob-gb" data-t="m-pub">Publications <span>▾</span></button>
+  <div class="mob-sub" id="m-pub"><a href="https://mmtt.blob.core.windows.net/jahjk/PublicationsPDF/aceda4e8-c80f-4654-82f0-2524fa0ca2c8.pdf" target="_blank">Download Meeqat ↓</a><button onclick="go('books')">Books Published</button><button onclick="go('new-pub')">New Publications</button><button onclick="go('weekly')">Weekly Muslim Archive</button></div>
+  <div class="mob-cta-w"><button class="mob-cta" onclick="go('fatwa-form')" style="margin-bottom:10px;background:var(--gm);">Ask a Question</button>
+  <button class="mob-cta" onclick="go('login')" style="margin-top:0;">🔑 Login / Account</button></div>
+</div>
+<!-- ═══ HOME ═══ -->
+<div class="page active" id="p-home">
+<!-- FULL BLEED HERO -->
+<section class="hero-v2">
+  <!-- Background: place your mosque image here -->
+  <div class="hero-v2-bg" id="heroBg">
+    <!--
+      HERO BACKGROUND IMAGE
+      Place your mosque photo at: src/assets/images/hero-bg.jpg
+      Recommended: high-res landscape image, dark/night mosque scene
+      Min size: 1920x1080px  |  Format: JPG/WEBP
+    -->
+  </div>
+  <div class="hero-v2-overlay"></div>
+
+  <!-- LEFT: Text content -->
+  <div class="hero-v2-left">
+    <div class="hero-v2-arabic">جمعیت اہل حدیث جموں و کشمیر</div>
+    <h1 class="hero-v2-title">JAMIAT AHLE<br>HADEES JK</h1>
+    <p class="hero-v2-desc">Serving the Muslim community of Jammu &amp; Kashmir<br>through education, religious guidance, and community<br>welfare, grounded in the Quran and authentic Sunnah.</p>
+    <div class="hero-v2-btns">
+      <button class="btn-v2-primary" onclick="go('smert')">Explore More</button>
+      <button class="btn-v2-outline" onclick="go('schools')">Our Institutions</button>
+    </div>
+  </div>
+
+  <!-- RIGHT: Prayer Times Card -->
+  <div class="hero-v2-right">
+    <div class="prayer-card">
+      <div class="prayer-card-hdr">
+        <div>
+          <div class="prayer-card-title">Prayer Times (Srinagar)</div>
+          <div class="prayer-card-date" id="prayer-date-display">Loading...</div>
+        </div>
+        <div class="prayer-card-icon">📅</div>
+      </div>
+      <div class="prayer-list" id="prayer-list">
+        <div class="prayer-row" data-prayer="Fajr">
+          <div class="prayer-row-left"><span class="prayer-icon">🌙</span><span class="prayer-name">Fajr</span></div>
+          <span class="prayer-time" id="pt-Fajr">—</span>
+        </div>
+        <div class="prayer-row" data-prayer="Sunrise">
+          <div class="prayer-row-left"><span class="prayer-icon">🌅</span><span class="prayer-name">Sunrise</span></div>
+          <span class="prayer-time" id="pt-Sunrise">—</span>
+        </div>
+        <div class="prayer-row" data-prayer="Dhuhr">
+          <div class="prayer-row-left"><span class="prayer-icon">☀️</span><span class="prayer-name">Zuhr</span></div>
+          <span class="prayer-time" id="pt-Dhuhr">—</span>
+        </div>
+        <div class="prayer-row" data-prayer="Asr">
+          <div class="prayer-row-left"><span class="prayer-icon">🌤</span><span class="prayer-name">Asr</span></div>
+          <span class="prayer-time" id="pt-Asr">—</span>
+        </div>
+        <div class="prayer-row" data-prayer="Maghrib">
+          <div class="prayer-row-left"><span class="prayer-icon">🌆</span><span class="prayer-name">Maghrib</span></div>
+          <span class="prayer-time" id="pt-Maghrib">—</span>
+        </div>
+        <div class="prayer-row" data-prayer="Isha">
+          <div class="prayer-row-left"><span class="prayer-icon">🌃</span><span class="prayer-name">Isha</span></div>
+          <span class="prayer-time" id="pt-Isha">—</span>
+        </div>
+      </div>
+      <div class="prayer-card-footer">
+        <span>⏱</span>
+        <span id="lc2">--:--:-- --</span>
+        <span class="prayer-card-footer-right">Live Clock</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom divider ornament -->
+  <div class="hero-v2-bottom-ornament">
+    <div class="hero-v2-line"></div>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" fill="#c9a84c"/><circle cx="12" cy="12" r="8" stroke="#c9a84c" stroke-width="1" fill="none" opacity=".4"/></svg>
+    <div class="hero-v2-line"></div>
+  </div>
+</section>
+<div class="stats-strip"><div class="stats-g"><div class="stat-i"><span class="stat-n">75+</span><div class="stat-l">Years of Service</div></div><div class="stat-i"><span class="stat-n">120+</span><div class="stat-l">Institutions</div></div><div class="stat-i"><span class="stat-n">200+</span><div class="stat-l">Registered Masajid</div></div><div class="stat-i"><span class="stat-n">50K+</span><div class="stat-l">Community Members</div></div></div></div>
+<!-- INFO PANEL: Events, Friday List, About Jamiat -->
+<div class="bgc">
+<div class="sec" style="padding-top:48px;padding-bottom:48px;">
+<div class="info-panel-grid">
+
+  <!-- EVENTS COLUMN -->
+  <div class="info-col rv d1">
+    <div class="info-col-hdr">
+      <span class="info-col-icon">📅</span>
+      <span class="info-col-title">Events</span>
+      <button class="info-col-more" onclick="go('events')">View all →</button>
+    </div>
+    <div class="info-col-body">
+      <div class="info-item" onclick="go('events')">
+        <div class="info-item-date">May 2025 · Srinagar</div>
+        <div class="info-item-title">دین رحمت کانفرنس</div>
+        <div class="info-item-desc">جامع سلفیہ لال بازار میں عظیم الشان دین رحمت کانفرنس</div>
+      </div>
+      <div class="info-item" onclick="go('events')">
+        <div class="info-item-date">June 2025 · Jammu</div>
+        <div class="info-item-title">Annual Scholars Seminar</div>
+        <div class="info-item-desc">Academic discourse on contemporary Islamic issues</div>
+      </div>
+      <div class="info-item" onclick="go('events')">
+        <div class="info-item-date">August 2025 · Srinagar</div>
+        <div class="info-item-title">Al Kulyat Graduation</div>
+        <div class="info-item-desc">Annual graduation — Al Kulyat us Salafia Boys &amp; Girls</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FRIDAY LIST COLUMN -->
+  <div class="info-col rv d2">
+    <div class="info-col-hdr">
+      <span class="info-col-icon">🕌</span>
+      <span class="info-col-title">Friday List</span>
+      <button class="info-col-more" onclick="go('friday')">Full list →</button>
+    </div>
+    <div class="info-col-body">
+      <div class="info-item" style="cursor:default;">
+        <div class="info-item-date">Jama Masjid Lal Bazar, Srinagar</div>
+        <div class="info-item-title">Sheikh Abdul Rashid Siddiqui</div>
+        <div class="info-item-desc">1:30 PM</div>
+      </div>
+      <div class="info-item" style="cursor:default;">
+        <div class="info-item-date">Masjid Ibrahim, Sopore</div>
+        <div class="info-item-title">Maulana Muhammad Yusuf</div>
+        <div class="info-item-desc">1:00 PM</div>
+      </div>
+      <div class="info-item" style="cursor:default;">
+        <div class="info-item-date">Masjid al-Huda, Baramulla</div>
+        <div class="info-item-title">Qari Abdullah Mir</div>
+        <div class="info-item-desc">1:30 PM</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT JAMIAT COLUMN -->
+  <div class="info-col rv d3">
+    <div class="info-col-hdr">
+      <span class="info-col-icon">ℹ️</span>
+      <span class="info-col-title">About Jamiat</span>
+      <button class="info-col-more" onclick="go('about')">Learn more →</button>
+    </div>
+    <div class="info-col-body">
+      <div class="info-item" onclick="go('aims')" style="border-left:3px solid var(--gold);padding-left:14px;border-radius:0 var(--r) var(--r) 0;">
+        <div class="info-item-title">Aims &amp; Objectives</div>
+        <div class="info-item-desc">Promoting Tawheed, Islamic education, unity and community welfare across J&amp;K.</div>
+      </div>
+      <div class="info-item" onclick="go('constitution')" style="border-left:3px solid var(--gold);padding-left:14px;border-radius:0 var(--r) var(--r) 0;">
+        <div class="info-item-title">Our Constitution</div>
+        <div class="info-item-desc">Download the official Jamiat constitution outlining structure and principles.</div>
+      </div>
+      <div class="info-item" onclick="go('smert')" style="border-left:3px solid var(--gold);padding-left:14px;border-radius:0 var(--r) var(--r) 0;">
+        <div class="info-item-title">SMERT Structure</div>
+        <div class="info-item-desc">Salafi Muslim Educational Religious Trust — our organisational framework.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+</div>
+<!-- END of INFO PANEL -->
+<!-- Carousel -->
+<div class="car-sec">
+  <div class="car-hdr rv">
+    <span class="car-lbl">✦ Events &amp; Programmes Gallery</span>
+    <div class="car-nav">
+      <button class="car-btn" id="cp">&#8592;</button>
+      <button class="car-btn" id="cn">&#8594;</button>
+    </div>
+  </div>
+
+  <div class="car-vp">
+    <div class="car-track" id="ct">
+
+      <div class="car-slide">
+        <img src="./src/assets/images/conference.JPG" alt="دین رحمت کانفرنس">
+        <div class="slide-cap">
+          <span class="ctag">Conference</span>
+          <span class="ctext">دین رحمت کانفرنس — جامع سلفیہ لال بازار</span>
+        </div>
+      </div>
+
+      <div class="car-slide">
+        <img src="./src/assets/images/ceremony.JPG" alt="Graduation Day">
+        <div class="slide-cap">
+          <span class="ctag">Education</span>
+          <span class="ctext">Graduation — Al Kulyat us Salafia</span>
+        </div>
+      </div>
+
+      <div class="car-slide">
+        <img src="./src/assets/images/masjid.JPG" alt="Masjid Registration">
+        <div class="slide-cap">
+          <span class="ctag">Waqf</span>
+          <span class="ctext">Masjid Registration Drive 2024</span>
+        </div>
+      </div>
+
+      <div class="car-slide">
+        <img src="./src/assets/images/community.JPG" alt="Community Gathering">
+        <div class="slide-cap">
+          <span class="ctag">Community</span>
+          <span class="ctext">Annual Jamiat Gathering — Kashmir</span>
+        </div>
+      </div>
+
+      <div class="car-slide">
+        <img src="./src/assets/images/meeqat.png" alt="Meeqat Publication">
+        <div class="slide-cap">
+          <span class="ctag">Publications</span>
+          <span class="ctext">Meeqat — New Edition Launch</span>
+        </div>
+      </div>
+
+      <div class="car-slide">
+        <img src="./src/assets/images/seminar.JPG" alt="Scholars Seminar">
+        <div class="slide-cap">
+          <span class="ctag">Seminar</span>
+          <span class="ctext">Islamic Scholars Seminar — Srinagar</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="car-dots" id="cd"></div>
+</div>
+<!-- Pillars -->
+<div class="bgc"><div class="sec"><div class="sh rv"><span class="stag">Who We Are</span><h2 class="stitle">Built on Knowledge &amp; Community</h2><p class="sdesc">A trusted Islamic organisation serving the people of Jammu &amp; Kashmir through education, guidance, and community welfare.</p><div class="orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+<div class="pillars-g">
+  <div class="pillar rv d1"><div class="p-ico"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><div class="p-t">Islamic Education</div><p class="p-d">Supporting Madrasas, schools, and colleges that provide authentic Islamic and modern education throughout J&amp;K.</p></div>
+  <div class="pillar rv d2"><div class="p-ico"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div class="p-t">Fatwa &amp; Guidance</div><p class="p-d">Connecting the community with qualified scholars for authentic Fatawa on worship, family, and daily life.</p></div>
+  <div class="pillar rv d3"><div class="p-ico"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div class="p-t">Masjid Welfare</div><p class="p-d">Registering and supporting Masajid and Islamic properties under the Waqf-i-Tanzeem framework.</p></div>
+  <div class="pillar rv d4"><div class="p-ico"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div><div class="p-t">Publications</div><p class="p-d">Producing Islamic literature including Meeqat, scholarly books, and the Weekly Muslim newspaper.</p></div>
+</div></div></div>
+<div class="sep"></div>
+<!-- Services -->
+<div class="bgk"><div class="sec"><div class="sh rv"><span class="stag dk-tag">What We Offer</span><h2 class="stitle dk-title">Our Services</h2><p class="sdesc dk-desc">From religious guidance to educational institutions — serving every need of the Muslim community.</p><div class="orn dk-orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+<div class="svc-g">
+  <div class="svc-card rv d1" onclick="go('fatwa-form')"><div class="svc-n">01</div><div class="svc-t">Fatwa / Islamic Q&amp;A</div><p class="svc-d">Submit your question to our Ifta Board and receive a verified response from qualified scholars.</p><span class="svc-arr">→</span></div>
+  <div class="svc-card rv d2" onclick="go('waqf')"><div class="svc-n">02</div><div class="svc-t">Waqf-i-Tanzeem</div><p class="svc-d">Register mosques and Islamic properties under the trust framework for long-term protection.</p><span class="svc-arr">→</span></div>
+  <div class="svc-card rv d3" onclick="go('smert')"><div class="svc-n">03</div><div class="svc-t">SMERT Institutions</div><p class="svc-d">Explore our network of affiliated schools, colleges, and educational institutions across J&amp;K.</p><span class="svc-arr">→</span></div>
+  <div class="svc-card rv d4" onclick="go('books')"><div class="svc-n">04</div><div class="svc-t">Publications &amp; Media</div><p class="svc-d">Access our library of books, download Meeqat, and browse the Weekly Muslim archive.</p><span class="svc-arr">→</span></div>
+  <div class="svc-card rv d5" onclick="go('friday')"><div class="svc-n">05</div><div class="svc-t">Friday List</div><p class="svc-d">View weekly Khatib assignments for Masajid across Jammu &amp; Kashmir every Friday.</p><span class="svc-arr">→</span></div>
+  <div class="svc-card rv d6" onclick="go('events')"><div class="svc-n">06</div><div class="svc-t">Events &amp; Programmes</div><p class="svc-d">Explore conferences, seminars, and community gatherings across J&amp;K.</p><span class="svc-arr">→</span></div>
+</div></div></div>
+<div class="sep"></div>
+<!-- Institutions Quick -->
+<div class="bgc"><div class="sec"><div class="sh rv"><span class="stag">SMERT Network</span><h2 class="stitle">Our Institutions</h2><p class="sdesc">A growing network of educational and religious institutions serving the community of J&amp;K.</p><div class="orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+<div class="inst-g">
+  <div class="inst-card rv d1" onclick="go('schools')"><div class="inst-ico"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div class="inst-t">Schools</div><div class="inst-m">View All →</div></div>
+  <div class="inst-card rv d2" onclick="go('colleges')"><div class="inst-ico"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div><div class="inst-t">Colleges</div><div class="inst-m">View All →</div></div>
+  <div class="inst-card rv d3" onclick="go('madarsa')"><div class="inst-ico"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div><div class="inst-t">Madaris</div><div class="inst-m">View All →</div></div>
+  <div class="inst-card rv d4" onclick="go('masjid')"><div class="inst-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div><div class="inst-t">Masjids</div><div class="inst-m">View All →</div></div>
+  <div class="inst-card rv d5" onclick="go('kuliyat-boys')"><div class="inst-ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div class="inst-t">Al Kulyat us Salafia (Boys)</div><div class="inst-m">Learn More →</div></div>
+  <div class="inst-card rv d6" onclick="go('kuliyat-girls')"><div class="inst-ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><div class="inst-t">Al Kulyat us Salafia (Girls)</div><div class="inst-m">Learn More →</div></div>
+  <div class="inst-card rv d7" onclick="go('markaz-ibn')"><div class="inst-ico"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div><div class="inst-t">Markaz Ibn Masood</div><div class="inst-m">Learn More →</div></div>
+  <div class="inst-card rv d8" onclick="go('sunday')"><div class="inst-ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="inst-t">Sunday / Vocational Classes</div><div class="inst-m">Learn More →</div></div>
+</div></div></div>
+<div class="sep"></div>
+<!-- Publications -->
+<div class="bgk"><div class="sec"><div class="sh rv"><span class="stag dk-tag">Knowledge &amp; Media</span><h2 class="stitle dk-title">Publications</h2><p class="sdesc dk-desc">Spreading knowledge through print and digital media, in the tradition of Islamic scholarship.</p><div class="orn dk-orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+<div class="pub-g">
+  <div class="pub-card rv d1" onclick="window.open('https://mmtt.blob.core.windows.net/jahjk/PublicationsPDF/aceda4e8-c80f-4654-82f0-2524fa0ca2c8.pdf','_blank')"><div class="pub-thumb"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="12" y1="6" x2="16" y2="6"/><line x1="12" y1="10" x2="16" y2="10"/></svg></div><div class="pub-body"><div class="pub-type">Monthly Journal</div><div class="pub-ttl">Meeqat</div><p class="pub-desc">Download the latest issue of our monthly Islamic journal — scholarship and community news.</p><div class="pub-lnk">Download PDF <span>→</span></div></div></div>
+  <div class="pub-card rv d2" onclick="go('books')"><div class="pub-thumb"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div><div class="pub-body"><div class="pub-type">Books</div><div class="pub-ttl">Published Books</div><p class="pub-desc">Browse our catalogue of scholarly books on Aqeedah, Fiqh, Tafseer and contemporary Islamic thought.</p><div class="pub-lnk">Browse Library <span>→</span></div></div></div>
+  <div class="pub-card rv d3" onclick="go('weekly')"><div class="pub-thumb"><svg viewBox="0 0 24 24"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8V6Z"/></svg></div><div class="pub-body"><div class="pub-type">Newspaper</div><div class="pub-ttl">Weekly Muslim Archive</div><p class="pub-desc">Access our archive of the Weekly Muslim — Islamic community news, commentary and current affairs.</p><div class="pub-lnk">Browse Archive <span>→</span></div></div></div>
+</div></div></div>
+<div class="sep"></div>
+<!-- Waqf CTA -->
+<div class="bgc"><div class="sec rv"><div class="waqf-wrap">
+  <div class="waqf-text"><span class="stag dk-tag">Waqf-i-Tanzeem</span><h2 class="stitle dk-title">Register Your Property</h2><p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:rgba(255,255,255,.62);line-height:1.75;margin-top:14px;">Protect mosques, Madrasas, and Islamic properties by registering them under Waqf-i-Tanzeem. Ensure these sacred places remain in the community's trust for generations to come.</p><div class="waqf-btns"><button class="btn btn-g" onclick="go('waqf')">Register a Property</button><button class="btn btn-o" onclick="go('waqf-reg')">View Registered Masajid</button></div></div>
+  <div class="waqf-stats"><div class="waqf-stat"><span class="waqf-num">200+</span><div class="waqf-lbl">Registered Masajid</div></div><div class="waqf-stat"><span class="waqf-num">50+</span><div class="waqf-lbl">Institutions Supported</div></div></div>
+</div></div></div>
+</div><!-- end home -->
+<!-- ═══ SMERT ═══ -->
+<div class="page" id="p-smert">
+<div class="pb"><div class="pb-ar">جمعيت أهل الحديث</div><div class="pb-title">SMERT</div><div class="pb-gold">Salafi Muslim Educational Religious Trust</div><div class="pb-sub">Structure, Aims &amp; Goals of Jamiat Ahle Hadees J&amp;K</div></div>
+<div class="bgw"><div class="sec"><div class="smert-lay">
+  <div class="smert-sb rvl"><h3>What is SMERT?</h3><p>SMERT stands for Salafi Muslim Educational Religious Trust — the formal organisational structure of Jamiat Ahle Hadees Jammu &amp; Kashmir.</p>
+    <div class="smert-row"><span class="smert-L">S</span><div><span class="smert-word">Salafi</span><span class="smert-mean">Followers of the Salaf-us-Saliheen</span></div></div>
+    <div class="smert-row"><span class="smert-L">M</span><div><span class="smert-word">Muslim</span><span class="smert-mean">Serving the Muslim Ummah</span></div></div>
+    <div class="smert-row"><span class="smert-L">E</span><div><span class="smert-word">Educational</span><span class="smert-mean">Knowledge as a pillar of faith</span></div></div>
+    <div class="smert-row"><span class="smert-L">R</span><div><span class="smert-word">Religious</span><span class="smert-mean">Grounded in Quran &amp; Sunnah</span></div></div>
+    <div class="smert-row"><span class="smert-L">T</span><div><span class="smert-word">Trust</span><span class="smert-mean">A registered charitable trust</span></div></div>
+  </div>
+  <div class="rvr">
+    <div class="sh lft"><span class="stag">Our Structure</span><h2 class="stitle">Aims &amp; <em>Goals</em></h2><p class="sdesc">Jamiat Ahle Hadees J&amp;K, operating under SMERT, is committed to a comprehensive vision for the Muslim community of the region.</p><div class="orn lft"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+    <div class="goals-g" style="margin-top:32px;">
+      <div class="goal-card"><h4>Propagation of Quran &amp; Sunnah</h4><p>Spreading the authentic teachings of Islam as understood by the Salaf-us-Saliheen through education and da'wah.</p></div>
+      <div class="goal-card"><h4>Educational Excellence</h4><p>Establishing and maintaining quality educational institutions that combine Islamic and modern education.</p></div>
+      <div class="goal-card"><h4>Community Welfare</h4><p>Providing social welfare, charitable services and support to the Muslim community of J&amp;K.</p></div>
+      <div class="goal-card"><h4>Waqf Management</h4><p>Registering and managing Islamic endowment properties to preserve community assets for future generations.</p></div>
+      <div class="goal-card"><h4>Islamic Publications</h4><p>Publishing books, periodicals and educational materials to spread Islamic knowledge and scholarship.</p></div>
+      <div class="goal-card"><h4>Fatwa &amp; Guidance</h4><p>Providing authentic Islamic rulings through a qualified Ifta Board to guide the community on religious matters.</p></div>
+    </div>
+    <div style="background:var(--cream);border-radius:var(--rl);padding:32px;margin-top:8px;">
+      <h3 style="font-family:'Cinzel',serif;font-size:1.1rem;font-weight:600;color:var(--gm);margin-bottom:12px;">Trust Structure</h3>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:.97rem;color:var(--inkm);line-height:1.8;margin-bottom:20px;">SMERT operates under a structured hierarchy ensuring accountability, transparency and adherence to Islamic principles in all activities. The trust is governed by a board of trustees comprising senior scholars and community leaders.</p>
+      <div class="trust-box-row">
+        <div class="trust-box"><div class="trust-box-n">Board</div><div class="trust-box-l">of Trustees</div></div>
+        <div class="trust-box"><div class="trust-box-n">Ifta</div><div class="trust-box-l">Board of Scholars</div></div>
+        <div class="trust-box"><div class="trust-box-n">J&amp;K</div><div class="trust-box-l">Regional Chapters</div></div>
+        <div class="trust-box"><div class="trust-box-n">120+</div><div class="trust-box-l">Institutions</div></div>
+      </div>
+    </div>
+  </div>
+</div></div></div>
+</div>
+
+<!-- ═══ AIMS ═══ -->
+<div class="page" id="p-aims">
+<div class="pb"><div class="pb-title">Aims &amp; Objectives</div><div class="pb-sub">The core mission and vision of Jamiat Ahle Hadees J&amp;K</div></div>
+<div class="bgw"><div class="sec"><div class="sh rv"><span class="stag">Our Mission</span><h2 class="stitle">What We Stand For</h2><p class="sdesc">Jamiat Ahle Hadees J&amp;K is guided by a clear vision rooted in the Quran and authentic Sunnah, serving the Muslim community of the region.</p><div class="orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+<div class="goals-g">
+  <div class="goal-card rv d1"><h4>🌟 Propagation of Tawheed</h4><p>Spreading pure monotheism and the authentic teachings of Islam as understood by the companions and the Salaf-us-Saliheen.</p></div>
+  <div class="goal-card rv d2"><h4>📚 Islamic Education</h4><p>Establishing and supporting schools, colleges and madarsas that provide quality religious and modern education across J&amp;K.</p></div>
+  <div class="goal-card rv d3"><h4>🤝 Community Unity</h4><p>Fostering unity, brotherhood and cooperation among the Muslim community of Jammu &amp; Kashmir.</p></div>
+  <div class="goal-card rv d4"><h4>🕌 Masjid Development</h4><p>Building, maintaining and registering mosques as centres of worship, learning and community gathering.</p></div>
+  <div class="goal-card rv d5"><h4>📖 Knowledge Dissemination</h4><p>Publishing Islamic literature including books, journals and newspapers to spread authentic religious knowledge.</p></div>
+  <div class="goal-card rv d6"><h4>⚖️ Religious Guidance</h4><p>Providing authentic Fatawa and religious guidance through a qualified and trusted Ifta Board.</p></div>
+  <div class="goal-card rv d7"><h4>🏥 Social Welfare</h4><p>Supporting underprivileged members of the Muslim community through charitable initiatives and welfare programmes.</p></div>
+  <div class="goal-card rv d8"><h4>🏛️ Waqf Preservation</h4><p>Protecting Islamic endowment properties through proper registration and management under Waqf-i-Tanzeem.</p></div>
+</div></div></div>
+</div>
+
+<!-- ═══ ABOUT ═══ -->
+<div class="page" id="p-about">
+<div class="pb"><div class="pb-ar">جمعيت أهل الحديث جموں و کشمیر</div><div class="pb-title">About Us</div><div class="pb-sub">Our history, mission and commitment to the Muslim community</div></div>
+<div class="bgw"><div class="sec"><div class="about-lay">
+  <div class="rvl">
+    <div class="sh lft"><span class="stag">Our Story</span><h2 class="stitle">A Legacy of <em>Faith</em></h2><div class="orn lft"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--inkm);line-height:1.85;margin-top:20px;margin-bottom:16px;">Jamiat Ahle Hadees Jammu &amp; Kashmir is a distinguished Islamic organisation dedicated to propagating the teachings of the Quran and authentic Hadees among the Muslim community of the region.</p>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--inkm);line-height:1.85;margin-bottom:16px;">Founded on the principles of adhering to the Quran and Sunnah as understood by the Salaf-us-Saliheen, we have established a comprehensive network of educational and religious institutions across Jammu &amp; Kashmir.</p>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--inkm);line-height:1.85;margin-bottom:28px;">Over the decades, we have grown into one of the most influential Islamic organisations in the region, with hundreds of affiliated mosques, schools, colleges and madarsas serving tens of thousands of Muslims.</p>
+    <button class="btn btn-p" onclick="go('smert')">Learn About SMERT</button>
+  </div>
+  <div class="rvr">
+    <div style="background:var(--gm);border-radius:var(--rl);padding:36px;text-align:center;margin-bottom:20px;">
+      <div style="font-family:'Amiri',serif;font-size:2.4rem;color:var(--glt);margin-bottom:12px;">الحديث</div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:rgba(255,255,255,.65);font-style:italic;line-height:1.7;">"Whoever Allah intends good for, He gives him understanding in the religion." — Sahih al-Bukhari</p>
+    </div>
+    <div class="pillars-g" style="grid-template-columns:1fr 1fr;">
+      <div class="pillar" style="padding:18px 14px;"><div class="p-t">Est. 1948</div><p class="p-d" style="font-size:.88rem;">Over 75 years of dedicated service</p></div>
+      <div class="pillar" style="padding:18px 14px;"><div class="p-t">120+ Institutions</div><p class="p-d" style="font-size:.88rem;">Schools, colleges, madarsas &amp; mosques</p></div>
+      <div class="pillar" style="padding:18px 14px;"><div class="p-t">200+ Masajid</div><p class="p-d" style="font-size:.88rem;">Registered under Waqf-i-Tanzeem</p></div>
+      <div class="pillar" style="padding:18px 14px;"><div class="p-t">All of J&amp;K</div><p class="p-d" style="font-size:.88rem;">Presence across all districts</p></div>
+    </div>
+  </div>
+</div></div></div>
+</div>
+
+<!-- ═══ CONSTITUTION ═══ -->
+<div class="page" id="p-constitution">
+<div class="pb"><div class="pb-title">Our Constitution</div><div class="pb-sub">The foundational document of Jamiat Ahle Hadees J&amp;K</div></div>
+<div class="bgw"><div class="sec" style="max-width:860px;">
+  <div class="sh rv"><span class="stag">Official Document</span><h2 class="stitle">The Constitution</h2><p class="sdesc">Access the official constitution of Jamiat Ahle Hadees J&amp;K — outlining our principles, structure, membership, and guidelines for organisational functioning.</p><div class="orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+  <div style="background:var(--cream);border:1px solid var(--cdk);border-radius:var(--rl);padding:48px;text-align:center;margin-bottom:32px;" class="rv">
+    <div style="width:80px;height:80px;background:linear-gradient(135deg,var(--gm),var(--ga));border-radius:50%;display:grid;place-items:center;margin:0 auto 20px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#e8c97a" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+    <h3 style="font-family:'Cinzel',serif;font-size:1.3rem;font-weight:600;color:var(--gm);margin-bottom:8px;">Jamiat Ahle Hadees J&amp;K — Official Constitution</h3>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--inkf);font-style:italic;margin-bottom:24px;">PDF Document · 23 MB · Urdu Language</p>
+    <a href="https://mmtt.blob.core.windows.net/jahjk/PublicationsPDF/aceda4e8-c80f-4654-82f0-2524fa0ca2c8.pdf" target="_blank" class="btn btn-g">↓ Download Constitution (23 MB)</a>
+  </div>
+  <div class="goals-g">
+    <div class="goal-card rv d1"><h4>Chapter 1 — Name &amp; Purpose</h4><p>Defines the official name, objectives and geographic scope of the organisation across Jammu &amp; Kashmir.</p></div>
+    <div class="goal-card rv d2"><h4>Chapter 2 — Membership</h4><p>Outlines the eligibility, rights and responsibilities of members at the individual and institutional level.</p></div>
+    <div class="goal-card rv d3"><h4>Chapter 3 — Governance</h4><p>Describes the structure of the board of trustees, executive committee, and general body and their roles.</p></div>
+    <div class="goal-card rv d4"><h4>Chapter 4 — Financial Matters</h4><p>Covers policies regarding donations, Waqf funds, auditing and financial accountability of the trust.</p></div>
+  </div>
+</div></div>
+</div>
+
+<!-- ═══ EVENTS ═══ -->
+<div class="page" id="p-events">
+<div class="pb"><div class="pb-title">Events &amp; Programmes</div><div class="pb-sub">Conferences, seminars, and community gatherings across Jammu &amp; Kashmir</div></div>
+<div class="bgc"><div class="sec">
+  <div class="sh rv"><span class="stag">Latest</span><h2 class="stitle">Upcoming &amp; Recent Events</h2><div class="orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+  <div class="ev-g">
+    <div class="ev-feat rvl"><div class="ev-img"><div class="ev-img-pat"></div><div class="ev-img-ar">دین رحمت کانفرنس</div><span class="ev-badge">Featured Event</span></div>
+      <div class="ev-body"><div class="ev-date">📅 May 2025 · Srinagar</div><div class="ev-title">دین رحمت کانفرنس — جامع سلفیہ لال بازار</div><p class="ev-desc">جامع سلفیہ لال بازار میں عظیم الشان دین رحمت کانفرنس کا انعقاد۔ A landmark conference on the mercy of Islam featuring prominent scholars from across the region.</p><button class="btn btn-p">View Details →</button></div>
+    </div>
+    <div class="rvr">
+      <div class="ev-item"><div class="ev-date">📅 June 2025 · Jammu</div><div class="ev-title">Annual Scholars Seminar</div><p class="ev-desc">Annual gathering of scholars for academic discourse on contemporary Islamic issues.</p></div>
+      <div class="ev-item"><div class="ev-date">📅 July 2025 · Kashmir Valley</div><div class="ev-title">Waqf Property Registration Drive</div><p class="ev-desc">Community drive to register unregistered mosques and Islamic properties across J&amp;K.</p></div>
+      <div class="ev-item"><div class="ev-date">📅 August 2025 · Srinagar</div><div class="ev-title">Al Kulyat Graduation Ceremony</div><p class="ev-desc">Annual graduation of students from Al Kulyat us Salafia — Boys &amp; Girls branches.</p></div>
+      <div class="ev-item"><div class="ev-date">📅 October 2025 · Region-wide</div><div class="ev-title">Community Welfare Programme</div><p class="ev-desc">Distribution of aid and welfare packages to underprivileged Muslim families.</p></div>
+    </div>
+  </div>
+</div></div>
+</div>
+
+<!-- ═══ FATWA FORM ═══ -->
+<div class="page" id="p-fatwa-form">
+<div class="pb"><div class="pb-ar">فتاویٰ</div><div class="pb-title">Fatwa &amp; Islamic Q&amp;A</div><div class="pb-sub">Submit your question to our qualified Ifta Board</div></div>
+<div class="bgc"><div class="sec"><div class="fatwa-lay">
+  <div class="rvl">
+    <div class="sh lft" style="margin-bottom:28px;"><span class="stag">Submit a Question</span><h2 class="stitle">Ask the <em>Scholars</em></h2><div class="orn lft"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--inkm);line-height:1.8;margin-bottom:28px;">Our Ifta Board is composed of qualified Islamic scholars grounded in the Quran and authentic Sunnah. Please provide as much context as possible for an accurate response.</p>
+    <div class="ff">
+      <div class="fg"><label class="fl">Your Full Name</label><input type="text" class="fi" placeholder="Enter your full name"></div>
+      <div class="fg"><label class="fl">Email Address</label><input type="email" class="fi" placeholder="your@email.com"></div>
+      <div class="fg"><label class="fl">Category</label><select class="fs"><option>Select a category...</option><option>Prayer (Salah)</option><option>Fasting (Sawm)</option><option>Zakat</option><option>Marriage &amp; Family</option><option>Business &amp; Finance</option><option>Halal &amp; Haram</option><option>Other</option></select></div>
+      <div class="fg"><label class="fl">Your Question</label><textarea class="fta" placeholder="Describe your question in detail, including all relevant context..."></textarea></div>
+      <div class="fg"><label class="fl">Language Preference</label><select class="fs"><option>English</option><option>Urdu</option><option>Kashmiri</option></select></div>
+      <button class="btn btn-p" style="width:100%;text-align:center;">Submit Question →</button>
+    </div>
+  </div>
+  <div class="rvr">
+    <div class="fatwa-recent"><h3>Recent Fatwas</h3>
+      <div class="f-item"><div class="f-q">Is it permissible to use digital payment apps for business transactions?</div><div class="f-meta">Finance · Answered</div></div>
+      <div class="f-item"><div class="f-q">What is the ruling on combining prayers (Jam'a) while travelling?</div><div class="f-meta">Prayer · Answered</div></div>
+      <div class="f-item"><div class="f-q">Is it permissible to work in a bank that deals with interest (riba)?</div><div class="f-meta">Finance · Answered</div></div>
+      <div class="f-item"><div class="f-q">What is the correct method of performing Witr prayer?</div><div class="f-meta">Prayer · Answered</div></div>
+      <div class="f-item"><div class="f-q">Is music and singing permissible in Islam?</div><div class="f-meta">General · Answered</div></div>
+    </div>
+    <div class="track-c"><h3>Track Your Question</h3><p>Check the status of a previously submitted question using your reference number.</p><input type="text" class="fi" placeholder="Enter reference number..." style="margin-bottom:10px;"><button class="btn btn-od" style="width:100%;text-align:center;" onclick="go('fatwa-status')">Check Status</button></div>
+  </div>
+</div></div></div>
+</div>
+
+<!-- ═══ IFTA BOARD ═══ -->
+<div class="page" id="p-ifta-board">
+<div class="pb"><div class="pb-title">Ifta Board</div><div class="pb-sub">Our qualified scholars and their areas of specialisation</div></div>
+<div class="bgw"><div class="sec">
+  <div class="sh rv"><span class="stag">Our Scholars</span><h2 class="stitle">The Ifta Board</h2><p class="sdesc">Fatawa are issued by our panel of qualified scholars, each with advanced training in Islamic jurisprudence and the sciences of Hadees.</p><div class="orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+  <div class="inst-dg">
+    <div class="idc rv d1"><div class="idc-hdr"><span class="idc-badge">Senior Scholar</span><div class="idc-t">Mufti Abdul Rashid (Chairman)</div></div><div class="idc-body"><p class="idc-d">30+ years of scholarship in Fiqh and Hadees sciences. Trained at prestigious Islamic institutions and author of several published works on Islamic jurisprudence.</p><div class="idc-more">Specialisation: Fiqh &amp; Family Law →</div></div></div>
+    <div class="idc rv d2"><div class="idc-hdr"><span class="idc-badge">Scholar</span><div class="idc-t">Maulana Muhammad Yusuf</div></div><div class="idc-body"><p class="idc-d">Specialist in contemporary financial matters and Islamic economics. Has issued Fatawa on banking, insurance and modern commercial transactions.</p><div class="idc-more">Specialisation: Finance &amp; Economics →</div></div></div>
+    <div class="idc rv d3"><div class="idc-hdr"><span class="idc-badge">Scholar</span><div class="idc-t">Sheikh Abdullah Mir</div></div><div class="idc-body"><p class="idc-d">Expert in the sciences of Hadees and Aqeedah. Specialist in matters of worship, purity and prayer with extensive knowledge of classical Islamic texts.</p><div class="idc-more">Specialisation: Ibadah &amp; Aqeedah →</div></div></div>
+  </div>
+  <div style="text-align:center;margin-top:40px;"><button class="btn btn-p" onclick="go('fatwa-form')">Submit a Question to the Board →</button></div>
+</div></div>
+</div>
+
+<!-- ═══ FATWA STATUS ═══ -->
+<div class="page" id="p-fatwa-status">
+<div class="pb"><div class="pb-title">Check Fatwa Status</div><div class="pb-sub">Track the status of your submitted question</div></div>
+<div class="bgw"><div class="sec" style="max-width:660px;">
+  <div class="sh rv"><span class="stag">Track Your Question</span><h2 class="stitle">Fatwa Status</h2><p class="sdesc">Enter your reference number below to check whether your question has been reviewed and answered by the Ifta Board.</p><div class="orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+  <div class="ff rv" style="margin-top:8px;">
+    <div class="fg"><label class="fl">Reference Number</label><input type="text" class="fi" placeholder="e.g. FAT-2025-0042"></div>
+    <div class="fg"><label class="fl">Your Email (for verification)</label><input type="email" class="fi" placeholder="your@email.com"></div>
+    <button class="btn btn-p" style="width:100%;text-align:center;">Check Status →</button>
+  </div>
+  <div style="text-align:center;margin-top:32px;"><p style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--inkf);margin-bottom:16px;font-style:italic;">Don't have a question yet?</p><button class="btn btn-od" onclick="go('fatwa-form')">Submit a New Question →</button></div>
+</div></div>
+</div>
+
+<!-- ═══ WAQF ═══ -->
+<div class="page" id="p-waqf">
+<div class="pb"><div class="pb-ar">الوَقْف في سبيل الله</div><div class="pb-title">Waqf-I-Tanzeem</div><div class="pb-sub">Islamic endowment management for properties dedicated in the way of Allah</div></div>
+<div class="bgd"><div class="sec">
+  <div class="sh rv"><span class="stag dk-tag">Property Management</span><h2 class="stitle dk-title">Manage Your Waqf</h2><p class="sdesc dk-desc">Register, track and manage Islamic endowment properties across Jammu &amp; Kashmir through our digital system.</p><div class="orn dk-orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+  <div class="waqf-cards">
+    <div class="waqf-card rv d1" onclick="go('waqf-reg')"><div class="wc-num">01</div><div class="wc-t">Register Property</div><div class="wc-d">Register a new property as Waqf under Jamiat Ahle Hadees J&amp;K's endowment registry.</div></div>
+    <div class="waqf-card rv d2" onclick="go('waqf-reg')"><div class="wc-num">02</div><div class="wc-t">Masajid (Registered)</div><div class="wc-d">Browse the complete list of registered mosques and their details across all districts.</div></div>
+    <div class="waqf-card rv d3" onclick="go('waqf-unreg')"><div class="wc-num">03</div><div class="wc-t">Masajid (Unregistered)</div><div class="wc-d">View mosques yet to be formally registered and help complete the documentation.</div></div>
+    <div class="waqf-card rv d4" onclick="go('waqf-darasgah')"><div class="wc-num">04</div><div class="wc-t">Darasgah &amp; Institutions</div><div class="wc-d">Islamic learning centres and educational institutions registered under the Waqf.</div></div>
+    <div class="waqf-card rv d5" onclick="go('waqf-other')"><div class="wc-num">05</div><div class="wc-t">Other Properties</div><div class="wc-d">Other community properties, graveyards, and facilities registered under Waqf-I-Tanzeem.</div></div>
+  </div>
+  <div class="waqf-reg rv">
+    <h3>Register a New Property</h3><p>To register a mosque, educational institution or other property under Waqf-I-Tanzeem, complete the form below. Our team will review and process your application.</p>
+    <div class="form-row"><div class="fg" style="margin-bottom:0;"><label class="fld">Property Name</label><input type="text" class="fid" placeholder="Name of property or masjid"></div><div class="fg" style="margin-bottom:0;"><label class="fld">Property Type</label><select class="fsd"><option>Masjid</option><option>Madarsa</option><option>School</option><option>Graveyard</option><option>Other</option></select></div></div>
+    <div class="fg" style="margin-top:16px;"><label class="fld">Location / District</label><input type="text" class="fid" placeholder="District, Tehsil, Village"></div>
+    <div class="fg"><label class="fld">Additional Details</label><textarea class="ftad" placeholder="Describe the property, its history and current use..."></textarea></div>
+    <button class="btn btn-g" style="margin-top:8px;">Submit Registration Request</button>
+  </div>
+</div></div>
+</div>
+
+<!-- ═══ WAQF REGISTERED ═══ -->
+<div class="page" id="p-waqf-reg">
+<div class="pb"><div class="pb-title">Registered Masajid</div><div class="pb-sub">Complete list of mosques registered under Waqf-I-Tanzeem</div></div>
+<div class="bgw"><div class="sec">
+  <div class="sh rv"><span class="stag">Waqf Registry</span><h2 class="stitle">Registered Masajid</h2><p class="sdesc">All mosques formally registered and protected under the Waqf-I-Tanzeem framework across Jammu &amp; Kashmir.</p><div class="orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+  <div style="background:var(--cream);border-radius:var(--rl);overflow:hidden;border:1px solid var(--cdk);" class="rv">
+    <table class="tbl">
+      <thead><tr><th>Masjid Name</th><th>District</th><th>Registration No.</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Jama Masjid Lal Bazar</td><td style="color:var(--inkf)">Srinagar</td><td style="font-family:'Cinzel',serif;font-size:.75rem;color:var(--gm)">WQF-2018-0041</td><td><span class="badge-green">Registered</span></td></tr>
+        <tr><td>Masjid Ibrahim</td><td style="color:var(--inkf)">Sopore</td><td style="font-family:'Cinzel',serif;font-size:.75rem;color:var(--gm)">WQF-2019-0063</td><td><span class="badge-green">Registered</span></td></tr>
+        <tr><td>Masjid al-Huda</td><td style="color:var(--inkf)">Baramulla</td><td style="font-family:'Cinzel',serif;font-size:.75rem;color:var(--gm)">WQF-2020-0087</td><td><span class="badge-green">Registered</span></td></tr>
+        <tr><td>Masjid Noor</td><td style="color:var(--inkf)">Anantnag</td><td style="font-family:'Cinzel',serif;font-size:.75rem;color:var(--gm)">WQF-2021-0112</td><td><span class="badge-green">Registered</span></td></tr>
+        <tr><td>Jama Masjid Jammu</td><td style="color:var(--inkf)">Jammu</td><td style="font-family:'Cinzel',serif;font-size:.75rem;color:var(--gm)">WQF-2017-0028</td><td><span class="badge-green">Registered</span></td></tr>
+        <tr><td>Masjid al-Rahman, Ganderbal</td><td style="color:var(--inkf)">Ganderbal</td><td style="font-family:'Cinzel',serif;font-size:.75rem;color:var(--gm)">WQF-2022-0134</td><td><span class="badge-green">Registered</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="text-align:center;margin-top:32px;"><button class="btn btn-p" onclick="go('waqf')">Register a New Property →</button></div>
+</div></div>
+</div>
+
+<!-- ═══ WAQF UNREGISTERED ═══ -->
+<div class="page" id="p-waqf-unreg">
+<div class="pb"><div class="pb-title">Unregistered Masajid</div><div class="pb-sub">Mosques yet to be formally registered under Waqf-I-Tanzeem</div></div>
+<div class="bgw"><div class="sec">
+  <div class="sh rv"><span class="stag">Pending Registration</span><h2 class="stitle">Unregistered Masajid</h2><p class="sdesc">The following mosques are identified but not yet formally registered. Help us complete their documentation to protect them under Waqf-I-Tanzeem.</p><div class="orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+  <div style="background:var(--cream);border-radius:var(--rl);overflow:hidden;border:1px solid var(--cdk);" class="rv">
+    <table class="tbl">
+      <thead><tr><th>Masjid Name</th><th>District</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Masjid Siddiq</td><td style="color:var(--inkf)">Pulwama</td><td><span class="badge-gold">Pending</span></td></tr>
+        <tr><td>Masjid Umar</td><td style="color:var(--inkf)">Kulgam</td><td><span class="badge-gold">Pending</span></td></tr>
+        <tr><td>Masjid Bilal</td><td style="color:var(--inkf)">Shopian</td><td><span class="badge-gold">Pending</span></td></tr>
+        <tr><td>Masjid Taqwa</td><td style="color:var(--inkf)">Bandipora</td><td><span class="badge-gold">Pending</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="text-align:center;margin-top:32px;"><button class="btn btn-p" onclick="go('waqf')">Help Register a Masjid →</button></div>
+</div></div>
+</div>
+
+<!-- ═══ WAQF DARASGAH ═══ -->
+<div class="page" id="p-waqf-darasgah">
+<div class="pb"><div class="pb-title">Darasgah &amp; Institutions</div><div class="pb-sub">Islamic learning centres and educational institutions under Waqf-I-Tanzeem</div></div>
+<div class="bgw"><div class="sec">
+  <div class="sh rv"><span class="stag">Waqf Registry</span><h2 class="stitle">Darasgah &amp; Institutions</h2><div class="orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+  <div class="inst-dg">
+    <div class="idc rv d1"><div class="idc-hdr"><span class="idc-badge">Women's College</span><div class="idc-t">Al Kulyat us Salafia Lil Banat</div></div><div class="idc-body"><p class="idc-d">Registered Islamic college for women. Waqf registration protects the institution's facilities in perpetuity.</p><div class="idc-more" onclick="go('kuliyat-girls')">WQF-EDU-2015-001 →</div></div></div>
+    <div class="idc rv d2"><div class="idc-hdr"><span class="idc-badge">Men's College</span><div class="idc-t">Al Kulyat us Salafia Lil Baneen</div></div><div class="idc-body"><p class="idc-d">Registered Islamic college for men with rigorous curriculum in Islamic sciences, Hadees, Arabic and Fiqh studies.</p><div class="idc-more" onclick="go('kuliyat-boys')">WQF-EDU-2015-002 →</div></div></div>
+    <div class="idc rv d3"><div class="idc-hdr"><span class="idc-badge">Islamic Centre</span><div class="idc-t">Markaz Ibn Masood</div></div><div class="idc-body"><p class="idc-d">A registered centre for Islamic learning and community outreach. Waqf status ensures long-term preservation.</p><div class="idc-more" onclick="go('markaz-ibn')">WQF-EDU-2017-008 →</div></div></div>
+  </div>
+</div></div>
+</div>
+
+<!-- ═══ WAQF OTHER ═══ -->
+<div class="page" id="p-waqf-other">
+<div class="pb"><div class="pb-title">Other Properties</div><div class="pb-sub">Community properties and facilities registered under Waqf-I-Tanzeem</div></div>
+<div class="bgw"><div class="sec">
+  <div class="sh rv"><span class="stag">Waqf Registry</span><h2 class="stitle">Other Properties</h2><div class="orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+  <div class="goals-g">
+    <div class="goal-card rv d1"><h4>🪦 Graveyards</h4><p>Community graveyards registered under Waqf-I-Tanzeem to ensure long-term maintenance and protection from encroachment.</p></div>
+    <div class="goal-card rv d2"><h4>🏗️ Community Halls</h4><p>Multi-purpose community halls used for gatherings, nikah ceremonies and Islamic events, protected under Waqf.</p></div>
+    <div class="goal-card rv d3"><h4>📚 Libraries</h4><p>Islamic libraries and reading rooms registered as Waqf properties to preserve collections of religious texts.</p></div>
+    <div class="goal-card rv d4"><h4>🏥 Welfare Centres</h4><p>Community welfare facilities providing aid and services to underprivileged Muslim families, operating under Waqf protection.</p></div>
+  </div>
+</div></div>
+</div>
+<!-- ═══ FRIDAY ═══ -->
+<div class="page" id="p-friday">
+<div class="pb"><div class="pb-title">Friday Khutba Schedule</div><div class="pb-sub">Weekly Khatib assignments for Masajid across Jammu &amp; Kashmir</div></div>
+<div class="bgk"><div class="sec">
+  <div class="sh rv"><span class="stag dk-tag">Jumu'ah</span><h2 class="stitle dk-title">This Week's Schedule</h2><p class="sdesc dk-desc">The following Khatibs have been assigned to deliver the Friday Khutba and lead prayers this week.</p><div class="orn dk-orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+  <div class="fri-g">
+    <div class="fri-card rv d1"><div class="fri-masjid">Jama Masjid Lal Bazar, Srinagar</div><div class="fri-khatib">Sheikh Abdul Rashid Siddiqui</div><div class="fri-time">1:30 PM</div></div>
+    <div class="fri-card rv d2"><div class="fri-masjid">Masjid Ibrahim, Sopore</div><div class="fri-khatib">Maulana Muhammad Yusuf</div><div class="fri-time">1:00 PM</div></div>
+    <div class="fri-card rv d3"><div class="fri-masjid">Masjid al-Huda, Baramulla</div><div class="fri-khatib">Qari Abdullah Mir</div><div class="fri-time">1:30 PM</div></div>
+    <div class="fri-card rv d4"><div class="fri-masjid">Masjid Noor, Anantnag</div><div class="fri-khatib">Hafiz Tariq Ahmad</div><div class="fri-time">1:30 PM</div></div>
+    <div class="fri-card rv d5"><div class="fri-masjid">Masjid Siddiq, Pulwama</div><div class="fri-khatib">Maulana Khurshid Khan</div><div class="fri-time">1:00 PM</div></div>
+    <div class="fri-card rv d6"><div class="fri-masjid">Jama Masjid Jammu</div><div class="fri-khatib">Sheikh Farooq Ahmad</div><div class="fri-time">1:15 PM</div></div>
+    <div class="fri-card rv d7"><div class="fri-masjid">Masjid Umar, Kulgam</div><div class="fri-khatib">Maulana Bashir Ahmad</div><div class="fri-time">1:30 PM</div></div>
+    <div class="fri-card rv d8"><div class="fri-masjid">Masjid Bilal, Shopian</div><div class="fri-khatib">Qari Noor Muhammad</div><div class="fri-time">1:30 PM</div></div>
+    <div class="fri-card rv d1"><div class="fri-masjid">Masjid Farooq, Kupwara</div><div class="fri-khatib">Maulana Iqbal Ahmad</div><div class="fri-time">1:30 PM</div></div>
+    <div class="fri-card rv d2"><div class="fri-masjid">Masjid Taqwa, Bandipora</div><div class="fri-khatib">Sheikh Mushtaq Ali</div><div class="fri-time">1:30 PM</div></div>
+    <div class="fri-card rv d3"><div class="fri-masjid">Masjid Rahman, Ganderbal</div><div class="fri-khatib">Hafiz Zahoor Ahmad</div><div class="fri-time">1:00 PM</div></div>
+    <div class="fri-card rv d4"><div class="fri-masjid">Masjid Salafi, Budgam</div><div class="fri-khatib">Maulana Rafiq Mir</div><div class="fri-time">1:30 PM</div></div>
+  </div>
+</div></div>
+</div>
+
+<!-- ═══ SCHOOLS ═══ -->
+<div class="page" id="p-schools">
+<div class="pb"><div class="pb-title">Schools</div><div class="pb-sub">Affiliated schools providing quality Islamic and modern education across J&amp;K</div></div>
+<div class="bgw"><div class="sec">
+  <div class="sh rv"><span class="stag">SMERT Network</span><h2 class="stitle">Affiliated Schools</h2><p class="sdesc">A network of schools across all districts of Jammu &amp; Kashmir offering quality Islamic and modern education.</p><div class="orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+  <div class="inst-dg">
+    <div class="idc rv d1"><div class="idc-hdr"><span class="idc-badge">Primary School</span><div class="idc-t">Jamiat Model School, Srinagar</div></div><div class="idc-body"><p class="idc-d">A leading primary school offering a blend of Quranic education and modern curriculum, nurturing students from an early age in faith and academics.</p><div class="idc-more">View Details →</div></div></div>
+    <div class="idc rv d2"><div class="idc-hdr"><span class="idc-badge">High School</span><div class="idc-t">Islamic High School, Sopore</div></div><div class="idc-body"><p class="idc-d">A reputed high school serving the Sopore community with strong academic standards and Islamic character development programmes.</p><div class="idc-more">View Details →</div></div></div>
+    <div class="idc rv d3"><div class="idc-hdr"><span class="idc-badge">Primary School</span><div class="idc-t">Salafi School, Baramulla</div></div><div class="idc-body"><p class="idc-d">Established to serve the Muslim community of Baramulla with authentic Islamic education alongside the national curriculum.</p><div class="idc-more">View Details →</div></div></div>
+    <div class="idc rv d4"><div class="idc-hdr"><span class="idc-badge">Middle School</span><div class="idc-t">Noor School, Anantnag</div></div><div class="idc-body"><p class="idc-d">Providing holistic education in the Anantnag district, with emphasis on Quran, Arabic and Islamic studies.</p><div class="idc-more">View Details →</div></div></div>
+  </div>
+</div></div>
+</div>
+
+<!-- ═══ COLLEGES ═══ -->
+<div class="page" id="p-colleges">
+<div class="pb"><div class="pb-title">Colleges</div><div class="pb-sub">Islamic colleges and higher education institutions under the SMERT network</div></div>
+<div class="bgw"><div class="sec">
+  <div class="sh rv"><span class="stag">Higher Education</span><h2 class="stitle">Affiliated Colleges</h2><div class="orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+  <div class="inst-dg">
+    <div class="idc rv d1"><div class="idc-hdr"><span class="idc-badge">Women's College</span><div class="idc-t">Al Kulyat us Salafia Lil Banat</div></div><div class="idc-body"><p class="idc-d">A premier Islamic college for women, offering comprehensive religious education grounded in authentic Quran and Sunnah.</p><div class="idc-more" onclick="go('kuliyat-girls')">Learn More →</div></div></div>
+    <div class="idc rv d2"><div class="idc-hdr"><span class="idc-badge">Men's College</span><div class="idc-t">Al Kulyat us Salafia Lil Baneen</div></div><div class="idc-body"><p class="idc-d">An Islamic college for men with rigorous curriculum in Islamic sciences, Hadees, Arabic and Fiqh studies.</p><div class="idc-more" onclick="go('kuliyat-boys')">Learn More →</div></div></div>
+  </div>
+</div></div>
+</div>
+
+<!-- ═══ MADARSA ═══ -->
+<div class="page" id="p-madarsa">
+<div class="pb"><div class="pb-title">Madarsas</div><div class="pb-sub">Traditional Islamic schools offering full-time religious education</div></div>
+<div class="bgw"><div class="sec">
+  <div class="sh rv"><span class="stag">Islamic Education</span><h2 class="stitle">Affiliated Madarsas</h2><p class="sdesc">Traditional madarsas offering full-time Islamic education with a focus on Quran memorisation and classical Islamic sciences.</p><div class="orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+  <div class="inst-dg">
+    <div class="idc rv d1"><div class="idc-hdr"><span class="idc-badge">Madarsa</span><div class="idc-t">Madarsa Salafiyya, Srinagar</div></div><div class="idc-body"><p class="idc-d">Full-time madarsa offering Hifz programme, Dars-e-Nizami, and advanced Islamic sciences in Srinagar.</p><div class="idc-more">View Details →</div></div></div>
+    <div class="idc rv d2"><div class="idc-hdr"><span class="idc-badge">Madarsa</span><div class="idc-t">Madarsa Ibn Taymiyyah, Sopore</div></div><div class="idc-body"><p class="idc-d">Residential madarsa for boys providing classical Islamic education including Quran, Fiqh and Arabic grammar.</p><div class="idc-more">View Details →</div></div></div>
+    <div class="idc rv d3"><div class="idc-hdr"><span class="idc-badge">Women's Madarsa</span><div class="idc-t">Madarsa Aisha Siddiqua, Baramulla</div></div><div class="idc-body"><p class="idc-d">Women's madarsa offering comprehensive Islamic studies, Hifz and Arabic language courses in Baramulla.</p><div class="idc-more">View Details →</div></div></div>
+  </div>
+</div></div>
+</div>
+
+<!-- ═══ MASJID ═══ -->
+<div class="page" id="p-masjid">
+<div class="pb"><div class="pb-title">Masjids</div><div class="pb-sub">Network of mosques across Jammu &amp; Kashmir under the Jamiat umbrella</div></div>
+<div class="bgw"><div class="sec">
+  <div class="sh rv"><span class="stag">Mosques</span><h2 class="stitle">Our Masajid</h2><p class="sdesc">Over 200 registered masajid across J&amp;K, serving as centres of worship, education and community gathering.</p><div class="orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+  <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:40px;" class="rv">
+    <button class="btn btn-p" onclick="go('waqf-reg')">View Registered Masajid</button>
+    <button class="btn btn-od" onclick="go('waqf-unreg')">Unregistered Masajid</button>
+    <button class="btn btn-od" onclick="go('waqf')">Register a Masjid</button>
+  </div>
+  <div class="inst-dg">
+    <div class="idc rv d1"><div class="idc-hdr"><span class="idc-badge">Central Mosque</span><div class="idc-t">Jama Masjid Lal Bazar</div></div><div class="idc-body"><p class="idc-d">One of the principal mosques of the Jamiat in Srinagar, hosting Friday prayers, Islamic programmes and community events.</p><div class="idc-more">District: Srinagar →</div></div></div>
+    <div class="idc rv d2"><div class="idc-hdr"><span class="idc-badge">District Mosque</span><div class="idc-t">Masjid Ibrahim, Sopore</div></div><div class="idc-body"><p class="idc-d">A prominent mosque in Sopore serving the northern Kashmir community with regular prayers, Quran classes and community programmes.</p><div class="idc-more">District: Baramulla →</div></div></div>
+    <div class="idc rv d3"><div class="idc-hdr"><span class="idc-badge">District Mosque</span><div class="idc-t">Jama Masjid Jammu</div></div><div class="idc-body"><p class="idc-d">The main Jamiat mosque in the Jammu region, serving the Muslim community of Jammu city with regular religious programmes.</p><div class="idc-more">District: Jammu →</div></div></div>
+  </div>
+</div></div>
+</div>
+
+<!-- ═══ KULIYAT BOYS ═══ -->
+<div class="page" id="p-kuliyat-boys">
+<div class="pb"><div class="pb-ar">الكلية السلفية للبنين</div><div class="pb-title">Al Kulyat us Salafia</div><div class="pb-gold">For Boys (Lil Baneen)</div><div class="pb-sub">A centre of excellence in Islamic education for men</div></div>
+<div class="bgw"><div class="sec"><div class="inst-inner">
+  <div class="rvl">
+    <div class="sh lft"><span class="stag">About the Institution</span><h2 class="stitle">Al Kulyat us Salafia <em>Lil Baneen</em></h2><div class="orn lft"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--inkm);line-height:1.85;margin-top:20px;margin-bottom:16px;">Al Kulyat us Salafia Lil Baneen is a premier Islamic college for men established under the SMERT framework. It provides rigorous academic training in the classical Islamic sciences including Quran, Hadees, Fiqh, Aqeedah and Arabic language.</p>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--inkm);line-height:1.85;margin-bottom:24px;">Graduates of the college go on to serve as Imams, scholars, teachers and community leaders across Jammu &amp; Kashmir, spreading authentic Islamic knowledge.</p>
+    <div class="goals-g">
+      <div class="goal-card"><h4>📖 Curriculum</h4><p>Quran Memorisation, Hadees Sciences, Islamic Fiqh, Aqeedah, Arabic Language and Grammar.</p></div>
+      <div class="goal-card"><h4>🎓 Admissions</h4><p>Applications open annually. Candidates must have completed basic Islamic education and passed the entrance evaluation.</p></div>
+      <div class="goal-card"><h4>🏠 Facilities</h4><p>Dedicated library, lecture halls, residential facilities and a mosque on campus for regular prayers and Islamic programmes.</p></div>
+      <div class="goal-card"><h4>📜 Graduation</h4><p>Annual graduation ceremony upon completion of the full programme, with certificates recognised across J&amp;K and beyond.</p></div>
+    </div>
+  </div>
+  <div class="rvr">
+    <div style="background:var(--gm);border-radius:var(--rl);padding:28px;text-align:center;margin-bottom:18px;">
+      <div style="font-family:'Amiri',serif;font-size:2rem;color:var(--gold);margin-bottom:10px;">للبنين</div>
+      <div style="font-family:'Cinzel',serif;font-size:.8rem;color:rgba(255,255,255,.65);margin-bottom:16px;">For Boys</div>
+      <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;">
+        <div><div style="font-family:'Cinzel',serif;font-size:1.6rem;font-weight:600;color:var(--gold);">4</div><div style="font-family:'Cormorant Garamond',serif;font-size:.85rem;color:rgba(255,255,255,.55);">Year Programme</div></div>
+        <div><div style="font-family:'Cinzel',serif;font-size:1.6rem;font-weight:600;color:var(--gold);">200+</div><div style="font-family:'Cormorant Garamond',serif;font-size:.85rem;color:rgba(255,255,255,.55);">Graduates</div></div>
+      </div>
+    </div>
+    <div style="background:var(--cream);border:1px solid var(--cdk);border-radius:var(--rl);padding:24px;">
+      <h4 style="font-family:'Cinzel',serif;font-size:.85rem;font-weight:600;color:var(--gm);margin-bottom:12px;">Contact Admissions</h4>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:.93rem;color:var(--inkm);line-height:1.6;margin-bottom:14px;">For admissions enquiries and application forms, contact the institution directly or submit an online enquiry.</p>
+      <button class="btn btn-p" style="width:100%;text-align:center;">Enquire Now →</button>
+    </div>
+  </div>
+</div></div></div>
+</div>
+
+<!-- ═══ KULIYAT GIRLS ═══ -->
+<div class="page" id="p-kuliyat-girls">
+<div class="pb"><div class="pb-ar">الكلية السلفية للبنات</div><div class="pb-title">Al Kulyat us Salafia</div><div class="pb-gold">For Girls (Lil Banat)</div><div class="pb-sub">Empowering Muslim women through authentic Islamic education</div></div>
+<div class="bgw"><div class="sec"><div class="inst-inner">
+  <div class="rvl">
+    <div class="sh lft"><span class="stag">About the Institution</span><h2 class="stitle">Al Kulyat us Salafia <em>Lil Banat</em></h2><div class="orn lft"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--inkm);line-height:1.85;margin-top:20px;margin-bottom:16px;">Al Kulyat us Salafia Lil Banat is a premier Islamic college for women, providing a comprehensive education in the authentic Islamic sciences in a safe and dedicated learning environment.</p>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--inkm);line-height:1.85;margin-bottom:24px;">The college empowers Muslim women to become knowledgeable scholars, teachers and community leaders who contribute to the propagation of authentic Islamic knowledge within their families and communities.</p>
+    <div class="goals-g">
+      <div class="goal-card"><h4>📖 Curriculum</h4><p>Quran Memorisation (Hifz), Hadees, Fiqh, Aqeedah, Tafseer, Arabic Language and Islamic History.</p></div>
+      <div class="goal-card"><h4>🎓 Admissions</h4><p>Open to Muslim women who have completed secondary education. Entrance evaluation required for all applicants.</p></div>
+      <div class="goal-card"><h4>🏠 Facilities</h4><p>Women-only campus with dedicated library, lecture halls, and facilities designed for a focused learning environment.</p></div>
+      <div class="goal-card"><h4>📜 Graduation</h4><p>Annual graduation ceremony. Graduates receive certificates and are encouraged to serve as teachers and mentors.</p></div>
+    </div>
+  </div>
+  <div class="rvr">
+    <div style="background:var(--gm);border-radius:var(--rl);padding:28px;text-align:center;margin-bottom:18px;">
+      <div style="font-family:'Amiri',serif;font-size:2rem;color:var(--gold);margin-bottom:10px;">للبنات</div>
+      <div style="font-family:'Cinzel',serif;font-size:.8rem;color:rgba(255,255,255,.65);margin-bottom:16px;">For Girls</div>
+      <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;">
+        <div><div style="font-family:'Cinzel',serif;font-size:1.6rem;font-weight:600;color:var(--gold);">3</div><div style="font-family:'Cormorant Garamond',serif;font-size:.85rem;color:rgba(255,255,255,.55);">Year Programme</div></div>
+        <div><div style="font-family:'Cinzel',serif;font-size:1.6rem;font-weight:600;color:var(--gold);">150+</div><div style="font-family:'Cormorant Garamond',serif;font-size:.85rem;color:rgba(255,255,255,.55);">Graduates</div></div>
+      </div>
+    </div>
+    <div style="background:var(--cream);border:1px solid var(--cdk);border-radius:var(--rl);padding:24px;">
+      <h4 style="font-family:'Cinzel',serif;font-size:.85rem;font-weight:600;color:var(--gm);margin-bottom:12px;">Contact Admissions</h4>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:.93rem;color:var(--inkm);line-height:1.6;margin-bottom:14px;">For admissions enquiries and application forms, contact the institution or submit an enquiry below.</p>
+      <button class="btn btn-p" style="width:100%;text-align:center;">Enquire Now →</button>
+    </div>
+  </div>
+</div></div></div>
+</div>
+
+<!-- ═══ MARKAZ IBN MASOOD ═══ -->
+<div class="page" id="p-markaz-ibn">
+<div class="pb"><div class="pb-ar">مرکز ابن مسعود</div><div class="pb-title">Markaz Ibn Masood</div><div class="pb-sub">A centre for Islamic learning and community outreach</div></div>
+<div class="bgw"><div class="sec" style="max-width:900px;">
+  <div class="sh rv"><span class="stag">Islamic Centre</span><h2 class="stitle">Markaz <em>Ibn Masood</em></h2><p class="sdesc">Named after the noble companion Abdullah ibn Masood (رضي الله عنه), this centre serves as a hub for Islamic education, da'wah and community outreach.</p><div class="orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+  <div class="goals-g">
+    <div class="goal-card rv d1"><h4>📖 Islamic Classes</h4><p>Regular classes in Quran, Hadees, Aqeedah, Fiqh and Arabic for students of all ages and backgrounds.</p></div>
+    <div class="goal-card rv d2"><h4>🎤 Lectures &amp; Seminars</h4><p>Hosting regular Islamic lectures, seminars and workshops by local and visiting scholars on contemporary Islamic issues.</p></div>
+    <div class="goal-card rv d3"><h4>📚 Library</h4><p>A well-stocked library of Islamic books, journals and references available to the community and researchers.</p></div>
+    <div class="goal-card rv d4"><h4>🤝 Da'wah Activities</h4><p>Active da'wah programme including outreach to new Muslims, distribution of Islamic materials and community engagement.</p></div>
+  </div>
+</div></div>
+</div>
+
+<!-- ═══ MARKAZ AISHA ═══ -->
+<div class="page" id="p-markaz-aisha">
+<div class="pb"><div class="pb-ar">مرکز عائشہ</div><div class="pb-title">Markaz Aisha</div><div class="pb-sub">A centre for Islamic education and guidance for women</div></div>
+<div class="bgw"><div class="sec" style="max-width:900px;">
+  <div class="sh rv"><span class="stag">Women's Centre</span><h2 class="stitle">Markaz <em>Aisha</em></h2><p class="sdesc">Named after Aisha bint Abi Bakr (رضي الله عنها) — Mother of the Believers — this centre is dedicated to the Islamic education and empowerment of Muslim women.</p><div class="orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+  <div class="goals-g">
+    <div class="goal-card rv d1"><h4>📖 Women's Quran Classes</h4><p>Dedicated Quran recitation, Tajweed and Hifz classes for women in a comfortable, women-only setting.</p></div>
+    <div class="goal-card rv d2"><h4>📚 Islamic Studies</h4><p>Courses in Islamic jurisprudence relevant to women's daily life, family matters and Islamic etiquette.</p></div>
+    <div class="goal-card rv d3"><h4>🤝 Counselling</h4><p>Islamic counselling and guidance for Muslim women on matters of family, marriage, parenting and community life.</p></div>
+    <div class="goal-card rv d4"><h4>🎤 Talks &amp; Programmes</h4><p>Regular talks, workshops and Islamic programmes specifically designed for the needs of Muslim women and young girls.</p></div>
+  </div>
+</div></div>
+</div>
+
+<!-- ═══ SUNDAY CLASSES ═══ -->
+<div class="page" id="p-sunday">
+<div class="pb"><div class="pb-title">Sunday &amp; Vocational Classes</div><div class="pb-sub">Weekend Islamic education and vocational skills for working adults and youth</div></div>
+<div class="bgw"><div class="sec">
+  <div class="sh rv"><span class="stag">Community Education</span><h2 class="stitle">Sunday &amp; Vocational <em>Classes</em></h2><p class="sdesc">For those who cannot attend full-time religious institutions, our Sunday and vocational classes provide accessible Islamic education alongside practical skills.</p><div class="orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+  <div class="goals-g">
+    <div class="goal-card rv d1"><h4>🕌 Sunday Islamic Classes</h4><p>Weekly Islamic education covering Quran, basic Fiqh, Aqeedah and Arabic for adults and children.</p></div>
+    <div class="goal-card rv d2"><h4>💻 Vocational Training</h4><p>Skill development courses in computing, tailoring, calligraphy and other practical fields for community members.</p></div>
+    <div class="goal-card rv d3"><h4>👦 Youth Programme</h4><p>Dedicated programme for Muslim youth combining Islamic character development with leadership and community skills.</p></div>
+    <div class="goal-card rv d4"><h4>🏅 Certificates</h4><p>Certificates awarded upon completion of each course, recognised within the Jamiat network of institutions.</p></div>
+  </div>
+</div></div>
+</div>
+
+<!-- ═══ BOOKS ═══ -->
+<div class="page" id="p-books">
+<div class="pb"><div class="pb-title">Books Published</div><div class="pb-sub">Islamic scholarly works published by Jamiat Ahle Hadees J&amp;K</div></div>
+<div class="bgc"><div class="sec">
+  <div class="sh rv"><span class="stag">Publications</span><h2 class="stitle">Published <em>Books</em></h2><p class="sdesc">A catalogue of scholarly books published by Jamiat Ahle Hadees J&amp;K on Aqeedah, Fiqh, Hadees, Tafseer and contemporary Islamic issues.</p><div class="orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+  <div class="pub-fg">
+    <div class="pfc rv d1"><div class="pfc-cover"><div class="pfc-pat"></div><div class="pfc-ar">التوحيد</div></div><div class="pfc-body"><span class="pfc-badge">Aqeedah</span><div class="pfc-t">Kitab al-Tawheed — Explained</div><p class="pfc-d">A comprehensive commentary on the fundamentals of Islamic monotheism for students and scholars. Available in Urdu and Kashmiri.</p><div class="pfc-l">Request Copy →</div></div></div>
+    <div class="pfc rv d2"><div class="pfc-cover"><div class="pfc-pat"></div><div class="pfc-ar">الحديث</div></div><div class="pfc-body"><span class="pfc-badge">Hadees</span><div class="pfc-t">Forty Hadees — An Introduction</div><p class="pfc-d">A beginner's guide to forty essential Hadees of the Prophet (ﷺ) with explanations in simple Urdu. Ideal for students and general readers.</p><div class="pfc-l">Request Copy →</div></div></div>
+    <div class="pfc rv d3"><div class="pfc-cover"><div class="pfc-pat"></div><div class="pfc-ar">الفقه</div></div><div class="pfc-body"><span class="pfc-badge">Fiqh</span><div class="pfc-t">Fiqh al-Ibadat — Acts of Worship</div><p class="pfc-d">A practical guide to the Fiqh of prayer, fasting, Zakat and Hajj according to the Quran and authentic Sunnah.</p><div class="pfc-l">Request Copy →</div></div></div>
+    <div class="pfc rv d4"><div class="pfc-cover"><div class="pfc-pat"></div><div class="pfc-ar">التفسير</div></div><div class="pfc-body"><span class="pfc-badge">Tafseer</span><div class="pfc-t">Selected Tafseer of Short Surahs</div><p class="pfc-d">Explanations of selected short Surahs from Juz Amma, written accessibly for students and families.</p><div class="pfc-l">Request Copy →</div></div></div>
+  </div>
+</div></div>
+</div>
+
+<!-- ═══ NEW PUB ═══ -->
+<div class="page" id="p-new-pub">
+<div class="pb"><div class="pb-title">New Publications</div><div class="pb-sub">Latest books and materials released by Jamiat Ahle Hadees J&amp;K</div></div>
+<div class="bgc"><div class="sec">
+  <div class="sh rv"><span class="stag">Latest</span><h2 class="stitle">New <em>Publications</em></h2><p class="sdesc">Our most recent releases — books, pamphlets and educational materials published for the Muslim community of J&amp;K.</p><div class="orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+  <div class="pub-fg">
+    <div class="pfc rv d1"><div class="pfc-cover"><div class="pfc-pat"></div><div class="pfc-ar">جديد</div></div><div class="pfc-body"><span class="pfc-badge">2025 · New</span><div class="pfc-t">Contemporary Financial Issues in Islam</div><p class="pfc-d">Addressing modern financial questions including digital payments, insurance, mortgages and cryptocurrency from an Islamic perspective.</p><div class="pfc-l">Request Copy →</div></div></div>
+    <div class="pfc rv d2"><div class="pfc-cover"><div class="pfc-pat"></div><div class="pfc-ar">منهج</div></div><div class="pfc-body"><span class="pfc-badge">2025 · New</span><div class="pfc-t">The Methodology of the Salaf</div><p class="pfc-d">An introduction to the principles of Salafi methodology in understanding the Quran and Sunnah, written for students and general readers.</p><div class="pfc-l">Request Copy →</div></div></div>
+  </div>
+</div></div>
+</div>
+
+<!-- ═══ WEEKLY MUSLIM ═══ -->
+<div class="page" id="p-weekly">
+<div class="pb"><div class="pb-title">Weekly Muslim Archive</div><div class="pb-sub">The official newspaper of Jamiat Ahle Hadees J&amp;K</div></div>
+<div class="bgc"><div class="sec">
+  <div class="sh rv"><span class="stag">Newspaper Archive</span><h2 class="stitle">Weekly <em>Muslim</em></h2><p class="sdesc">Browse our archive of the Weekly Muslim — covering Islamic community news, commentary, Fatawa and current affairs for the Muslim community of J&amp;K.</p><div class="orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+  <div class="pub-fg" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr));">
+    <div class="pfc rv d1"><div class="pfc-cover" style="height:130px;"><div class="pfc-pat"></div><div class="pfc-ar" style="font-size:1.6rem;">مسلم</div></div><div class="pfc-body"><span class="pfc-badge">May 2025</span><div class="pfc-t">Weekly Muslim — Issue 312</div><p class="pfc-d">Latest edition covering community news, the Deen-e-Rehmat Conference and a new Fatwa ruling.</p><div class="pfc-l">Read / Download →</div></div></div>
+    <div class="pfc rv d2"><div class="pfc-cover" style="height:130px;"><div class="pfc-pat"></div><div class="pfc-ar" style="font-size:1.6rem;">مسلم</div></div><div class="pfc-body"><span class="pfc-badge">April 2025</span><div class="pfc-t">Weekly Muslim — Issue 308</div><p class="pfc-d">Ramadan special edition with Sehri and Iftar timetables, Ramadan Fatawa and community Eid announcements.</p><div class="pfc-l">Read / Download →</div></div></div>
+    <div class="pfc rv d3"><div class="pfc-cover" style="height:130px;"><div class="pfc-pat"></div><div class="pfc-ar" style="font-size:1.6rem;">مسلم</div></div><div class="pfc-body"><span class="pfc-badge">March 2025</span><div class="pfc-t">Weekly Muslim — Issue 304</div><p class="pfc-d">Featuring the Waqf registration drive results, new book launches and a profile of Markaz Ibn Masood.</p><div class="pfc-l">Read / Download →</div></div></div>
+  </div>
+</div></div>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+
+<!-- ═══ LOGIN ═══ -->
+<div class="page" id="p-login">
+<div class="pb"><div class="pb-ar">بِسۡمِ ٱللَّهِ</div><div class="pb-title">Login / Account</div><div class="pb-sub">Access your Jamiat Ahle Hadees JK member portal</div></div>
+<div class="bgc"><div class="sec" style="max-width:1000px;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;" class="login-layout">
+
+    <!-- LOGIN FORM -->
+    <div class="rvl">
+      <div class="sh lft" style="margin-bottom:28px;"><span class="stag">Member Portal</span><h2 class="stitle">Sign <em>In</em></h2><div class="orn lft"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+      <div class="ff">
+        <div class="fg"><label class="fl">Email Address / Member ID</label><input type="email" class="fi" placeholder="your@email.com or MEM-2024-0001"></div>
+        <div class="fg"><label class="fl">Password</label><input type="password" class="fi" placeholder="Enter your password"></div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:8px;">
+          <label style="display:flex;align-items:center;gap:8px;font-family:'Cormorant Garamond',serif;font-size:.94rem;color:var(--inkm);cursor:pointer;"><input type="checkbox" style="accent-color:var(--gm);"> Remember me</label>
+          <button onclick="go('forgot-password')" style="font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gm);background:none;border:none;cursor:pointer;text-decoration:underline;">Forgot Password?</button>
+        </div>
+        <button class="btn btn-p" style="width:100%;text-align:center;padding:14px;">Sign In →</button>
+        <div style="text-align:center;margin-top:20px;">
+          <p style="font-family:'Cormorant Garamond',serif;font-size:.95rem;color:var(--inkf);">Don't have an account? <button onclick="go('register')" style="font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gm);background:none;border:none;cursor:pointer;text-decoration:underline;">Register</button></p>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div style="display:flex;align-items:center;gap:12px;margin:24px 0;"><div style="flex:1;height:1px;background:var(--cdk);"></div><span style="font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--inkf);">or continue with</span><div style="flex:1;height:1px;background:var(--cdk);"></div></div>
+
+      <!-- Social / OTP login -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <button style="display:flex;align-items:center;justify-content:center;gap:8px;padding:11px 16px;border:1.5px solid var(--cdk);border-radius:var(--r);background:var(--w);font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--inkm);cursor:pointer;transition:border-color .2s;" onmouseover="this.style.borderColor='var(--gm)'" onmouseout="this.style.borderColor='var(--cdk)'">📱 OTP Login</button>
+        <button style="display:flex;align-items:center;justify-content:center;gap:8px;padding:11px 16px;border:1.5px solid var(--cdk);border-radius:var(--r);background:var(--w);font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--inkm);cursor:pointer;transition:border-color .2s;" onmouseover="this.style.borderColor='var(--gm)'" onmouseout="this.style.borderColor='var(--cdk)'">✉️ Email Link</button>
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="rvr">
+      <!-- Member Benefits -->
+      <div style="background:var(--gm);border-radius:var(--rl);padding:32px;margin-bottom:20px;">
+        <h3 style="font-family:'Cinzel',serif;font-size:1.1rem;font-weight:600;color:var(--gold);margin-bottom:6px;">Member Portal</h3>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:.97rem;color:rgba(255,255,255,.65);line-height:1.7;margin-bottom:22px;">Access exclusive features available to registered members of Jamiat Ahle Hadees J&K.</p>
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div style="display:flex;align-items:flex-start;gap:14px;">
+            <div style="width:36px;height:36px;background:rgba(201,168,76,.15);border-radius:8px;display:grid;place-items:center;flex-shrink:0;font-size:1rem;">📋</div>
+            <div><div style="font-family:'Cinzel',serif;font-size:.78rem;font-weight:600;color:var(--glt);margin-bottom:3px;">Track Fatwa Status</div><div style="font-family:'Cormorant Garamond',serif;font-size:.88rem;color:rgba(255,255,255,.55);">View the status of your submitted questions to the Ifta Board.</div></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px;">
+            <div style="width:36px;height:36px;background:rgba(201,168,76,.15);border-radius:8px;display:grid;place-items:center;flex-shrink:0;font-size:1rem;">🕌</div>
+            <div><div style="font-family:'Cinzel',serif;font-size:.78rem;font-weight:600;color:var(--glt);margin-bottom:3px;">Waqf Property Dashboard</div><div style="font-family:'Cormorant Garamond',serif;font-size:.88rem;color:rgba(255,255,255,.55);">Manage and track registered Waqf properties under your account.</div></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px;">
+            <div style="width:36px;height:36px;background:rgba(201,168,76,.15);border-radius:8px;display:grid;place-items:center;flex-shrink:0;font-size:1rem;">📚</div>
+            <div><div style="font-family:'Cinzel',serif;font-size:.78rem;font-weight:600;color:var(--glt);margin-bottom:3px;">Publications Library</div><div style="font-family:'Cormorant Garamond',serif;font-size:.88rem;color:rgba(255,255,255,.55);">Download all publications and access member-only content.</div></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px;">
+            <div style="width:36px;height:36px;background:rgba(201,168,76,.15);border-radius:8px;display:grid;place-items:center;flex-shrink:0;font-size:1rem;">🎓</div>
+            <div><div style="font-family:'Cinzel',serif;font-size:.78rem;font-weight:600;color:var(--glt);margin-bottom:3px;">Institution Applications</div><div style="font-family:'Cormorant Garamond',serif;font-size:.88rem;color:rgba(255,255,255,.55);">Apply and track admissions for Jamiat affiliated institutions.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Register CTA -->
+      <div style="background:var(--cream);border:1px solid var(--cdk);border-radius:var(--rl);padding:24px;text-align:center;">
+        <h4 style="font-family:'Cinzel',serif;font-size:.9rem;font-weight:600;color:var(--gm);margin-bottom:8px;">New to Jamiat Ahle Hadees JK?</h4>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:.94rem;color:var(--inkm);line-height:1.6;margin-bottom:18px;">Register as a member to access all features of the portal including Waqf management, Fatwa tracking and more.</p>
+        <button class="btn btn-od" style="width:100%;text-align:center;" onclick="go('register')">Create an Account →</button>
+      </div>
+    </div>
+
+  </div>
+</div></div>
+</div>
+
+<!-- ═══ REGISTER ═══ -->
+<div class="page" id="p-register">
+<div class="pb"><div class="pb-title">Create an Account</div><div class="pb-sub">Register as a member of Jamiat Ahle Hadees J&K</div></div>
+<div class="bgc"><div class="sec" style="max-width:760px;">
+  <div class="sh rv"><span class="stag">New Member</span><h2 class="stitle">Register Your <em>Account</em></h2><p class="sdesc">Create a member account to access the full range of digital services offered by Jamiat Ahle Hadees J&K.</p><div class="orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+  <div class="ff rv" style="margin-top:8px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+      <div class="fg" style="margin-bottom:0;"><label class="fl">First Name</label><input type="text" class="fi" placeholder="e.g. Muhammad"></div>
+      <div class="fg" style="margin-bottom:0;"><label class="fl">Last Name</label><input type="text" class="fi" placeholder="e.g. Abdullah"></div>
+    </div>
+    <div class="fg" style="margin-top:16px;"><label class="fl">Email Address</label><input type="email" class="fi" placeholder="your@email.com"></div>
+    <div class="fg"><label class="fl">Mobile Number</label><input type="tel" class="fi" placeholder="+91 98765 43210"></div>
+    <div class="fg"><label class="fl">District</label><select class="fs"><option value="">Select your district...</option><option>Srinagar</option><option>Baramulla</option><option>Sopore</option><option>Anantnag</option><option>Pulwama</option><option>Shopian</option><option>Kulgam</option><option>Kupwara</option><option>Bandipora</option><option>Ganderbal</option><option>Budgam</option><option>Jammu</option><option>Udhampur</option><option>Other</option></select></div>
+    <div class="fg"><label class="fl">Member Type</label><select class="fs"><option>Individual Member</option><option>Institution Representative</option><option>Scholar / Alim</option><option>Imam / Khatib</option></select></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+      <div class="fg" style="margin-bottom:0;"><label class="fl">Password</label><input type="password" class="fi" placeholder="Min. 8 characters"></div>
+      <div class="fg" style="margin-bottom:0;"><label class="fl">Confirm Password</label><input type="password" class="fi" placeholder="Repeat password"></div>
+    </div>
+    <div style="margin-top:20px;margin-bottom:20px;padding:14px 16px;background:rgba(26,92,52,.06);border-radius:var(--r);border-left:3px solid var(--gm);">
+      <label style="display:flex;align-items:flex-start;gap:10px;font-family:'Cormorant Garamond',serif;font-size:.97rem;color:var(--inkm);cursor:pointer;line-height:1.6;"><input type="checkbox" style="accent-color:var(--gm);margin-top:3px;flex-shrink:0;"> I confirm that the information provided is accurate and I agree to the terms and conditions of Jamiat Ahle Hadees J&K membership.</label>
+    </div>
+    <button class="btn btn-p" style="width:100%;text-align:center;padding:14px;">Create Account →</button>
+    <p style="text-align:center;font-family:'Cormorant Garamond',serif;font-size:.94rem;color:var(--inkf);margin-top:16px;">Already have an account? <button onclick="go('login')" style="font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gm);background:none;border:none;cursor:pointer;text-decoration:underline;">Sign In</button></p>
+  </div>
+</div></div>
+</div>
+
+<!-- ═══ FORGOT PASSWORD ═══ -->
+<div class="page" id="p-forgot-password">
+<div class="pb"><div class="pb-title">Forgot Password</div><div class="pb-sub">Reset your account password</div></div>
+<div class="bgc"><div class="sec" style="max-width:540px;">
+  <div class="sh rv"><span class="stag">Account Recovery</span><h2 class="stitle">Reset Your <em>Password</em></h2><p class="sdesc">Enter your registered email address and we will send you a link to reset your password.</p><div class="orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
+  <div class="ff rv" style="margin-top:8px;">
+    <div class="fg"><label class="fl">Registered Email Address</label><input type="email" class="fi" placeholder="your@email.com"></div>
+    <button class="btn btn-p" style="width:100%;text-align:center;padding:14px;">Send Reset Link →</button>
+    <p style="text-align:center;font-family:'Cormorant Garamond',serif;font-size:.94rem;color:var(--inkf);margin-top:20px;">Remember your password? <button onclick="go('login')" style="font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gm);background:none;border:none;cursor:pointer;text-decoration:underline;">Back to Login</button></p>
+  </div>
+</div></div>
+</div>
+
+
+<footer><div class="ft-in">
+  <div><div class="ft-name">Jamiat Ahle Hadees JK</div><div class="ft-tag">جمعیت اہل حدیث جموں و کشمیر</div><p class="ft-desc">Serving the Muslim community of Jammu &amp; Kashmir through education, religious guidance, and community welfare, grounded in the Quran and authentic Sunnah.</p></div>
+  <div><div class="ft-ct">Organisation</div><ul class="ft-lks"><li><button onclick="go('aims')">Aims &amp; Objectives</button></li><li><button onclick="go('about')">About Us</button></li><li><button onclick="go('constitution')">Constitution</button></li><li><button onclick="go('smert')">SMERT</button></li><li><button onclick="go('events')">Events</button></li><li><button onclick="go('login')">Login / Account</button></li><li><button onclick="go('register')">Register</button></li></ul></div>
+  <div><div class="ft-ct">Services</div><ul class="ft-lks"><li><button onclick="go('fatwa-form')">Submit Fatwa</button></li><li><button onclick="go('ifta-board')">Ifta Board</button></li><li><button onclick="go('waqf')">Waqf Registration</button></li><li><button onclick="go('friday')">Friday List</button></li><li><button onclick="go('fatwa-status')">Check Status</button></li></ul></div>
+  <div><div class="ft-ct">Publications</div><ul class="ft-lks"><li><a href="https://mmtt.blob.core.windows.net/jahjk/PublicationsPDF/aceda4e8-c80f-4654-82f0-2524fa0ca2c8.pdf" target="_blank">Download Meeqat</a></li><li><button onclick="go('books')">Books</button></li><li><button onclick="go('new-pub')">New Publications</button></li><li><button onclick="go('weekly')">Weekly Muslim</button></li></ul></div>
+</div>
+<div class="ft-div"></div>
+<div class="ft-bot"><span class="ft-copy">© 2025 Jamiat Ahle Hadees JK. All rights reserved.</span><ul class="ft-blks"><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms</a></li></ul></div>
+</footer>
+<script>
+/* ── SALAH HIDE ON SCROLL ── */
+(function() {
+  const bar = document.querySelector('.salah-bar');
+  if (!bar) return;
+  let lastY = window.scrollY;
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const currentY = window.scrollY;
+        if (currentY > lastY && currentY > 80) {
+          bar.classList.add('hidden');
+        } else {
+          bar.classList.remove('hidden');
+        }
+        lastY = currentY;
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+})();
+
+/* ── PAGE ROUTER ── */
+function go(name) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const page = document.getElementById('p-' + name);
+  if (page) {
+    page.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setTimeout(runReveal, 60);
+  }
+  // close mobile drawer
+  document.getElementById('drawer').classList.remove('open');
+  document.getElementById('ham').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+/* ── HAMBURGER ── */
+const ham = document.getElementById('ham');
+const drawer = document.getElementById('drawer');
+ham.addEventListener('click', () => {
+  const open = drawer.classList.toggle('open');
+  ham.classList.toggle('open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+document.querySelectorAll('.mob-gb').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.getElementById(btn.dataset.t).classList.toggle('open');
+  });
+});
+
+/* ── SALAH TABS ── */
+function switchSalah(id, btn) {
+  document.querySelectorAll('.s-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.s-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('sp-' + id).classList.add('active');
+}
+
+/* ── SALAH HIDE ON SCROLL ── */
+(function() {
+  const bar = document.querySelector('.salah-bar');
+  if (!bar) return;
+  let lastY = window.scrollY;
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const currentY = window.scrollY;
+        if (currentY > lastY && currentY > 80) { bar.classList.add('hidden'); }
+        else { bar.classList.remove('hidden'); }
+        lastY = currentY;
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+})();
+
+/* ── HERO PRAYER CARD — Live Aladhan API ── */
+(function fetchHeroPrayers() {
+  const prayers = ['Fajr','Sunrise','Dhuhr','Asr','Maghrib','Isha'];
+  const lat = 34.0837, lng = 74.7973;
+  const today = new Date();
+  const dd = String(today.getDate()).padStart(2,'0');
+  const mm = String(today.getMonth()+1).padStart(2,'0');
+  const yyyy = today.getFullYear();
+
+  // Show Hijri + Gregorian date
+  const dateEl = document.getElementById('prayer-date-display');
+  if (dateEl) {
+    const greg = today.toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+    dateEl.textContent = greg;
+  }
+
+  const url = `https://api.aladhan.com/v1/timings/${dd}-${mm}-${yyyy}?latitude=${lat}&longitude=${lng}&method=1`;
+
+  fetch(url)
+    .then(r => r.json())
+    .then(data => {
+      const timings = data.data.timings;
+      const meta = data.data.date;
+
+      // Update date with Hijri
+      if (dateEl && meta) {
+        const hijri = meta.hijri;
+        dateEl.textContent = `${meta.readable} / ${hijri.day} ${hijri.month.en} ${hijri.year}`;
+      }
+
+      const now = new Date();
+      const curMins = now.getHours() * 60 + now.getMinutes();
+      let marked = false;
+
+      prayers.forEach(p => {
+        const timeEl = document.getElementById('pt-' + p);
+        const row = document.querySelector(`.prayer-row[data-prayer="${p}"]`);
+        if (!timeEl || !timings[p]) return;
+
+        // Convert 24h to 12h
+        const [hh, mm] = timings[p].split(':').map(Number);
+        const ap = hh >= 12 ? 'PM' : 'AM';
+        const h12 = hh % 12 || 12;
+        timeEl.textContent = `${h12}:${String(mm).padStart(2,'0')} ${ap}`;
+
+        // Highlight next prayer
+        const pMins = hh * 60 + mm;
+        if (!marked && curMins < pMins) {
+          if (row) { row.classList.add('next-prayer'); }
+          marked = true;
+        }
+      });
+
+      // Also update the salah bar times (legacy bar)
+      prayers.forEach(p => {
+        const el = document.getElementById('t-' + p);
+        if (el && timings[p]) {
+          const [hh, mm] = timings[p].split(':').map(Number);
+          const ap = hh >= 12 ? 'PM' : 'AM';
+          const h12 = hh % 12 || 12;
+          el.textContent = `${h12}:${String(mm).padStart(2,'0')} ${ap}`;
+        }
+      });
+    })
+    .catch(() => {
+      // Fallback Srinagar times
+      const fb = {Fajr:'5:12 AM',Sunrise:'6:38 AM',Dhuhr:'12:44 PM',Asr:'4:10 PM',Maghrib:'6:48 PM',Isha:'8:05 PM'};
+      prayers.forEach(p => {
+        const el = document.getElementById('pt-' + p);
+        if (el && fb[p]) el.textContent = fb[p];
+      });
+      if (dateEl) dateEl.textContent = new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+    });
+})();
+
+/* ── LIVE CLOCK ── */
+function tick() {
+  const n = new Date(), h = n.getHours(), m = n.getMinutes(), s = n.getSeconds();
+  const ap = h >= 12 ? 'PM' : 'AM', hh = h % 12 || 12;
+  const str = `${hh}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')} ${ap}`;
+  const el = document.getElementById('lc');
+  if (el) el.textContent = str;
+  const el2 = document.getElementById('lc2');
+  if (el2) el2.textContent = str;
+}
+setInterval(tick, 1000); tick();
+
+/* ── LIVE SALAH TIMES via Aladhan API ── */
+(function fetchSalahTimes() {
+  const prayers = ['Fajr','Sunrise','Dhuhr','Asr','Maghrib','Isha'];
+  const lat = 34.0837, lng = 74.7973; // Srinagar coordinates
+  const today = new Date();
+  const dd = String(today.getDate()).padStart(2,'0');
+  const mm = String(today.getMonth()+1).padStart(2,'0');
+  const yyyy = today.getFullYear();
+
+  // Update date display
+  const dateEl = document.getElementById('salah-date');
+  if (dateEl) {
+    dateEl.textContent = today.toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'long'});
+  }
+
+  // Aladhan API — method 1 = Karachi (standard for South Asia)
+  const url = `https://api.aladhan.com/v1/timings/${dd}-${mm}-${yyyy}?latitude=${lat}&longitude=${lng}&method=1`;
+
+  fetch(url)
+    .then(r => r.json())
+    .then(data => {
+      const timings = data.data.timings;
+      prayers.forEach(p => {
+        const el = document.getElementById('t-' + p);
+        if (el && timings[p]) {
+          // Convert 24h to 12h
+          const [hh, mm] = timings[p].split(':').map(Number);
+          const ap = hh >= 12 ? 'PM' : 'AM';
+          const h12 = hh % 12 || 12;
+          el.textContent = `${h12}:${String(mm).padStart(2,'0')} ${ap}`;
+        }
+      });
+
+      // Highlight next prayer
+      const now = new Date();
+      const curMins = now.getHours() * 60 + now.getMinutes();
+      let marked = false;
+      document.querySelectorAll('#sp-daily .s-item').forEach(el => {
+        el.classList.remove('next');
+        const key = el.dataset.p;
+        if (!marked && timings[key]) {
+          const [hh, mm] = timings[key].split(':').map(Number);
+          const pMins = hh * 60 + mm;
+          if (curMins < pMins) { el.classList.add('next'); marked = true; }
+        }
+      });
+    })
+    .catch(() => {
+      // Fallback: static Srinagar times if API fails
+      const fallback = { Fajr:'5:12 AM', Sunrise:'6:38 AM', Dhuhr:'12:44 PM', Asr:'4:10 PM', Maghrib:'6:48 PM', Isha:'8:05 PM' };
+      prayers.forEach(p => {
+        const el = document.getElementById('t-' + p);
+        if (el && fallback[p]) el.textContent = fallback[p];
+      });
+    });
+})();
+
+/* ── CAROUSEL ── */
+(function() {
+  const track = document.getElementById('ct');
+  const dotsEl = document.getElementById('cd');
+
+  if (!track || !dotsEl) return;
+
+  const slides = track.querySelectorAll('.car-slide');
+  const N = slides.length;
+
+  let cur = 0;
+
+  const vis = () => window.innerWidth >= 560 ? 2 : 1;
+  const stepBy = () => vis();
+  const pageCount = () => Math.ceil(N / stepBy());
+
+  function buildDots() {
+    dotsEl.innerHTML = '';
+
+    for (let i = 0; i < pageCount(); i++) {
+      const d = document.createElement('button');
+      d.className = 'c-dot' + (i === Math.floor(cur / stepBy()) ? ' active' : '');
+
+      d.addEventListener('click', () => {
+        goSlide(i * stepBy());
+      });
+
+      dotsEl.appendChild(d);
+    }
+  }
+
+  function goSlide(idx) {
+    if (idx >= N) {
+      cur = 0;
+    } else if (idx < 0) {
+      cur = (pageCount() - 1) * stepBy();
+    } else {
+      cur = idx;
+    }
+
+    const gap = 16;
+    const w = slides[0].getBoundingClientRect().width + gap;
+
+    track.style.transform = `translateX(-${cur * w}px)`;
+
+    const activePage = Math.floor(cur / stepBy());
+
+    document.querySelectorAll('.c-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === activePage);
+    });
+  }
+
+  const prevBtn = document.getElementById('cp');
+  const nextBtn = document.getElementById('cn');
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      goSlide(cur - stepBy());
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      goSlide(cur + stepBy());
+    });
+  }
+
+  let sx = 0;
+
+  track.addEventListener('touchstart', e => {
+    sx = e.touches[0].clientX;
+  }, { passive:true });
+
+  track.addEventListener('touchend', e => {
+    const dx = sx - e.changedTouches[0].clientX;
+
+    if (Math.abs(dx) > 48) {
+      goSlide(dx > 0 ? cur + stepBy() : cur - stepBy());
+    }
+  });
+
+  let tmr = setInterval(() => {
+    goSlide(cur + stepBy());
+  }, 4800);
+
+  track.addEventListener('mouseenter', () => clearInterval(tmr));
+
+  track.addEventListener('mouseleave', () => {
+    tmr = setInterval(() => {
+      goSlide(cur + stepBy());
+    }, 4800);
+  });
+
+  window.addEventListener('resize', () => {
+    cur = 0;
+    buildDots();
+    goSlide(0);
+  });
+
+  buildDots();
+  goSlide(0);
+})();
+
+/* ── APPLE SCROLL REVEAL ── */
+function runReveal() {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.07, rootMargin: '0px 0px -28px 0px' });
+  document.querySelectorAll('.page.active .rv, .page.active .rvl, .page.active .rvr').forEach(el => {
+    if (!el.classList.contains('in')) obs.observe(el);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  const themeBtn = document.getElementById('themeToggle');
+
+  if (!themeBtn) return;
+
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark');
+    themeBtn.textContent = 'Light Theme';
+  }
+
+  themeBtn.addEventListener('click', function () {
+    document.body.classList.toggle('dark');
+
+    if (document.body.classList.contains('dark')) {
+      localStorage.setItem('theme', 'dark');
+      themeBtn.textContent = 'Light Theme';
+    } else {
+      localStorage.setItem('theme', 'light');
+      themeBtn.textContent = 'Dark Theme';
+    }
+  });
+});
+runReveal();
+</script>
+</body>
+</html>

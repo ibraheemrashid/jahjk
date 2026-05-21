@@ -1,0 +1,22 @@
+{
+  "name": "jahjk-website",
+  "version": "1.0.0",
+  "description": "Redesigned website for Jamiat Ahle Hadees Jammu & Kashmir",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve . -p 3000",
+    "dev": "npx live-server --port=3000 --open=index.html"
+  },
+  "keywords": ["islamic", "jamiat", "kashmir", "website"],
+  "author": "JAHJK",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "serve": "^14.0.0",
+    "live-server": "^1.2.2"
+  },
+  "notes": {
+    "usage": "Just open index.html in a browser — no build step required.",
+    "fonts": "Google Fonts loaded via CDN — requires internet connection.",
+    "angular": "See pages/ folder for component templates to use in Angular."
+  }
+}
