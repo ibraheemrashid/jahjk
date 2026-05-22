@@ -66,6 +66,10 @@ nav{background:var(--gk);position:sticky;top:0;z-index:200;box-shadow:0 2px 24px
   background:rgba(201,168,76,.14);
   color:var(--gold);
 }
+
+#themeToggle{
+  margin-left:14px;
+}
 .login-layout{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
 @media(max-width:800px){.login-layout{grid-template-columns:1fr!important;}}
 .nav-cta:hover{background:var(--glt)!important;}
@@ -1124,6 +1128,140 @@ body.dark footer .ft-div{
 .dir-search::placeholder{
   color:var(--inkf);
 }
+
+.theme-toggle{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  border:1px solid rgba(201,168,76,.25);
+  background:rgba(255,255,255,.06);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  cursor:pointer;
+}
+
+.theme-toggle svg{
+  position:absolute;
+  width:18px !important;
+  height:18px !important;
+  color:var(--gold);
+  stroke:currentColor;
+}
+
+.moon-icon{
+  opacity:1;
+}
+
+.sun-icon{
+  opacity:0;
+}
+
+body.dark .moon-icon{
+  opacity:0;
+}
+
+body.dark .sun-icon{
+  opacity:1;
+}
+.smart-theme-toggle{
+  background:none;
+  border:none;
+  padding:0;
+  cursor:pointer;
+}
+
+.toggle-track{
+  width:74px;
+  height:38px;
+
+  border-radius:999px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(8,28,21,.95),
+      rgba(16,54,41,.95)
+    );
+
+  border:
+    1px solid rgba(201,168,76,.22);
+
+  position:relative;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:0 10px;
+
+  box-shadow:
+    inset 0 1px 2px rgba(255,255,255,.04),
+    0 8px 24px rgba(0,0,0,.18);
+
+  overflow:hidden;
+}
+
+.toggle-track svg{
+  width:16px;
+  height:16px;
+  z-index:2;
+}
+
+
+.toggle-sun{
+  color:#000000;
+  transition:.25s ease;
+}
+
+.toggle-moon{
+  color:rgba(255,255,255,.45);
+  transition:.25s ease;
+}
+
+body.dark .toggle-sun{
+  color:rgba(255,255,255,.35);
+}
+
+body.dark .toggle-moon{
+  color:#fff;
+}
+
+.toggle-thumb{
+  position:absolute;
+
+  width:28px;
+  height:28px;
+
+  border-radius:50%;
+
+  left:40px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #f4bc06
+    );
+
+  transition:.28s cubic-bezier(.4,0,.2,1);
+
+  box-shadow:
+    0 3px 10px rgba(0,0,0,.22);
+}
+/* LIGHT MODE */
+
+body.dark .toggle-thumb{
+  left:5px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0b0b0b,
+      #1a1a1a
+    );
+}
 </style>
 </head>
 <body>
@@ -1189,7 +1327,19 @@ body.dark footer .ft-div{
       </ul>
     </li>
     <li><button class="nav-cta" onclick="go('login')">Login / Account</button></li>
-   <button id="themeToggle" class="nav-theme-btn">Dark Theme</button>
+   <button id="themeToggle" class="smart-theme-toggle" aria-label="Toggle Theme">
+
+  <div class="toggle-track">
+
+    <i data-lucide="moon" class="toggle-moon"></i>
+
+    <div class="toggle-thumb"></div>
+
+    <i data-lucide="sun-medium" class="toggle-sun"></i>
+
+  </div>
+
+</button>
   </ul>
   <button class="nav-ham" id="ham"><span></span><span></span><span></span></button>
 </div></nav>
@@ -2611,31 +2761,54 @@ function runReveal() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  const themeBtn = document.getElementById('themeToggle');
+
+  const themeBtn =
+    document.getElementById('themeToggle');
 
   if (!themeBtn) return;
 
-  if (localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark');
-    themeBtn.textContent = 'Light Theme';
+  function updateThemeIcons(){
+
+    const isDark =
+      document.body.classList.contains('dark');
+
+    themeBtn.setAttribute(
+      'aria-label',
+      isDark ? 'Light Mode' : 'Dark Mode'
+    );
+
   }
 
-  themeBtn.addEventListener('click', function () {
+  // LOAD SAVED THEME
+
+  if(localStorage.getItem('theme') === 'dark'){
+
+    document.body.classList.add('dark');
+
+  }
+
+  updateThemeIcons();
+
+  // TOGGLE
+
+  themeBtn.addEventListener('click', function(){
+
     document.body.classList.toggle('dark');
 
-    if (document.body.classList.contains('dark')) {
-      localStorage.setItem('theme', 'dark');
-      themeBtn.textContent = 'Light Theme';
-    } else {
-      localStorage.setItem('theme', 'light');
-      themeBtn.textContent = 'Dark Theme';
-    }
+    const isDark =
+      document.body.classList.contains('dark');
+
+    localStorage.setItem(
+      'theme',
+      isDark ? 'dark' : 'light'
+    );
+
+    updateThemeIcons();
+
   });
+
 });
 runReveal();
-</script>
-<script>
-  lucide.createIcons();
 </script>
 
 <script>
@@ -2683,6 +2856,9 @@ runReveal();
   });
 
 });
+</script>
+<script>
+  lucide.createIcons();
 </script>
 </body>
 </html>
