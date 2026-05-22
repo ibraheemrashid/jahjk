@@ -197,7 +197,7 @@ nav{background:var(--gk);position:sticky;top:0;z-index:200;box-shadow:0 2px 24px
 /* CAROUSEL */
 .car-sec{background:var(--gk);padding:0 0 52px;}
 .car-hdr{max-width:1200px;margin:0 auto;padding:0 32px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
-.car-lbl{font-family:'Cinzel',serif;font-size:.7rem;color:var(--glt);letter-spacing:.14em;text-transform:uppercase;opacity:.8;}
+.car-lbl{font-family:'Cinzel',serif;font: size 9rem;color:var(--glt);letter-spacing:.14em;text-transform:uppercase;opacity:.8; padding: 20px;}
 .car-nav{display:none;}
 .car-btn{width:38px;height:38px;border-radius:50%;border:1.5px solid rgba(201,168,76,.35);background:rgba(255,255,255,.04);color:var(--gold);font-size:1rem;cursor:pointer;display:grid;place-items:center;transition:all .2s;}
 .car-btn:hover{background:rgba(201,168,76,.15);border-color:var(--gold);}
@@ -481,12 +481,7 @@ nav{background:var(--gk);position:sticky;top:0;z-index:200;box-shadow:0 2px 24px
 .info-item-desc { font-family:'Cormorant Garamond',serif; font-size:.9rem; color:var(--inkf); line-height:1.5; }
 
 /* FOOTER */
-footer{background:linear-gradient(
-    135deg,
-    #c8a54d,
-    #d7b866,
-    #b89235
-  );padding:52px 32px 28px;position:relative;z-index:1;}
+footer{background:var(--gd);padding:52px 32px 28px;position:relative;z-index:1;}
 .ft-in{max-width:1200px;margin:0 auto;display:grid;gap:36px;grid-template-columns:2fr 1fr 1fr 1fr;}
 @media(max-width:900px){.ft-in{grid-template-columns:1fr 1fr;}}
 @media(max-width:520px){.ft-in{grid-template-columns:1fr;gap:26px;}}
@@ -900,88 +895,77 @@ body.dark footer .ft-div{
 }
 
 .contact-premium-section{
-  background:var(--gd);
-  padding:44px 24px;
+  position:relative;
+
+  padding:48px 32px;
+
+  background:
+    var(--gd);
+
+  overflow:hidden;
 }
 
 .contact-premium-grid{
-  max-width:1200px;
+  position:relative;
+  z-index:1;
+
+  max-width:1100px;
   margin:0 auto;
+
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:32px;
+
+  gap:58px;
 }
 
 .contact-premium-card{
-  background:#20242b;
-  border:1px solid rgba(201,168,76,.18);
-  border-radius:22px;
-  padding:28px;
-  color:#e8edf3;
-  box-shadow:0 20px 50px rgba(0,0,0,.22);
-}
-
-.contact-card-icon{
-  width:82px;
-  height:82px;
-  border-radius:50%;
-  background:rgba(42,138,82,.18);
-  display:grid;
-  place-items:center;
-  margin:0 auto 26px;
-}
-
-.contact-card-icon svg{
-  width:44px;
-  height:44px;
-  color:var(--gold);
-  stroke-width:1.8;
+  background:#121a16;
+  border:1px solid rgba(201,168,76,.14);
+  border-radius:16px;
+  padding:22px;
+  color:#f5efe3;
+  box-shadow:0 10px 30px rgba(0,0,0,.16);
 }
 
 .contact-premium-card h2{
-  text-align:center;
   font-family:'Cinzel',serif;
-  font-size:1.55rem;
-  color:#fff;
-  margin-bottom:40px;
+  font-size:1.2rem;
+  color:var(--gold);
+  margin-bottom:18px;
 }
 
 .contact-info-row{
   display:grid;
-  grid-template-columns:70px 1fr;
-  gap:22px;
-  align-items:start;
-  margin-bottom:34px;
+  grid-template-columns:42px 1fr;
+  gap:12px;
+  margin-bottom:18px;
 }
 
 .contact-info-row > span{
-  width:64px;
-  height:64px;
+  width:38px;
+  height:38px;
   border-radius:50%;
-  background:rgba(42,138,82,.15);
+  background:rgba(201,168,76,.08);
   display:grid;
   place-items:center;
 }
 
 .contact-info-row svg{
-  width:26px;
-  height:26px;
+  width:18px;
+  height:18px;
   color:var(--gold);
 }
 
 .contact-info-row h3{
-  font-family:'Cinzel',serif;
+  font-size:.8rem;
   color:#fff;
-  font-size:1rem;
-  margin-bottom:8px;
+  margin-bottom:3px;
 }
 
-.contact-info-row p,
-.visit-text,
-.contact-note{
-  color:rgba(255,255,255,.6);
-  font-size:1.15rem;
-  line-height:1.6;
+.contact-info-row p{
+  color:rgba(255,255,255,.72);
+  font-size:.88rem;
+  line-height:1.45;
 }
 
 .contact-info-row a{
@@ -989,18 +973,12 @@ body.dark footer .ft-div{
   text-decoration:none;
 }
 
-.contact-note{
-  border-top:1px solid rgba(255,255,255,.18);
-  padding-top:28px;
-  margin-top:20px;
-}
-
 .contact-map-wrap{
-  height:280px;
-  border-radius:16px;
+  height:220px;
+  border-radius:12px;
   overflow:hidden;
-  border:1px solid rgba(201,168,76,.2);
-  margin-bottom:28px;
+  border:1px solid rgba(201,168,76,.12);
+  margin-bottom:14px;
 }
 
 .contact-map-wrap iframe{
@@ -1009,34 +987,52 @@ body.dark footer .ft-div{
   border:0;
 }
 
+.visit-text,
+.contact-note{
+  color:rgba(255,255,255,.62);
+  font-size:.85rem;
+  line-height:1.45;
+}
+
+.contact-note{
+  margin-top:10px;
+  padding-top:12px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
 .contact-socials{
-  border-top:1px solid rgba(255,255,255,.18);
-  padding-top:26px;
+  margin-top:14px;
+  padding-top:14px;
+  border-top:1px solid rgba(255,255,255,.08);
   display:flex;
   align-items:center;
-  gap:24px;
-  flex-wrap:wrap;
+  gap:14px;
 }
 
 .contact-socials a{
   color:#fff;
-  text-decoration:none;
 }
 
 .contact-socials svg{
-  width:22px;
-  height:22px;
+  width:18px;
+  height:18px;
 }
 
 .contact-socials button{
   margin-left:auto;
   background:transparent;
+  border:1px solid rgba(201,168,76,.28);
   color:var(--gold);
-  border:1.5px solid var(--gold);
-  border-radius:12px;
-  padding:12px 24px;
-  font-family:'Cinzel',serif;
+  padding:8px 14px;
+  border-radius:10px;
   cursor:pointer;
+  font-size:.78rem;
+}
+
+@media(max-width:800px){
+  .contact-premium-grid{
+    grid-template-columns:1fr;
+  }
 }
 
 .back-to-top{
@@ -1081,6 +1077,53 @@ body.dark footer .ft-div{
   }
 }
 
+.dir-search-wrap{
+  max-width:520px;
+
+  margin:
+    0 auto 32px;
+
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  background:rgba(255,255,255,.96);
+
+  border:
+    1px solid rgba(201,168,76,.16);
+
+  border-radius:999px;
+
+  padding:14px 18px;
+
+  box-shadow:
+    0 12px 32px rgba(0,0,0,.08);
+}
+
+.dir-search-wrap svg{
+  width:18px;
+  height:18px;
+  color:var(--gold);
+  flex-shrink:0;
+}
+
+.dir-search{
+  width:100%;
+
+  border:none;
+  outline:none;
+  background:transparent;
+
+  font-family:'Cormorant Garamond',serif;
+
+  font-size:1rem;
+
+  color:var(--ink);
+}
+
+.dir-search::placeholder{
+  color:var(--inkf);
+}
 </style>
 </head>
 <body>
@@ -1326,10 +1369,6 @@ body.dark footer .ft-div{
 <div class="car-sec">
   <div class="car-hdr rv">
     <span class="car-lbl">✦ Events &amp; Programmes Gallery</span>
-    <div class="car-nav">
-      <button class="car-btn" id="cp">&#8592;</button>
-      <button class="car-btn" id="cn">&#8594;</button>
-    </div>
   </div>
 
   <div class="car-vp">
@@ -1434,6 +1473,91 @@ body.dark footer .ft-div{
   <div class="waqf-text"><span class="stag dk-tag">Waqf-i-Tanzeem</span><h2 class="stitle dk-title">Register Your Property</h2><p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:rgba(255,255,255,.62);line-height:1.75;margin-top:14px;">Protect mosques, Madrasas, and Islamic properties by registering them under Waqf-i-Tanzeem. Ensure these sacred places remain in the community's trust for generations to come.</p><div class="waqf-btns"><button class="btn btn-g" onclick="go('waqf')">Register a Property</button><button class="btn btn-o" onclick="go('waqf-reg')">View Registered Masajid</button></div></div>
   <div class="waqf-stats"><div class="waqf-stat"><span class="waqf-num">200+</span><div class="waqf-lbl">Registered Masajid</div></div><div class="waqf-stat"><span class="waqf-num">50+</span><div class="waqf-lbl">Institutions Supported</div></div></div>
 </div></div></div>
+
+<section class="contact-premium-section" id="contact">
+  <div class="contact-premium-grid">
+
+    <div class="contact-premium-card">
+      <div class="contact-card-icon">
+        <i data-lucide="phone"></i>
+      </div>
+
+      <h2>Contact Information</h2>
+
+      <div class="contact-info-row">
+        <span><i data-lucide="phone"></i></span>
+        <div>
+          <h3>Phone Numbers</h3>
+          <p>
+            <a href="tel:+919541921816">+91 9541921816</a>
+            <span>|</span>
+            <a href="tel:+919541921816">+91 9541921816</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-info-row">
+        <span><i data-lucide="map-pin"></i></span>
+        <div>
+          <h3>Address</h3>
+          <p>Jamiat Manzil Barbar Shah, Srinagar, Jammu and Kashmir</p>
+        </div>
+      </div>
+
+      <div class="contact-info-row">
+        <span><i data-lucide="mail"></i></span>
+        <div>
+          <h3>Email</h3>
+          <p><a href="mailto:contact@jahjk.org">contact@jahjk.org</a></p>
+        </div>
+      </div>
+
+      <div class="contact-info-row">
+        <span><i data-lucide="clock"></i></span>
+        <div>
+          <h3>Working Hours</h3>
+          <p>Mon-Sat 10:00 AM to 5:00 PM</p>
+        </div>
+      </div>
+
+      <div class="contact-note">
+        We remain available during working hours
+      </div>
+    </div>
+
+    <div class="contact-premium-card">
+      <div class="contact-card-icon">
+        <i data-lucide="map-pin"></i>
+      </div>
+
+      <h2>Visit Us</h2>
+
+      <div class="contact-map-wrap">
+        <iframe
+          src="https://www.google.com/maps?q=Head%20Office%20Jamiat%20Ahli-Hadees%20J%26K%20Srinagar&output=embed"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <p class="visit-text">
+        Come and visit us at our office in Srinagar
+      </p>
+
+      <div class="contact-socials">
+        <a href="#"><i data-lucide="facebook"></i></a>
+        <a href="#"><i data-lucide="twitter"></i></a>
+        <a href="#"><i data-lucide="youtube"></i></a>
+        <a href="#"><i data-lucide="instagram"></i></a>
+        <a href="#"><i data-lucide="message-circle"></i></a>
+
+        <button onclick="go('quick-links')">Quick Links</button>
+      </div>
+    </div>
+
+  </div>
+</section>
 </div><!-- end home -->
 <!-- ═══ SMERT ═══ -->
 <div class="page" id="p-smert">
@@ -1778,12 +1902,22 @@ body.dark footer .ft-div{
 <div class="page" id="p-schools">
 <div class="pb"><div class="pb-title">Schools</div><div class="pb-sub">Affiliated schools providing quality Islamic and modern education across J&amp;K</div></div>
 <div class="bgw"><div class="sec">
+  <div class="dir-search-wrap">
+  <i data-lucide="search"></i>
+
+  <input
+    type="text"
+    class="dir-search"
+    data-target="school-card"
+    placeholder="Search schools..."
+  >
+</div>
   <div class="sh rv"><span class="stag">SMERT Network</span><h2 class="stitle">Affiliated Schools</h2><p class="sdesc">A network of schools across all districts of Jammu &amp; Kashmir offering quality Islamic and modern education.</p><div class="orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
   <div class="inst-dg">
-    <div class="idc rv d1"><div class="idc-hdr"><span class="idc-badge">Primary School</span><div class="idc-t">Jamiat Model School, Srinagar</div></div><div class="idc-body"><p class="idc-d">A leading primary school offering a blend of Quranic education and modern curriculum, nurturing students from an early age in faith and academics.</p><div class="idc-more">View Details →</div></div></div>
-    <div class="idc rv d2"><div class="idc-hdr"><span class="idc-badge">High School</span><div class="idc-t">Islamic High School, Sopore</div></div><div class="idc-body"><p class="idc-d">A reputed high school serving the Sopore community with strong academic standards and Islamic character development programmes.</p><div class="idc-more">View Details →</div></div></div>
-    <div class="idc rv d3"><div class="idc-hdr"><span class="idc-badge">Primary School</span><div class="idc-t">Salafi School, Baramulla</div></div><div class="idc-body"><p class="idc-d">Established to serve the Muslim community of Baramulla with authentic Islamic education alongside the national curriculum.</p><div class="idc-more">View Details →</div></div></div>
-    <div class="idc rv d4"><div class="idc-hdr"><span class="idc-badge">Middle School</span><div class="idc-t">Noor School, Anantnag</div></div><div class="idc-body"><p class="idc-d">Providing holistic education in the Anantnag district, with emphasis on Quran, Arabic and Islamic studies.</p><div class="idc-more">View Details →</div></div></div>
+    <div class="idc school-card rv d1"><div class="idc-hdr"><span class="idc-badge">Primary School</span><div class="idc-t">Jamiat Model School, Srinagar</div></div><div class="idc-body"><p class="idc-d">A leading primary school offering a blend of Quranic education and modern curriculum, nurturing students from an early age in faith and academics.</p><div class="idc-more">View Details →</div></div></div>
+    <div class="idc school-card rv d2"><div class="idc-hdr"><span class="idc-badge">High School</span><div class="idc-t">Islamic High School, Sopore</div></div><div class="idc-body"><p class="idc-d">A reputed high school serving the Sopore community with strong academic standards and Islamic character development programmes.</p><div class="idc-more">View Details →</div></div></div>
+    <div class="idc school-card rv d3"><div class="idc-hdr"><span class="idc-badge">Primary School</span><div class="idc-t">Salafi School, Baramulla</div></div><div class="idc-body"><p class="idc-d">Established to serve the Muslim community of Baramulla with authentic Islamic education alongside the national curriculum.</p><div class="idc-more">View Details →</div></div></div>
+    <div class="idc school-card rv d4"><div class="idc-hdr"><span class="idc-badge">Middle School</span><div class="idc-t">Noor School, Anantnag</div></div><div class="idc-body"><p class="idc-d">Providing holistic education in the Anantnag district, with emphasis on Quran, Arabic and Islamic studies.</p><div class="idc-more">View Details →</div></div></div>
   </div>
 </div></div>
 </div>
@@ -1792,10 +1926,21 @@ body.dark footer .ft-div{
 <div class="page" id="p-colleges">
 <div class="pb"><div class="pb-title">Colleges</div><div class="pb-sub">Islamic colleges and higher education institutions under the SMERT network</div></div>
 <div class="bgw"><div class="sec">
+
+  <div class="dir-search-wrap">
+  <i data-lucide="search"></i>
+
+  <input
+    type="text"
+    class="dir-search"
+    data-target="college-card"
+    placeholder="Search colleges..."
+  >
+</div>
   <div class="sh rv"><span class="stag">Higher Education</span><h2 class="stitle">Affiliated Colleges</h2><div class="orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
   <div class="inst-dg">
-    <div class="idc rv d1"><div class="idc-hdr"><span class="idc-badge">Women's College</span><div class="idc-t">Al Kulyat us Salafia Lil Banat</div></div><div class="idc-body"><p class="idc-d">A premier Islamic college for women, offering comprehensive religious education grounded in authentic Quran and Sunnah.</p><div class="idc-more" onclick="go('kuliyat-girls')">Learn More →</div></div></div>
-    <div class="idc rv d2"><div class="idc-hdr"><span class="idc-badge">Men's College</span><div class="idc-t">Al Kulyat us Salafia Lil Baneen</div></div><div class="idc-body"><p class="idc-d">An Islamic college for men with rigorous curriculum in Islamic sciences, Hadees, Arabic and Fiqh studies.</p><div class="idc-more" onclick="go('kuliyat-boys')">Learn More →</div></div></div>
+    <div class="idc college-card rv d1"><div class="idc-hdr"><span class="idc-badge">Women's College</span><div class="idc-t">Al Kulyat us Salafia Lil Banat</div></div><div class="idc-body"><p class="idc-d">A premier Islamic college for women, offering comprehensive religious education grounded in authentic Quran and Sunnah.</p><div class="idc-more" onclick="go('kuliyat-girls')">Learn More →</div></div></div>
+   <div class="idc college-card rv d2"><div class="idc-hdr"><span class="idc-badge">Men's College</span><div class="idc-t">Al Kulyat us Salafia Lil Baneen</div></div><div class="idc-body"><p class="idc-d">An Islamic college for men with rigorous curriculum in Islamic sciences, Hadees, Arabic and Fiqh studies.</p><div class="idc-more" onclick="go('kuliyat-boys')">Learn More →</div></div></div>
   </div>
 </div></div>
 </div>
@@ -1804,11 +1949,22 @@ body.dark footer .ft-div{
 <div class="page" id="p-madarsa">
 <div class="pb"><div class="pb-title">Madarsas</div><div class="pb-sub">Traditional Islamic schools offering full-time religious education</div></div>
 <div class="bgw"><div class="sec">
+
+  <div class="dir-search-wrap">
+  <i data-lucide="search"></i>
+
+  <input
+    type="text"
+    class="dir-search"
+    data-target="madarsa-card"
+    placeholder="Search madarsas..."
+  >
+</div>
   <div class="sh rv"><span class="stag">Islamic Education</span><h2 class="stitle">Affiliated Madarsas</h2><p class="sdesc">Traditional madarsas offering full-time Islamic education with a focus on Quran memorisation and classical Islamic sciences.</p><div class="orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
   <div class="inst-dg">
-    <div class="idc rv d1"><div class="idc-hdr"><span class="idc-badge">Madarsa</span><div class="idc-t">Madarsa Salafiyya, Srinagar</div></div><div class="idc-body"><p class="idc-d">Full-time madarsa offering Hifz programme, Dars-e-Nizami, and advanced Islamic sciences in Srinagar.</p><div class="idc-more">View Details →</div></div></div>
-    <div class="idc rv d2"><div class="idc-hdr"><span class="idc-badge">Madarsa</span><div class="idc-t">Madarsa Ibn Taymiyyah, Sopore</div></div><div class="idc-body"><p class="idc-d">Residential madarsa for boys providing classical Islamic education including Quran, Fiqh and Arabic grammar.</p><div class="idc-more">View Details →</div></div></div>
-    <div class="idc rv d3"><div class="idc-hdr"><span class="idc-badge">Women's Madarsa</span><div class="idc-t">Madarsa Aisha Siddiqua, Baramulla</div></div><div class="idc-body"><p class="idc-d">Women's madarsa offering comprehensive Islamic studies, Hifz and Arabic language courses in Baramulla.</p><div class="idc-more">View Details →</div></div></div>
+    <div class="idc madarsa-card rv d1"><div class="idc-hdr"><span class="idc-badge">Madarsa</span><div class="idc-t">Madarsa Salafiyya, Srinagar</div></div><div class="idc-body"><p class="idc-d">Full-time madarsa offering Hifz programme, Dars-e-Nizami, and advanced Islamic sciences in Srinagar.</p><div class="idc-more">View Details →</div></div></div>
+    <div class="idc madarsa-card rv d2"><div class="idc-hdr"><span class="idc-badge">Madarsa</span><div class="idc-t">Madarsa Ibn Taymiyyah, Sopore</div></div><div class="idc-body"><p class="idc-d">Residential madarsa for boys providing classical Islamic education including Quran, Fiqh and Arabic grammar.</p><div class="idc-more">View Details →</div></div></div>
+    <div class="idc madarsa-card rv d3"><div class="idc-hdr"><span class="idc-badge">Women's Madarsa</span><div class="idc-t">Madarsa Aisha Siddiqua, Baramulla</div></div><div class="idc-body"><p class="idc-d">Women's madarsa offering comprehensive Islamic studies, Hifz and Arabic language courses in Baramulla.</p><div class="idc-more">View Details →</div></div></div>
   </div>
 </div></div>
 </div>
@@ -1817,6 +1973,17 @@ body.dark footer .ft-div{
 <div class="page" id="p-masjid">
 <div class="pb"><div class="pb-title">Masjids</div><div class="pb-sub">Network of mosques across Jammu &amp; Kashmir under the Jamiat umbrella</div></div>
 <div class="bgw"><div class="sec">
+
+  <div class="dir-search-wrap">
+  <i data-lucide="search"></i>
+
+  <input
+    type="text"
+    class="dir-search"
+    data-target="masjid-card"
+    placeholder="Search masjids..."
+  >
+</div>
   <div class="sh rv"><span class="stag">Mosques</span><h2 class="stitle">Our Masajid</h2><p class="sdesc">Over 200 registered masajid across J&amp;K, serving as centres of worship, education and community gathering.</p><div class="orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
   <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:40px;" class="rv">
     <button class="btn btn-p" onclick="go('waqf-reg')">View Registered Masajid</button>
@@ -1824,9 +1991,9 @@ body.dark footer .ft-div{
     <button class="btn btn-od" onclick="go('waqf')">Register a Masjid</button>
   </div>
   <div class="inst-dg">
-    <div class="idc rv d1"><div class="idc-hdr"><span class="idc-badge">Central Mosque</span><div class="idc-t">Jama Masjid Lal Bazar</div></div><div class="idc-body"><p class="idc-d">One of the principal mosques of the Jamiat in Srinagar, hosting Friday prayers, Islamic programmes and community events.</p><div class="idc-more">District: Srinagar →</div></div></div>
-    <div class="idc rv d2"><div class="idc-hdr"><span class="idc-badge">District Mosque</span><div class="idc-t">Masjid Ibrahim, Sopore</div></div><div class="idc-body"><p class="idc-d">A prominent mosque in Sopore serving the northern Kashmir community with regular prayers, Quran classes and community programmes.</p><div class="idc-more">District: Baramulla →</div></div></div>
-    <div class="idc rv d3"><div class="idc-hdr"><span class="idc-badge">District Mosque</span><div class="idc-t">Jama Masjid Jammu</div></div><div class="idc-body"><p class="idc-d">The main Jamiat mosque in the Jammu region, serving the Muslim community of Jammu city with regular religious programmes.</p><div class="idc-more">District: Jammu →</div></div></div>
+    <div class="idc masjid-card rv d1"><div class="idc-hdr"><span class="idc-badge">Central Mosque</span><div class="idc-t">Jama Masjid Lal Bazar</div></div><div class="idc-body"><p class="idc-d">One of the principal mosques of the Jamiat in Srinagar, hosting Friday prayers, Islamic programmes and community events.</p><div class="idc-more">District: Srinagar →</div></div></div>
+    <div class="idc masjid-card rv d2"><div class="idc-hdr"><span class="idc-badge">District Mosque</span><div class="idc-t">Masjid Ibrahim, Sopore</div></div><div class="idc-body"><p class="idc-d">A prominent mosque in Sopore serving the northern Kashmir community with regular prayers, Quran classes and community programmes.</p><div class="idc-more">District: Baramulla →</div></div></div>
+    <div class="idc masjid-card rv d3"><div class="idc-hdr"><span class="idc-badge">District Mosque</span><div class="idc-t">Jama Masjid Jammu</div></div><div class="idc-body"><p class="idc-d">The main Jamiat mosque in the Jammu region, serving the Muslim community of Jammu city with regular religious programmes.</p><div class="idc-more">District: Jammu →</div></div></div>
   </div>
 </div></div>
 </div>
@@ -2089,91 +2256,6 @@ body.dark footer .ft-div{
   </div>
 </div></div>
 </div>
-
-<section class="contact-premium-section" id="contact">
-  <div class="contact-premium-grid">
-
-    <div class="contact-premium-card">
-      <div class="contact-card-icon">
-        <i data-lucide="phone"></i>
-      </div>
-
-      <h2>Contact Information</h2>
-
-      <div class="contact-info-row">
-        <span><i data-lucide="phone"></i></span>
-        <div>
-          <h3>Phone Numbers</h3>
-          <p>
-            <a href="tel:+919541921816">+91 9541921816</a>
-            <span>|</span>
-            <a href="tel:+919541921816">+91 9541921816</a>
-          </p>
-        </div>
-      </div>
-
-      <div class="contact-info-row">
-        <span><i data-lucide="map-pin"></i></span>
-        <div>
-          <h3>Address</h3>
-          <p>Jamiat Manzil Barbar Shah, Srinagar, Jammu and Kashmir</p>
-        </div>
-      </div>
-
-      <div class="contact-info-row">
-        <span><i data-lucide="mail"></i></span>
-        <div>
-          <h3>Email</h3>
-          <p><a href="mailto:contact@jahjk.org">contact@jahjk.org</a></p>
-        </div>
-      </div>
-
-      <div class="contact-info-row">
-        <span><i data-lucide="clock"></i></span>
-        <div>
-          <h3>Working Hours</h3>
-          <p>Mon-Sat 10:00 AM to 5:00 PM</p>
-        </div>
-      </div>
-
-      <div class="contact-note">
-        We remain available during working hours
-      </div>
-    </div>
-
-    <div class="contact-premium-card">
-      <div class="contact-card-icon">
-        <i data-lucide="map-pin"></i>
-      </div>
-
-      <h2>Visit Us</h2>
-
-      <div class="contact-map-wrap">
-        <iframe
-          src="https://www.google.com/maps?q=Head%20Office%20Jamiat%20Ahli-Hadees%20J%26K%20Srinagar&output=embed"
-          loading="lazy"
-          allowfullscreen
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-
-      <p class="visit-text">
-        Come and visit us at our office in Srinagar
-      </p>
-
-      <div class="contact-socials">
-        <a href="#"><i data-lucide="facebook"></i></a>
-        <a href="#"><i data-lucide="twitter"></i></a>
-        <a href="#"><i data-lucide="youtube"></i></a>
-        <a href="#"><i data-lucide="instagram"></i></a>
-        <a href="#"><i data-lucide="message-circle"></i></a>
-
-        <button onclick="go('quick-links')">Quick Links</button>
-      </div>
-    </div>
-
-  </div>
-</section>
 
 <button class="back-to-top" id="backToTop" aria-label="Back to top">
   <i data-lucide="arrow-up"></i>
@@ -2575,6 +2657,32 @@ runReveal();
   });
 
   lucide.createIcons();
+
+  document.querySelectorAll('.dir-search').forEach(input => {
+
+  input.addEventListener('input', function(){
+
+    const q =
+      this.value.toLowerCase().trim();
+
+    const target =
+      this.dataset.target;
+
+    document.querySelectorAll('.' + target)
+      .forEach(card => {
+
+        const txt =
+          card.innerText.toLowerCase();
+
+        card.style.display =
+          txt.includes(q)
+            ? ''
+            : 'none';
+      });
+
+  });
+
+});
 </script>
 </body>
 </html>
