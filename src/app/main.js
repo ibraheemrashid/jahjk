@@ -11,11 +11,14 @@ function go(name) {
     page.classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });
     setTimeout(runReveal, 60);
+
+    if (window.lucide) lucide.createIcons();
   }
   // close mobile drawer
   document.getElementById('drawer').classList.remove('open');
   document.getElementById('ham').classList.remove('open');
   document.body.style.overflow = '';
+  
 }
 
 /* ── HAMBURGER ── */

@@ -395,11 +395,79 @@ nav{background:var(--gk);position:sticky;top:0;z-index:200;box-shadow:0 2px 20px
 .smert-L{font-family:'Cinzel',serif;font-size:1.8rem;font-weight:700;color:var(--gold);line-height:1;min-width:28px;}
 .smert-word{font-family:'Cinzel',serif;font-size:.84rem;font-weight:600;color:var(--w);display:block;margin-bottom:2px;}
 .smert-mean{font-family:'Cormorant Garamond',serif;font-size:.88rem;color:rgba(255,255,255,.55);}
-.goals-g{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:40px;}
-@media(max-width:600px){.goals-g{grid-template-columns:1fr;}}
-.goal-card{background:var(--cream);border-radius:var(--r);padding:20px;border-left:3px solid var(--gold);}
-.goal-card h4{font-family:'Cinzel',serif;font-size:.84rem;font-weight:600;color:var(--gm);margin-bottom:7px;}
-.goal-card p{font-family:'Cormorant Garamond',serif;font-size:.94rem;color:var(--inkm);line-height:1.65;}
+/* ================================
+   AIMS & OBJECTIVES / GOALS
+================================ */
+
+.goals-g{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin-bottom:40px;
+}
+
+@media(max-width:600px){
+  .goals-g{
+    grid-template-columns:1fr;
+  }
+}
+
+.goal-card{
+  background:var(--cream);
+  border-radius:var(--r);
+  padding:20px;
+  border-left:3px solid var(--gold);
+  transition:.25s ease;
+}
+
+.goal-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 24px rgba(0,0,0,.08);
+}
+
+.goal-card h4{
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  font-family:'Cinzel',serif;
+  font-size:.84rem;
+  font-weight:600;
+  color:var(--gm);
+
+  margin-bottom:10px;
+  line-height:1.4;
+}
+
+.goal-card p{
+  font-family:'Cormorant Garamond',serif;
+  font-size:.94rem;
+  color:var(--inkm);
+  line-height:1.7;
+}
+
+/* ICON FIX */
+.goal-card h4 .goal-icon{
+  width:20px !important;
+  height:20px !important;
+
+  min-width:20px !important;
+  min-height:20px !important;
+
+  max-width:20px !important;
+  max-height:20px !important;
+
+  display:inline-block !important;
+  position:static !important;
+
+  flex-shrink:0 !important;
+
+  color:var(--gold) !important;
+  stroke:currentColor !important;
+  fill:none !important;
+
+  overflow:visible !important;
+}
 .trust-box-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:20px;}
 .trust-box{flex:1;min-width:130px;background:var(--w);border:1px solid var(--cdk);border-radius:var(--r);padding:16px;text-align:center;}
 .trust-box-n{font-family:'Cinzel',serif;font-size:1.4rem;font-weight:600;color:var(--gm);}

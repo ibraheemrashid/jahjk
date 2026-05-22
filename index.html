@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Cinzel:wght@400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
 <style>
 :root{
   --gd:#0d2818;--gk:#133a22;--gm:#1a5c34;--ga:#2a8a52;
@@ -306,11 +307,79 @@ nav{background:var(--gk);position:sticky;top:0;z-index:200;box-shadow:0 2px 24px
 .smert-L{font-family:'Cinzel',serif;font-size:1.8rem;font-weight:700;color:var(--gold);line-height:1;min-width:28px;}
 .smert-word{font-family:'Cinzel',serif;font-size:.84rem;font-weight:600;color:var(--w);display:block;margin-bottom:2px;}
 .smert-mean{font-family:'Cormorant Garamond',serif;font-size:.88rem;color:rgba(255,255,255,.55);}
-.goals-g{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:40px;}
-@media(max-width:600px){.goals-g{grid-template-columns:1fr;}}
-.goal-card{background:var(--cream);border-radius:var(--r);padding:20px;border-left:3px solid var(--gold);}
-.goal-card h4{font-family:'Cinzel',serif;font-size:.84rem;font-weight:600;color:var(--gm);margin-bottom:7px;}
-.goal-card p{font-family:'Cormorant Garamond',serif;font-size:.94rem;color:var(--inkm);line-height:1.65;}
+/* ================================
+   AIMS & OBJECTIVES / GOALS
+================================ */
+
+.goals-g{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin-bottom:40px;
+}
+
+@media(max-width:600px){
+  .goals-g{
+    grid-template-columns:1fr;
+  }
+}
+
+.goal-card{
+  background:var(--cream);
+  border-radius:var(--r);
+  padding:20px;
+  border-left:3px solid var(--gold);
+  transition:.25s ease;
+}
+
+.goal-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 24px rgba(0,0,0,.08);
+}
+
+.goal-card h4{
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  font-family:'Cinzel',serif;
+  font-size:.84rem;
+  font-weight:600;
+  color:var(--gm);
+
+  margin-bottom:10px;
+  line-height:1.4;
+}
+
+.goal-card p{
+  font-family:'Cormorant Garamond',serif;
+  font-size:.94rem;
+  color:var(--inkm);
+  line-height:1.7;
+}
+
+/* ICON FIX */
+.goal-card h4 .goal-icon{
+  width:20px !important;
+  height:20px !important;
+
+  min-width:20px !important;
+  min-height:20px !important;
+
+  max-width:20px !important;
+  max-height:20px !important;
+
+  display:inline-block !important;
+  position:static !important;
+
+  flex-shrink:0 !important;
+
+  color:var(--gold) !important;
+  stroke:currentColor !important;
+  fill:none !important;
+
+  overflow:visible !important;
+}
 .trust-box-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:20px;}
 .trust-box{flex:1;min-width:130px;background:var(--w);border:1px solid var(--cdk);border-radius:var(--r);padding:16px;text-align:center;}
 .trust-box-n{font-family:'Cinzel',serif;font-size:1.4rem;font-weight:600;color:var(--gm);}
@@ -814,23 +883,21 @@ body.dark footer .ft-div{
 }
 .hero-v2-line{width:80px;height:1px;background:rgba(201,168,76,.35);}
 
+/* ───────── MODERN PRAYER ICONS ───────── */
+.premium-prayer-icon{
+  width:18px;
+  height:18px;
+  color:var(--gold);
+  stroke-width:1.8;
+  flex-shrink:0;
+  display:inline-flex;
+  vertical-align:middle;
+}
+
 </style>
 </head>
 <body>
 <div class="geo-bg"></div>
-<!-- TOPBAR -->
-<div class="topbar-new">
-  <div class="topbar-new-in">
-    <span class="topbar-ar">جمعیت اہل حدیث جموں و کشمیر</span>
-    <div class="topbar-links">
-      <button onclick="go('ifta-board')">Fatwa Board</button>
-      <button onclick="go('waqf')">Waqf Board</button>
-      <button onclick="go('books')">Media</button>
-      <button onclick="go('about')">Contact</button>
-      <button class="topbar-donate" onclick="go('login')">Donate</button>
-    </div>
-  </div>
-</div>
 <!-- NAV -->
 <nav><div class="nav-in">
   <div class="nav-logo" onclick="go('home')">
@@ -918,12 +985,6 @@ body.dark footer .ft-div{
 <section class="hero-v2">
   <!-- Background: place your mosque image here -->
   <div class="hero-v2-bg" id="heroBg">
-    <!--
-      HERO BACKGROUND IMAGE
-      Place your mosque photo at: src/assets/images/hero-bg.jpg
-      Recommended: high-res landscape image, dark/night mosque scene
-      Min size: 1920x1080px  |  Format: JPG/WEBP
-    -->
   </div>
   <div class="hero-v2-overlay"></div>
 
@@ -946,36 +1007,36 @@ body.dark footer .ft-div{
           <div class="prayer-card-title">Prayer Times (Srinagar)</div>
           <div class="prayer-card-date" id="prayer-date-display">Loading...</div>
         </div>
-        <div class="prayer-card-icon">📅</div>
+        <div class="prayer-card-icon"><i data-lucide="calendar-days" class="premium-prayer-icon"></i></div>
       </div>
       <div class="prayer-list" id="prayer-list">
         <div class="prayer-row" data-prayer="Fajr">
-          <div class="prayer-row-left"><span class="prayer-icon">🌙</span><span class="prayer-name">Fajr</span></div>
+          <div class="prayer-row-left"><span class="prayer-icon"><i data-lucide="sunrise" class="premium-prayer-icon"></i></span><span class="prayer-name">Fajr</span></div>
           <span class="prayer-time" id="pt-Fajr">—</span>
         </div>
         <div class="prayer-row" data-prayer="Sunrise">
-          <div class="prayer-row-left"><span class="prayer-icon">🌅</span><span class="prayer-name">Sunrise</span></div>
+          <div class="prayer-row-left"><span class="prayer-icon"><i data-lucide="sun" class="premium-prayer-icon"></i></span><span class="prayer-name">Sunrise</span></div>
           <span class="prayer-time" id="pt-Sunrise">—</span>
         </div>
         <div class="prayer-row" data-prayer="Dhuhr">
-          <div class="prayer-row-left"><span class="prayer-icon">☀️</span><span class="prayer-name">Zuhr</span></div>
+          <div class="prayer-row-left"><span class="prayer-icon"><i data-lucide="sun-medium" class="premium-prayer-icon"></i></span><span class="prayer-name">Zuhr</span></div>
           <span class="prayer-time" id="pt-Dhuhr">—</span>
         </div>
         <div class="prayer-row" data-prayer="Asr">
-          <div class="prayer-row-left"><span class="prayer-icon">🌤</span><span class="prayer-name">Asr</span></div>
+          <div class="prayer-row-left"><span class="prayer-icon"><i data-lucide="sun-dim" class="premium-prayer-icon"></i></span><span class="prayer-name">Asr</span></div>
           <span class="prayer-time" id="pt-Asr">—</span>
         </div>
         <div class="prayer-row" data-prayer="Maghrib">
-          <div class="prayer-row-left"><span class="prayer-icon">🌆</span><span class="prayer-name">Maghrib</span></div>
+          <div class="prayer-row-left"><span class="prayer-icon"><i data-lucide="sunset" class="premium-prayer-icon"></i></span><span class="prayer-name">Maghrib</span></div>
           <span class="prayer-time" id="pt-Maghrib">—</span>
         </div>
         <div class="prayer-row" data-prayer="Isha">
-          <div class="prayer-row-left"><span class="prayer-icon">🌃</span><span class="prayer-name">Isha</span></div>
+          <div class="prayer-row-left"><span class="prayer-icon"><i data-lucide="moon-star" class="premium-prayer-icon"></i></span><span class="prayer-name">Isha</span></div>
           <span class="prayer-time" id="pt-Isha">—</span>
         </div>
       </div>
       <div class="prayer-card-footer">
-        <span>⏱</span>
+        <span><i data-lucide="clock-3" class="premium-prayer-icon"></i></span>
         <span id="lc2">--:--:-- --</span>
         <span class="prayer-card-footer-right">Live Clock</span>
       </div>
@@ -998,7 +1059,7 @@ body.dark footer .ft-div{
   <!-- EVENTS COLUMN -->
   <div class="info-col rv d1">
     <div class="info-col-hdr">
-      <span class="info-col-icon">📅</span>
+      <span class="info-col-icon"><i data-lucide="calendar-range" class="premium-prayer-icon"></i></span>
       <span class="info-col-title">Events</span>
       <button class="info-col-more" onclick="go('events')">View all →</button>
     </div>
@@ -1024,7 +1085,7 @@ body.dark footer .ft-div{
   <!-- FRIDAY LIST COLUMN -->
   <div class="info-col rv d2">
     <div class="info-col-hdr">
-      <span class="info-col-icon">🕌</span>
+      <span class="info-col-icon"><i data-lucide="landmark" class="premium-prayer-icon"></i></span>
       <span class="info-col-title">Friday List</span>
       <button class="info-col-more" onclick="go('friday')">Full list →</button>
     </div>
@@ -1050,7 +1111,7 @@ body.dark footer .ft-div{
   <!-- ABOUT JAMIAT COLUMN -->
   <div class="info-col rv d3">
     <div class="info-col-hdr">
-      <span class="info-col-icon">ℹ️</span>
+      <span class="info-col-icon"><i data-lucide="badge-info" class="premium-prayer-icon"></i></span>
       <span class="info-col-title">About Jamiat</span>
       <button class="info-col-more" onclick="go('about')">Learn more →</button>
     </div>
@@ -1099,15 +1160,15 @@ body.dark footer .ft-div{
         <img src="./src/assets/images/ceremony.JPG" alt="Graduation Day">
         <div class="slide-cap">
           <span class="ctag">Education</span>
-          <span class="ctext">Graduation — Al Kulyat us Salafia</span>
+          <span class="ctext">Inaugral Ceremony - Tauheed Studio</span>
         </div>
       </div>
 
       <div class="car-slide">
-        <img src="./src/assets/images/masjid.JPG" alt="Masjid Registration">
+        <img src="./src/assets/images/sadr sahab.JPG" alt="Masjid Registration">
         <div class="slide-cap">
-          <span class="ctag">Waqf</span>
-          <span class="ctext">Masjid Registration Drive 2024</span>
+          <span class="ctag"></span>
+          <span class="ctext">محترم صدر صاحب  : عبدل لطیف بٹ الکندی </span>
         </div>
       </div>
 
@@ -1131,7 +1192,7 @@ body.dark footer .ft-div{
         <img src="./src/assets/images/seminar.JPG" alt="Scholars Seminar">
         <div class="slide-cap">
           <span class="ctag">Seminar</span>
-          <span class="ctext">Islamic Scholars Seminar — Srinagar</span>
+          <span class="ctext">یک روزہ اصلاح</span>
         </div>
       </div>
 
@@ -1227,15 +1288,69 @@ body.dark footer .ft-div{
 <div class="pb"><div class="pb-title">Aims &amp; Objectives</div><div class="pb-sub">The core mission and vision of Jamiat Ahle Hadees J&amp;K</div></div>
 <div class="bgw"><div class="sec"><div class="sh rv"><span class="stag">Our Mission</span><h2 class="stitle">What We Stand For</h2><p class="sdesc">Jamiat Ahle Hadees J&amp;K is guided by a clear vision rooted in the Quran and authentic Sunnah, serving the Muslim community of the region.</p><div class="orn"><div class="ol"></div><div class="od"></div><div class="ol"></div></div></div>
 <div class="goals-g">
-  <div class="goal-card rv d1"><h4>🌟 Propagation of Tawheed</h4><p>Spreading pure monotheism and the authentic teachings of Islam as understood by the companions and the Salaf-us-Saliheen.</p></div>
-  <div class="goal-card rv d2"><h4>📚 Islamic Education</h4><p>Establishing and supporting schools, colleges and madarsas that provide quality religious and modern education across J&amp;K.</p></div>
-  <div class="goal-card rv d3"><h4>🤝 Community Unity</h4><p>Fostering unity, brotherhood and cooperation among the Muslim community of Jammu &amp; Kashmir.</p></div>
-  <div class="goal-card rv d4"><h4>🕌 Masjid Development</h4><p>Building, maintaining and registering mosques as centres of worship, learning and community gathering.</p></div>
-  <div class="goal-card rv d5"><h4>📖 Knowledge Dissemination</h4><p>Publishing Islamic literature including books, journals and newspapers to spread authentic religious knowledge.</p></div>
-  <div class="goal-card rv d6"><h4>⚖️ Religious Guidance</h4><p>Providing authentic Fatawa and religious guidance through a qualified and trusted Ifta Board.</p></div>
-  <div class="goal-card rv d7"><h4>🏥 Social Welfare</h4><p>Supporting underprivileged members of the Muslim community through charitable initiatives and welfare programmes.</p></div>
-  <div class="goal-card rv d8"><h4>🏛️ Waqf Preservation</h4><p>Protecting Islamic endowment properties through proper registration and management under Waqf-i-Tanzeem.</p></div>
-</div></div></div>
+  <div class="goal-card rv d1">
+  <h4>
+    <i data-lucide="sparkles" class="goal-icon"></i>
+    Propagation of Tawheed
+  </h4>
+  <p>Spreading pure monotheism and the authentic teachings of Islam as understood by the companions and the Salaf-us-Saliheen.</p>
+</div>
+
+<div class="goal-card rv d2">
+  <h4>
+    <i data-lucide="graduation-cap" class="goal-icon"></i>
+    Islamic Education
+  </h4>
+  <p>Establishing and supporting schools, colleges and madarsas that provide quality religious and modern education across J&amp;K.</p>
+</div>
+
+<div class="goal-card rv d3">
+  <h4>
+    <i data-lucide="handshake" class="goal-icon"></i>
+    Community Unity
+  </h4>
+  <p>Fostering unity, brotherhood and cooperation among the Muslim community of Jammu &amp; Kashmir.</p>
+</div>
+
+<div class="goal-card rv d4">
+  <h4>
+    <i data-lucide="landmark" class="goal-icon"></i>
+    Masjid Development
+  </h4>
+  <p>Building, maintaining and registering mosques as centres of worship, learning and community gathering.</p>
+</div>
+
+<div class="goal-card rv d5">
+  <h4>
+    <i data-lucide="book-copy" class="goal-icon"></i>
+    Knowledge Dissemination
+  </h4>
+  <p>Publishing Islamic literature including books, journals and newspapers to spread authentic religious knowledge.</p>
+</div>
+
+<div class="goal-card rv d6">
+  <h4>
+    <i data-lucide="scale" class="goal-icon"></i>
+    Religious Guidance
+  </h4>
+  <p>Providing authentic Fatawa and religious guidance through a qualified and trusted Ifta Board.</p>
+</div>
+
+<div class="goal-card rv d7">
+  <h4>
+    <i data-lucide="heart-handshake" class="goal-icon"></i>
+    Social Welfare
+  </h4>
+  <p>Supporting underprivileged members of the Muslim community through charitable initiatives and welfare programmes.</p>
+</div>
+
+<div class="goal-card rv d8">
+  <h4>
+    <i data-lucide="building" class="goal-icon"></i>
+    Waqf Preservation
+  </h4>
+  <p>Protecting Islamic endowment properties through proper registration and management under Waqf-i-Tanzeem.</p>
+</div></div></div></div>
 </div>
 
 <!-- ═══ ABOUT ═══ -->
@@ -2161,6 +2276,9 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 runReveal();
+</script>
+<script>
+  lucide.createIcons();
 </script>
 </body>
 </html>
