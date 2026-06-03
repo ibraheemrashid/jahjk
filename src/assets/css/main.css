@@ -7,6 +7,20 @@
    https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Cinzel:wght@400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap
 */
 
+@font-face{
+  font-family:'FuturaDemi';
+  src:url('./src/assets/fonts/FuturaCyrillicDemi.ttf') format('truetype');
+  font-weight:600;
+  font-style:normal;
+}
+
+@font-face{
+  font-family:'FuturaMedium';
+  src:url('./src/assets/fonts/FuturaCyrillicMedium.ttf') format('truetype');
+  font-weight:500;
+  font-style:normal;
+}
+
 :root {
   --gd: #0d2818;
   --gk: #133a22;
