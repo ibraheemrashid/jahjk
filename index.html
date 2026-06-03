@@ -1185,13 +1185,128 @@
       animation: fD 1s .32s ease both;
     }
 
-    .hero-btns {
-      display: flex;
-      gap: 14px;
-      justify-content: center;
-      flex-wrap: wrap;
-      animation: fD 1s .48s ease both;
+
+    .hero-quote-card{
+      position:relative;
+      width:fit-content;
+      max-width:520px;
+      margin-top:24px;
+      padding:22px 26px 20px;
+      border-radius:18px;
+
+      background:rgba(8,18,12,.68);
+      border:1px solid rgba(201,168,76,.42);
+
+      box-shadow:0 14px 34px rgba(0,0,0,.28);
+
+      overflow:hidden;
     }
+
+    .hero-quote-card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at 8% 0%, rgba(201,168,76,.22), transparent 30%),
+        linear-gradient(135deg, rgba(255,255,255,.09), transparent 45%);
+      pointer-events:none;
+    }
+
+    .hero-quote-text{
+      position:relative;
+      z-index:2;
+      margin:0;
+      padding:0 26px;
+
+      color:#fff;
+      font-size:clamp(1.05rem, 1.7vw, 1.45rem);
+      line-height:1.45;
+      font-weight:800;
+      letter-spacing:.01em;
+
+      text-shadow:0 2px 8px rgba(0,0,0,.35);
+    }
+
+    .hero-quote-open,
+    .hero-quote-close{
+      position:absolute;
+      z-index:1;
+      color:#c9a84c;
+      font-family:Georgia, serif;
+      font-size:7rem;
+      line-height:1;
+      font-weight:900;
+      opacity:.95;
+    }
+
+    .hero-quote-open{
+      top:0px;
+      left:20px;
+    }
+
+    .hero-quote-close{
+      right:22px;
+      bottom:-24px;
+    }
+
+    .hero-quote-profile{
+      position:relative;
+      z-index:2;
+      margin-top:24px;
+      display:flex;
+      align-items:center;
+      gap:13px;
+    }
+
+    .hero-quote-profile img{
+      width:48px;
+      height:48px;
+      border-radius:50%;
+      object-fit:cover;
+      border:2px solid #c9a84c;
+      box-shadow:0 8px 24px rgba(0,0,0,.28);
+    }
+
+    .hero-quote-profile strong{
+      display:block;
+      color:#fff;
+      font-size:.96rem;
+      font-weight:800;
+    }
+
+    .hero-quote-profile span{
+      display:block;
+      margin-top:3px;
+      color:#c9a84c;
+      font-size:.84rem;
+      font-weight:700;
+    }
+
+    @media(max-width:600px){
+  .hero-quote-card{
+    max-width:100%;
+    padding:26px 20px 24px;
+  }
+
+  .hero-quote-text{
+    padding:0 24px;
+    font-size:1.25rem;
+  }
+
+  .hero-quote-open,
+  .hero-quote-close{
+    font-size:5rem;
+  }
+
+  .hero-quote-open{
+    left:12px;
+  }
+
+  .hero-quote-close{
+    right:14px;
+    bottom:-16px;
+  }
+}
 
     @keyframes fD {
       from {
@@ -3477,30 +3592,6 @@
       }
     }
 
-    /* BG image*/
-    .hero-v2-bg {
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(105deg,
-          rgba(5, 12, 7, .86) 0%,
-          rgba(5, 12, 7, .62) 48%,
-          rgba(5, 12, 7, .35) 100%),
-        url('./src/assets/images/mosque.png') center center / cover no-repeat;
-      z-index: 0;
-    }
-
-    /* Dark overlay for text readability */
-    .hero-v2-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(105deg,
-          rgba(5, 12, 7, .82) 0%,
-          rgba(5, 12, 7, .55) 50%,
-          rgba(5, 12, 7, .3) 100%);
-      z-index: 1;
-    }
-
     /* LEFT side */
     .hero-v2-left {
       position: relative;
@@ -4222,6 +4313,185 @@
     inset 0 1px 0 rgba(255,255,255,.06);
   border-color:rgba(201,168,76,.38);
 }
+
+.lang-switcher{
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.lang-switcher button{
+  border:1px solid rgba(201,168,76,.25);
+  background:transparent;
+  color:var(--gold);
+  padding:6px 10px;
+  border-radius:999px;
+  cursor:pointer;
+  font-family:'Cinzel',serif;
+  font-size:.65rem;
+}
+
+html[dir="rtl"] body{
+  direction:rtl;
+  text-align:right;
+}
+
+html[dir="rtl"] .nav-in,
+html[dir="rtl"] .hero-v2,
+html[dir="rtl"] .contact-premium-grid{
+  direction:rtl;
+}
+
+.google-lang-wrap{
+  display:flex;
+  align-items:center;
+  margin-left:12px;
+}
+
+.goog-te-gadget{
+  font-family:'Cinzel',serif !important;
+  font-size:.7rem !important;
+  color:var(--gold) !important;
+}
+
+.goog-te-gadget span{
+  display:none;
+}
+
+.goog-te-combo{
+  background:transparent;
+  color:var(--gold);
+  border:1px solid rgba(201,168,76,.35);
+  border-radius:999px;
+  padding:7px 10px;
+  font-family:'Cinzel',serif;
+}
+
+.goog-te-gadget{
+  font-size:0 !important;
+}
+
+.goog-te-combo{
+  font-size:14px !important;
+}
+
+/* Hide Google Translate extra branding text */
+.goog-logo-link,
+.goog-te-gadget span{
+  display:none !important;
+}
+
+.goog-te-gadget{
+  font-size:0 !important;
+}
+
+.goog-te-combo{
+  font-size:14px !important;
+}
+
+/* Hide Google Translate top toolbar */
+.goog-te-banner-frame,
+.goog-te-banner-frame.skiptranslate,
+iframe.goog-te-banner-frame{
+  display:none !important;
+}
+
+body{
+  top:0 !important;
+}
+
+html{
+  margin-top:0 !important;
+}
+body > .skiptranslate{
+  display:none !important;
+}
+
+.hero-v2{
+  position:relative;
+  overflow:hidden;
+}
+
+/* image background */
+.hero-v2-bg {
+  position: absolute;
+  inset: -3%;
+  background:
+    linear-gradient(105deg,
+      rgba(5, 12, 7, .86) 0%,
+      rgba(5, 12, 7, .62) 48%,
+      rgba(5, 12, 7, .35) 100%),
+    url('./src/assets/images/mosque.png') center center / cover no-repeat;
+  z-index: 0;
+  animation: heroLivingBg 28s ease-in-out infinite alternate;
+  will-change: transform, background-position;
+  filter:
+    brightness(1.50)
+    contrast(1.08)
+    saturate(1.08);
+}
+
+
+/* keep text readable */
+.hero-v2-overlay{
+  position:absolute;
+  inset:0;
+  z-index:4;
+  pointer-events:none;
+  background:
+    linear-gradient(
+      105deg,
+      rgba(5,12,7,.86) 0%,
+      rgba(5,12,7,.58) 48%,
+      rgba(5,12,7,.28) 100%
+    );
+}
+
+/* make your content sit above effects */
+.hero-v2-left,
+.prayer-card,
+.premium-prayer-card,
+.hero-v2-content{
+  position:relative;
+  z-index:5;
+}
+
+/* animations */
+@keyframes heroLivingBg {
+  0% {
+    transform: scale(1.03) translateX(0) translateY(0);
+    background-position: center center;
+  }
+
+  50% {
+    transform: scale(1.06) translateX(-10px) translateY(-6px);
+    background-position: 52% 48%;
+  }
+
+  100% {
+    transform: scale(1.08) translateX(8px) translateY(4px);
+    background-position: 48% 52%;
+  }
+}
+
+.hero-soft-glow{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index:2;
+
+  background:
+    radial-gradient(
+      circle at 64% 46%,
+      rgba(255,210,120,.18),
+      rgba(255,210,120,.08) 12%,
+      transparent 28%
+    );
+
+  mix-blend-mode:screen;
+  animation:softGlowPulse 10s ease-in-out infinite;
+}
+
   </style>
 </head>
 
@@ -4306,6 +4576,9 @@
 
         </button>
       </ul>
+      <div class="google-lang-wrap">
+  <div id="google_translate_element"></div>
+</div>
       <button class="nav-ham" id="ham"><span></span><span></span><span></span></button>
     </div>
   </nav>
@@ -4349,9 +4622,9 @@
     <!-- FULL BLEED HERO -->
     <section class="hero-v2">
       <!-- Background: place your mosque image here -->
-      <div class="hero-v2-bg" id="heroBg">
-      </div>
+      <div class="hero-v2-bg"></div>
       <div class="hero-v2-overlay"></div>
+      <div class="hero-soft-glow"></div>
 
       <!-- LEFT: Text content -->
       <div class="hero-v2-left">
@@ -4359,10 +4632,27 @@
         <h1 class="hero-v2-title">JAMIAT AHLE<br>HADEES JK</h1>
         <p class="hero-v2-desc">Serving the Muslim community of Jammu &amp; Kashmir<br>through education, religious
           guidance, and community<br>welfare, grounded in the Quran and authentic Sunnah.</p>
-        <div class="hero-v2-btns">
-          <button class="btn-v2-primary" onclick="go('smert')">Explore More</button>
-          <button class="btn-v2-outline" onclick="go('schools')">Our Institutions</button>
+
+        <div class="hero-quote-card">
+
+        <div class="hero-quote-open">“</div>
+
+        <p class="hero-quote-text">
+          The message of Islam is mercy, knowledge and sincerity in worship.
+        </p>
+
+        <div class="hero-quote-profile">
+          <img src="./src/assets/images/sadr.jpg" alt="Sadr Jamiat Ahle Hadees J&K">
+
+          <div>
+            <strong>Sadr Jamiat Ahle Hadees J&K</strong>
+            <span>From the Desk of the Sadr</span>
+          </div>
         </div>
+
+        <div class="hero-quote-close">”</div>
+
+      </div>
       </div>
 
       <!-- RIGHT: Prayer Times Card -->
@@ -7384,6 +7674,20 @@
   <script>
     lucide.createIcons();
   </script>
+
+ <script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: 'en',
+      includedLanguages: 'en,ur,ar'
+    },
+    'google_translate_element'
+  );
+}
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>

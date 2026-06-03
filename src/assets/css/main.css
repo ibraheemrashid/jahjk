@@ -1029,6 +1029,85 @@ nav {
   flex-wrap: wrap;
   animation: fD 1s 0.48s ease both;
 }
+.hero-v2-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(105deg,
+      rgba(5, 12, 7, .86) 0%,
+      rgba(5, 12, 7, .62) 48%,
+      rgba(5, 12, 7, .35) 100%),
+    url('./src/assets/images/mosque.png') center center / cover no-repeat;
+  z-index: 0;
+  animation: heroSlowZoom 42s ease-in-out infinite alternate;
+}
+/* Dark overlay for text readability */
+    .hero-v2-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(105deg,
+          rgba(5, 12, 7, .82) 0%,
+          rgba(5, 12, 7, .55) 50%,
+          rgba(5, 12, 7, .3) 100%);
+      z-index: 1;
+    }
+.water-reflection{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:42%;
+  background:url('./src/assets/images/mosque.png') center bottom / cover no-repeat;
+  opacity:.18;
+  filter:blur(2px) brightness(1.12) saturate(1.08);
+  transform:scaleY(-1) translateY(8px);
+  mix-blend-mode:screen;
+  pointer-events:none;
+  z-index:2;
+  mask-image:linear-gradient(to top, rgba(0,0,0,.75), rgba(0,0,0,.3), transparent);
+  -webkit-mask-image:linear-gradient(to top, rgba(0,0,0,.75), rgba(0,0,0,.3), transparent);
+  animation:waterShimmer 11s ease-in-out infinite alternate;
+}
+
+.water-reflection::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(255,255,255,.10) 45%,
+    transparent 70%
+  );
+  animation:waterLightSweep 13s ease-in-out infinite;
+}
+
+.mosque-glow{
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 52% 45%, rgba(255,220,145,.18), transparent 28%),
+    radial-gradient(circle at 47% 39%, rgba(255,255,210,.10), transparent 22%);
+  opacity:.38;
+  mix-blend-mode:screen;
+  animation:mosqueGlowPulse 18s ease-in-out infinite;
+  pointer-events:none;
+  z-index:3;
+}
+
+.hero-fog{
+  position:absolute;
+  inset:-20%;
+  background:
+    radial-gradient(circle at 20% 60%, rgba(255,255,255,.08), transparent 28%),
+    radial-gradient(circle at 70% 40%, rgba(255,255,255,.06), transparent 30%),
+    radial-gradient(circle at 45% 75%, rgba(255,255,255,.05), transparent 35%);
+  filter:blur(18px);
+  opacity:.28;
+  animation:fogDrift 42s ease-in-out infinite alternate;
+  pointer-events:none;
+  z-index:4;
+}
 @keyframes fD {
   from {
     opacity: 0;
@@ -3142,4 +3221,70 @@ body.dark footer .ft-div {
     0 28px 70px rgba(0,0,0,.28),
     inset 0 1px 0 rgba(255,255,255,.06);
   border-color:rgba(201,168,76,.38);
+}
+
+.google-lang-wrap{
+  display:flex;
+  align-items:center;
+  margin-left:12px;
+}
+
+.goog-te-gadget{
+  font-family:'Cinzel',serif !important;
+  font-size:.7rem !important;
+  color:var(--gold) !important;
+}
+
+.goog-te-gadget span{
+  display:none;
+}
+
+.goog-te-combo{
+  background:transparent;
+  color:var(--gold);
+  border:1px solid rgba(201,168,76,.35);
+  border-radius:999px;
+  padding:7px 10px;
+  font-family:'Cinzel',serif;
+}
+
+.goog-te-gadget{
+  font-size:0 !important;
+}
+
+.goog-te-combo{
+  font-size:14px !important;
+}
+
+/* Hide Google Translate top toolbar */
+.goog-te-banner-frame,
+.goog-te-banner-frame.skiptranslate,
+iframe.goog-te-banner-frame{
+  display:none !important;
+}
+
+body{
+  top:0 !important;
+}
+
+html{
+  margin-top:0 !important;
+}
+
+/* Hide Google Translate extra branding text */
+.goog-logo-link,
+.goog-te-gadget span{
+  display:none !important;
+}
+
+.goog-te-gadget{
+  font-size:0 !important;
+}
+
+.goog-te-combo{
+  font-size:14px !important;
+}
+
+body > .skiptranslate{
+  display:none !important;
 }
