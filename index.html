@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jamiat Ahle Hadees JK | Official Digital Platform</title>
+  <title>Jamiat Ahl- e -Hadees JK | Official Digital Platform</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -66,10 +66,10 @@
     }
 
     html,
-    body{
-      width:100%;
-      max-width:100%;
-      overflow-x:hidden;
+    body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
     }
 
     .geo-bg {
@@ -122,7 +122,7 @@
     .nav-in {
       max-width: 1240px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0 10px;
       display: flex;
       align-items: center;
       gap: 8px;
@@ -132,10 +132,14 @@
     .nav-logo {
       display: flex;
       align-items: center;
-      gap: 12px;
-      text-decoration: none;
-      flex-shrink: 0;
       cursor: pointer;
+    }
+
+    .nav-logo-full {
+      height: 57px;
+      width: auto;
+      display: block;
+      object-fit: contain;
     }
 
     .nav-emb {
@@ -319,35 +323,36 @@
       align-items: start;
     }
 
-    @media(max-width:600px){
-    .nav-in{
-      width:100%;
-      padding:0 12px;
-      gap:8px;
+    @media(max-width:600px) {
+      .nav-in {
+        width: 100%;
+        padding: 0 12px;
+        gap: 8px;
+      }
+
+      .nav-logo {
+        min-width: 0;
+        flex: 1;
+      }
+
+      .nl-title {
+        font-size: .72rem;
+        white-space: nowrap;
+      }
+
+      #languageSelect,
+      .language-select,
+      .goog-te-combo {
+        max-width: 180px;
+        width: 180px;
+      }
+
+      .nav-ham {
+        flex-shrink: 0;
+        margin-left: 6px;
+      }
     }
 
-    .nav-logo{
-      min-width:0;
-      flex:1;
-    }
-
-    .nl-title{
-      font-size:.72rem;
-      white-space:nowrap;
-    }
-
-    #languageSelect,
-    .language-select,
-    .goog-te-combo{
-      max-width:180px;
-      width:180px;
-    }
-
-    .nav-ham{
-      flex-shrink:0;
-      margin-left:6px;
-    }
-  }
     @media(max-width:800px) {
       .login-layout {
         grid-template-columns: 1fr !important;
@@ -1270,8 +1275,8 @@
       position: relative;
       width: fit-content;
       margin-top: 24px;
-      max-width:460px;
-      padding:18px 22px 16px;
+      max-width: 460px;
+      padding: 18px 22px 16px;
       border-radius: 18px;
 
       background: rgba(8, 18, 12, .68);
@@ -1299,8 +1304,8 @@
       padding: 0 44px 0 64px;
 
       color: #fff;
-      font-size:clamp(.95rem, 1.3vw, 1.25rem);
-      line-height:1.4;
+      font-size: clamp(.95rem, 1.3vw, 1.25rem);
+      line-height: 1.4;
       font-weight: 800;
       letter-spacing: .01em;
 
@@ -1389,26 +1394,26 @@
         bottom: -16px;
       }
 
-      .hero-v2{
-        width:100%;
-        max-width:100%;
-        overflow:hidden;
+      .hero-v2 {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
       }
 
-      .hero-v2-left{
-        max-width:100%;
-        padding:0 12px;
+      .hero-v2-left {
+        max-width: 100%;
+        padding: 0 12px;
       }
 
-      .hero-v2-desc{
-        max-width:100%;
-        overflow-wrap:break-word;
-        word-break:normal;
+      .hero-v2-desc {
+        max-width: 100%;
+        overflow-wrap: break-word;
+        word-break: normal;
       }
 
-      .hero-v2-title{
-        max-width:100%;
-        overflow-wrap:break-word;
+      .hero-v2-title {
+        max-width: 100%;
+        overflow-wrap: break-word;
       }
     }
 
@@ -1600,287 +1605,296 @@
     }
 
     /* CAROUSEL */
-    .car-sec{
-  background:var(--gk);
-  padding:0 0 64px;
-  position:relative;
-  overflow:hidden;
-}
+    .car-sec {
+      background: var(--gk);
+      padding: 0 0 64px;
+      position: relative;
+      overflow: hidden;
+    }
 
-.car-sec::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    radial-gradient(circle at 20% 10%, rgba(201,168,76,.12), transparent 28%),
-    radial-gradient(circle at 85% 90%, rgba(255,255,255,.05), transparent 30%);
-  pointer-events:none;
-}
+    .car-sec::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(201, 168, 76, .12), transparent 28%),
+        radial-gradient(circle at 85% 90%, rgba(255, 255, 255, .05), transparent 30%);
+      pointer-events: none;
+    }
 
-.car-hdr{
-  max-width:1200px;
-  margin:0 auto;
-  padding:0 32px 26px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:12px;
-  flex-wrap:wrap;
-  position:relative;
-  z-index:2;
-}
+    .car-hdr {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 32px 26px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 2;
+    }
 
-.car-lbl{
-  font-family:'Cinzel', serif;
-  font-size:clamp(1.2rem, 3vw, 2rem);
-  color:var(--glt);
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  opacity:.9;
-  padding:22px 0 8px;
-}
+    .car-lbl {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.2rem, 3vw, 2rem);
+      color: var(--glt);
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      opacity: .9;
+      padding: 22px 0 8px;
+    }
 
-.car-nav{
-  display:none;
-}
+    .car-nav {
+      display: none;
+    }
 
-.car-btn{
-  width:38px;
-  height:38px;
-  border-radius:50%;
-  border:1.5px solid rgba(201,168,76,.35);
-  background:rgba(255,255,255,.04);
-  color:var(--gold);
-  font-size:1rem;
-  cursor:pointer;
-  display:grid;
-  place-items:center;
-  transition:.25s ease;
-}
+    .car-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(201, 168, 76, .35);
+      background: rgba(255, 255, 255, .04);
+      color: var(--gold);
+      font-size: 1rem;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      transition: .25s ease;
+    }
 
-.car-btn:hover{
-  background:rgba(201,168,76,.15);
-  border-color:var(--gold);
-  transform:translateY(-2px);
-}
+    .car-btn:hover {
+      background: rgba(201, 168, 76, .15);
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
 
-.car-vp{
-  overflow:hidden;
-  position:relative;
-  z-index:2;
-}
+    .car-vp {
+      overflow: hidden;
+      position: relative;
+      z-index: 2;
+    }
 
-.car-track{
-  display:flex;
-  gap:20px;
-  transition:transform .95s cubic-bezier(.16,1,.3,1);
-  will-change:transform;
-  padding:10px 32px 8px;
-}
+    .car-track {
+      display: flex;
+      gap: 20px;
+      transition: transform .95s cubic-bezier(.16, 1, .3, 1);
+      will-change: transform;
+      padding: 10px 32px 8px;
+    }
 
-.car-slide{
-  flex:0 0 calc((100% - 20px) / 2);
-  border-radius:18px;
-  overflow:hidden;
-  position:relative;
-  aspect-ratio:4/3;
-  background:rgba(255,255,255,.055);
-  border:1px solid rgba(201,168,76,.18);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 14px 36px rgba(0,0,0,.22);
+    .car-slide {
+      flex: 0 0 calc((100% - 20px) / 2);
+      border-radius: 18px;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 4/3;
+      background: rgba(255, 255, 255, .055);
+      border: 1px solid rgba(201, 168, 76, .18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 14px 36px rgba(0, 0, 0, .22);
 
-  opacity:0.72;
-  transform:translateY(8px) scale(.96);
-  filter:blur(7px);
+      opacity: 0.72;
+      transform: translateY(8px) scale(.96);
+      filter: blur(7px);
 
-  transition:
-    opacity .75s cubic-bezier(.16,1,.3,1),
-    transform .75s cubic-bezier(.16,1,.3,1),
-    filter .75s cubic-bezier(.16,1,.3,1),
-    box-shadow .3s ease,
-    border-color .3s ease;
-}
+      transition:
+        opacity .75s cubic-bezier(.16, 1, .3, 1),
+        transform .75s cubic-bezier(.16, 1, .3, 1),
+        filter .75s cubic-bezier(.16, 1, .3, 1),
+        box-shadow .3s ease,
+        border-color .3s ease;
+    }
 
-.car-sec.in .car-slide{
-  opacity:1;
-  transform:translateY(0) scale(1);
-  filter:blur(0);
-}
+    .car-sec.in .car-slide {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
 
-.car-sec.in .car-slide:nth-child(1){transition-delay:.05s;}
-.car-sec.in .car-slide:nth-child(2){transition-delay:.14s;}
-.car-sec.in .car-slide:nth-child(3){transition-delay:.23s;}
-.car-sec.in .car-slide:nth-child(4){transition-delay:.32s;}
+    .car-sec.in .car-slide:nth-child(1) {
+      transition-delay: .05s;
+    }
 
-.car-slide:hover{
-  transform:translateY(-8px) scale(1.018);
-  border-color:rgba(201,168,76,.45);
-  box-shadow:0 24px 58px rgba(0,0,0,.36);
-}
+    .car-sec.in .car-slide:nth-child(2) {
+      transition-delay: .14s;
+    }
 
-.car-slide.is-active{
-  transform:translateY(0) scale(1);
-  opacity:1;
-  border-color:rgba(201,168,76,.36);
-  box-shadow:0 24px 58px rgba(0,0,0,.36);
-}
+    .car-sec.in .car-slide:nth-child(3) {
+      transition-delay: .23s;
+    }
 
-.car-slide.is-near{
-  transform:translateY(12px) scale(.94);
-  opacity:.45;
-}
+    .car-sec.in .car-slide:nth-child(4) {
+      transition-delay: .32s;
+    }
 
-.car-slide img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  background:var(--gk);
-  transform:scale(1.01);
-  transition:transform .9s cubic-bezier(.16,1,.3,1), filter .45s ease;
-}
+    .car-slide:hover {
+      transform: translateY(-8px) scale(1.018);
+      border-color: rgba(201, 168, 76, .45);
+      box-shadow: 0 24px 58px rgba(0, 0, 0, .36);
+    }
 
-.car-slide.is-active img{
-  transform:scale(1.04);
-  filter:brightness(1.06) contrast(1.04);
-}
+    .car-slide.is-active {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+      border-color: rgba(201, 168, 76, .36);
+      box-shadow: 0 24px 58px rgba(0, 0, 0, .36);
+    }
 
-.car-slide:hover img{
-  transform:scale(1.065);
-  filter:brightness(1.06) contrast(1.04);
-}
+    .car-slide.is-near {
+      transform: translateY(12px) scale(.94);
+      opacity: .45;
+    }
 
-.slide-cap{
-  position:absolute;
-  left:14px;
-  right:14px;
-  bottom:14px;
-  padding:14px 16px;
-  border-radius:14px;
-  background:linear-gradient(
-    135deg,
-    rgba(6,18,10,.86),
-    rgba(6,18,10,.48)
-  );
-  border:1px solid rgba(201,168,76,.22);
-  backdrop-filter:blur(8px);
-  transform:translateY(10px);
-  opacity:.92;
-  transition:.3s ease;
-}
+    .car-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      background: var(--gk);
+      transform: scale(1.01);
+      transition: transform .9s cubic-bezier(.16, 1, .3, 1), filter .45s ease;
+    }
 
-.car-slide:hover .slide-cap{
-  transform:translateY(0);
-  border-color:rgba(201,168,76,.42);
-}
+    .car-slide.is-active img {
+      transform: scale(1.04);
+      filter: brightness(1.06) contrast(1.04);
+    }
 
-.slide-cap .ctag{
-  display:block;
-  font-family:'Cinzel', serif;
-  font-size:.56rem;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-  color:var(--gold);
-  margin-bottom:4px;
-}
+    .car-slide:hover img {
+      transform: scale(1.065);
+      filter: brightness(1.06) contrast(1.04);
+    }
 
-.slide-cap .ctext{
-  font-family:'Cormorant Garamond', serif;
-  font-size:.95rem;
-  color:rgba(255,255,255,.92);
-  line-height:1.35;
-}
+    .slide-cap {
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: linear-gradient(135deg,
+          rgba(6, 18, 10, .86),
+          rgba(6, 18, 10, .48));
+      border: 1px solid rgba(201, 168, 76, .22);
+      backdrop-filter: blur(8px);
+      transform: translateY(10px);
+      opacity: .92;
+      transition: .3s ease;
+    }
 
-.slide-ph{
-  width:100%;
-  height:100%;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  background:linear-gradient(135deg, rgba(13,56,30,.85), rgba(10,40,22,.95));
-}
+    .car-slide:hover .slide-cap {
+      transform: translateY(0);
+      border-color: rgba(201, 168, 76, .42);
+    }
 
-.slide-ph .icon{
-  font-size:2.6rem;
-  color:var(--gold);
-  opacity:.4;
-}
+    .slide-cap .ctag {
+      display: block;
+      font-family: 'Cinzel', serif;
+      font-size: .56rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
 
-.slide-ph .lbl{
-  font-family:'Cormorant Garamond', serif;
-  font-size:.9rem;
-  color:rgba(255,255,255,.38);
-  text-align:center;
-  padding:0 18px;
-  line-height:1.5;
-}
+    .slide-cap .ctext {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: .95rem;
+      color: rgba(255, 255, 255, .92);
+      line-height: 1.35;
+    }
 
-.car-dots{
-  display:flex;
-  gap:8px;
-  justify-content:center;
-  align-items:center;
-  margin-top:22px;
-  position:relative;
-  z-index:2;
-}
+    .slide-ph {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, rgba(13, 56, 30, .85), rgba(10, 40, 22, .95));
+    }
 
-.c-dot{
-  width:8px;
-  height:8px;
-  border-radius:50%;
-  background:rgba(201,168,76,.25);
-  border:none;
-  cursor:pointer;
-  transition:.28s ease;
-  padding:0;
-}
+    .slide-ph .icon {
+      font-size: 2.6rem;
+      color: var(--gold);
+      opacity: .4;
+    }
 
-.c-dot.active{
-  background:var(--gold);
-  width:28px;
-  border-radius:999px;
-  box-shadow:0 0 18px rgba(201,168,76,.45);
-}
+    .slide-ph .lbl {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: .9rem;
+      color: rgba(255, 255, 255, .38);
+      text-align: center;
+      padding: 0 18px;
+      line-height: 1.5;
+    }
 
-@media(max-width:900px){
-  .car-track{
-    gap:16px;
-    padding:8px 24px;
-  }
+    .car-dots {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      align-items: center;
+      margin-top: 22px;
+      position: relative;
+      z-index: 2;
+    }
 
-  .car-slide{
-    flex:0 0 calc(50% - 8px);
-    border-radius:16px;
-  }
-}
+    .c-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(201, 168, 76, .25);
+      border: none;
+      cursor: pointer;
+      transition: .28s ease;
+      padding: 0;
+    }
 
-@media(max-width:560px){
-  .car-track{
-    gap:14px;
-    padding:8px 18px;
-  }
+    .c-dot.active {
+      background: var(--gold);
+      width: 28px;
+      border-radius: 999px;
+      box-shadow: 0 0 18px rgba(201, 168, 76, .45);
+    }
 
-  .car-slide{
-    flex:0 0 calc(88% - 8px);
-    border-radius:15px;
-  }
+    @media(max-width:900px) {
+      .car-track {
+        gap: 16px;
+        padding: 8px 24px;
+      }
 
-  .slide-cap{
-    left:10px;
-    right:10px;
-    bottom:10px;
-    padding:12px 13px;
-  }
+      .car-slide {
+        flex: 0 0 calc(50% - 8px);
+        border-radius: 16px;
+      }
+    }
 
-  .slide-cap .ctext{
-    font-size:.86rem;
-  }
-}
+    @media(max-width:560px) {
+      .car-track {
+        gap: 14px;
+        padding: 8px 18px;
+      }
+
+      .car-slide {
+        flex: 0 0 calc(88% - 8px);
+        border-radius: 15px;
+      }
+
+      .slide-cap {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        padding: 12px 13px;
+      }
+
+      .slide-cap .ctext {
+        font-size: .86rem;
+      }
+    }
 
     /* PILLARS */
     .pillars-g {
@@ -3225,6 +3239,361 @@
       align-items: start;
     }
 
+    .history-timeline {
+      max-width: 900px;
+      margin: 40px auto 0;
+      position: relative;
+    }
+
+    .history-timeline::before {
+      content: "";
+      position: absolute;
+      left: 28px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--gold);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 80px;
+      margin-bottom: 32px;
+    }
+
+    .timeline-year {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: #111;
+      font-family: 'Cinzel', serif;
+      font-size: .72rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .timeline-card {
+      background: var(--cream);
+      padding: 22px;
+      border-radius: 14px;
+      border-left: 4px solid var(--gold);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, .08);
+    }
+
+    .timeline-card h3 {
+      font-family: 'Cinzel', serif;
+      margin-bottom: 10px;
+      color: var(--gk);
+    }
+
+    .timeline-card p {
+      font-family: 'Cormorant Garamond', serif;
+      line-height: 1.8;
+      color: var(--inkm);
+    }
+
+
+
+.exec-wrapper{
+  position:relative;
+
+  max-width:1200px;
+  margin:50px auto 0;
+
+  padding:40px;
+
+  border:2px solid rgba(201,168,76,.45);
+  border-radius:28px;
+
+  .exec-wrapper{
+  background:linear-gradient(
+    180deg,
+    #fffdf8,
+    #f7f1df
+  );
+
+  .exec-wrapper{
+  background:linear-gradient(
+    180deg,
+    #fffdf8,
+    #f7f1df
+  );
+
+  border:2px solid rgba(201,168,76,.6);
+
+  border-radius:28px;
+
+  padding:42px;
+}
+}
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.08),
+    inset 0 0 0 1px rgba(201,168,76,.15);
+}
+
+.exec-wrapper::before,
+.exec-wrapper::after{
+  content:"";
+  position:absolute;
+  width:60px;
+  height:60px;
+  border-color:var(--gold);
+  pointer-events:none;
+}
+
+.exec-wrapper::before{
+  top:16px;
+  left:16px;
+
+  border-top:3px solid var(--gold);
+  border-left:3px solid var(--gold);
+}
+
+.exec-wrapper::after{
+  bottom:16px;
+  right:16px;
+
+  border-bottom:3px solid var(--gold);
+  border-right:3px solid var(--gold);
+}
+
+.exec-tier{
+  display:flex;
+  justify-content:center;
+  gap:22px;
+  flex-wrap:wrap;
+}
+
+.exec-tier-top{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  margin-bottom:18px;
+}
+
+.exec-tier-two{
+  margin:18px 0;
+}
+
+.exec-connector{
+  width:2px;
+  height:34px;
+  margin:0 auto;
+  background:linear-gradient(to bottom, var(--gold), rgba(201,168,76,.12));
+}
+
+.exec-card{
+  position:relative;
+  background:var(--cream);
+  border:1px solid rgba(201,168,76,.22);
+  border-top:3px solid var(--gold);
+  border-radius:18px;
+  padding:24px 22px;
+  min-height:156px;
+  width:100%;
+  max-width:310px;
+  text-align:center;
+  box-shadow:0 12px 34px rgba(13,40,24,.08);
+  overflow:hidden;
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    border-color .25s ease;
+}
+
+.exec-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 15% 0%, rgba(201,168,76,.18), transparent 32%),
+    linear-gradient(135deg, rgba(255,255,255,.65), transparent 50%);
+  pointer-events:none;
+}
+
+.exec-card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(201,168,76,.46);
+  box-shadow:0 22px 50px rgba(13,40,24,.16);
+}
+
+.exec-main{
+  max-width:360px;
+  background:linear-gradient(135deg, var(--gk), var(--gd));
+  border-color:rgba(201,168,76,.45);
+  box-shadow:0 24px 70px rgba(13,40,24,.26);
+  margin: 0 auto;
+}
+
+.exec-main h3,
+.exec-main .exec-label{
+  color:#fff;
+}
+
+.exec-main .exec-label{
+  color:var(--gold);
+}
+
+.exec-icon{
+  position:relative;
+  z-index:2;
+  width:52px;
+  height:52px;
+  margin:0 auto 14px;
+  border-radius:50%;
+  background:rgba(201,168,76,.12);
+  border:1px solid rgba(201,168,76,.38);
+  display:grid;
+  place-items:center;
+}
+
+.exec-icon svg{
+  width:24px;
+  height:24px;
+  stroke:var(--gold);
+}
+
+.exec-label{
+  position:relative;
+  z-index:2;
+  display:block;
+  font-family:'Cinzel', serif;
+  font-size:.58rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:8px;
+}
+
+.exec-card h3{
+  position:relative;
+  z-index:2;
+  font-family:'Cinzel', serif;
+  font-size:.96rem;
+  font-weight:700;
+  color:var(--gm);
+  line-height:1.45;
+}
+
+.exec-section-title{
+  width:fit-content;
+  margin:42px auto 24px;
+  padding:10px 22px;
+  border-radius:999px;
+  background:rgba(201,168,76,.12);
+  border:1px solid rgba(201,168,76,.32);
+  font-family:'Cinzel', serif;
+  font-size:.72rem;
+  font-weight:700;
+  color:var(--gm);
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+
+.exec-grid{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:20px;
+}
+
+.exec-grid .exec-card{
+  max-width:none;
+}
+
+.exec-grid-small{
+  grid-template-columns:repeat(5, 1fr);
+}
+
+.exec-grid-small .exec-card{
+  min-height:146px;
+  padding:22px 16px;
+}
+
+.exec-president-photo{
+  width:92px;
+  height:92px;
+  margin:0 auto 16px;
+  border-radius:50%;
+  overflow:hidden;
+  border:3px solid var(--gold);
+  box-shadow:0 0 0 4px rgba(201,168,76,.15);
+}
+
+.exec-president-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.exec-president-name{
+  margin-top:10px;
+  font-family:'Cormorant Garamond', serif;
+  font-size:1rem;
+  color:rgba(255,255,255,.9);
+  font-style:italic;
+}
+
+@media(max-width:1024px){
+  .exec-grid,
+  .exec-grid-small{
+    grid-template-columns:repeat(2, 1fr);
+  }
+
+  .exec-card{
+    max-width:none;
+  }
+}
+
+@media(max-width:560px){
+  .exec-chart{
+    margin-top:34px;
+  }
+
+  .exec-tier{
+    gap:16px;
+  }
+
+  .exec-grid,
+  .exec-grid-small{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+
+  .exec-card{
+    min-height:auto;
+    padding:22px 18px;
+  }
+
+  .exec-connector{
+    height:26px;
+  }
+}
+
+    @media(max-width:600px) {
+      .history-timeline::before {
+        left: 22px;
+      }
+
+      .timeline-item {
+        padding-left: 64px;
+      }
+
+      .timeline-year {
+        width: 46px;
+        height: 46px;
+        font-size: .62rem;
+      }
+    }
+
     @media(max-width:800px) {
       .about-lay {
         grid-template-columns: 1fr;
@@ -3805,50 +4174,50 @@
       background: url('./src/assets/images/Mecca.png') center center / cover no-repeat;
     }
 
-   @media(max-width:1024px){
-    .hero-v2{
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      gap:28px;
-      padding:48px 22px 60px;
-    }
+    @media(max-width:1024px) {
+      .hero-v2 {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 28px;
+        padding: 48px 22px 60px;
+      }
 
-    .hero-v2-left{
-      width:100%;
-      max-width:620px;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      text-align:center;
-    }
+      .hero-v2-left {
+        width: 100%;
+        max-width: 620px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
 
-    .hero-quote-card{
-      position:relative;
-      z-index:3;
-      width:100%;
-      max-width:520px;
-      margin:24px auto 0;
-    }
+      .hero-quote-card {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        max-width: 520px;
+        margin: 24px auto 0;
+      }
 
-    .hero-v2-right{
-      position:relative !important;
-      right:auto !important;
-      bottom:auto !important;
-      transform:none !important;
-      width:100%;
-      max-width:520px;
-      margin:0 auto;
-      display:flex;
-      justify-content:center;
-      z-index:3;
-    }
+      .hero-v2-right {
+        position: relative !important;
+        right: auto !important;
+        bottom: auto !important;
+        transform: none !important;
+        width: 100%;
+        max-width: 520px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        z-index: 3;
+      }
 
-    .prayer-card{
-      width:100%;
-      max-width:460px;
+      .prayer-card {
+        width: 100%;
+        max-width: 460px;
+      }
     }
-  }
 
     @media(max-width:480px) {
       .hero-v2 {
@@ -3856,27 +4225,28 @@
       }
     }
 
-    @media(max-width:560px){
-      .hero-v2{
-        padding:42px 18px 54px;
+    @media(max-width:560px) {
+      .hero-v2 {
+        padding: 42px 18px 54px;
       }
 
-      .hero-v2-desc br{
-        display:none;
+      .hero-v2-desc br {
+        display: none;
       }
 
-      .hero-quote-card{
-        max-width:100%;
+      .hero-quote-card {
+        max-width: 100%;
       }
 
-      .prayer-card{
-        max-width:100%;
+      .prayer-card {
+        max-width: 100%;
       }
     }
-      .hero-quote-card {
-        width: 100%;
-        max-width: 360px;
-      }
+
+    .hero-quote-card {
+      width: 100%;
+      max-width: 360px;
+    }
 
     /* LEFT side */
     .hero-v2-left {
@@ -3917,10 +4287,10 @@
 
     /* RIGHT side — Prayer Card */
     .hero-v2-right {
-      position:absolute;
-      right:15px;
-      bottom:86.3px;
-      z-index:5;
+      position: absolute;
+      right: 15px;
+      bottom: 86.3px;
+      z-index: 5;
     }
 
     @media(max-width:1024px) {
@@ -3928,7 +4298,7 @@
         width: 100%;
         max-width: 420px;
         margin: 0 auto;
-        transform: none;  
+        transform: none;
       }
     }
 
@@ -4573,40 +4943,40 @@
       direction: rtl;
     }
 
-   .google-lang-wrap{
-    position:relative;
-    display:flex;
-    align-items:center;
-  }
+    .google-lang-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
 
-  .lang-icon{
-    position:absolute;
-    left:12px;
-    z-index:10;
-    width:18px;
-    height:18px;
-    color:var(--gold);
-    pointer-events:none;
-  }
+    .lang-icon {
+      position: absolute;
+      left: 12px;
+      z-index: 10;
+      width: 18px;
+      height: 18px;
+      color: var(--gold);
+      pointer-events: none;
+    }
 
-  .goog-te-combo{
-  width:52px;
-  height:40px;
+    .goog-te-combo {
+      width: 52px;
+      height: 40px;
 
-  padding-left:34px;
+      padding-left: 34px;
 
-  border-radius:999px;
-  border:1px solid rgba(201,168,76,.35);
+      border-radius: 999px;
+      border: 1px solid rgba(201, 168, 76, .35);
 
-  background:rgba(255,255,255,.04);
+      background: rgba(255, 255, 255, .04);
 
-  color:transparent;
+      color: transparent;
 
-  cursor:pointer;
+      cursor: pointer;
 
-  appearance:none;
-  -webkit-appearance:none;
-}
+      appearance: none;
+      -webkit-appearance: none;
+    }
 
     .goog-te-gadget {
       font-family: 'Cinzel', serif !important;
@@ -4664,24 +5034,24 @@
       overflow: hidden;
     }
 
-    @media(max-width:600px){
-  .google-lang-wrap{
-    margin-left:6px;
-  }
+    @media(max-width:600px) {
+      .google-lang-wrap {
+        margin-left: 6px;
+      }
 
-  .goog-te-combo{
-    width:62px;
-    height:34px;
-    padding-left:30px;
-    font-size:0 !important;
-  }
+      .goog-te-combo {
+        width: 62px;
+        height: 34px;
+        padding-left: 30px;
+        font-size: 0 !important;
+      }
 
-  .google-lang-wrap::before{
-    left:50%;
-    transform:translate(-50%, -50%);
-    font-size:1rem;
-  }
-}
+      .google-lang-wrap::before {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1rem;
+      }
+    }
 
     /* image background */
     .hero-v2-bg {
@@ -4747,9 +5117,7 @@
   <nav>
     <div class="nav-in">
       <div class="nav-logo" onclick="go('home')">
-        <img src="/src/assets/images/logo.png" alt="Jamiat Ahle Hadees JK" class="nav-emb" style="object-fit:contain;">
-        <div><span class="nl-title">Jamiat Ahle Hadees</span><span class="nl-sub">جمعیت اہل حدیث جموں و کشمیر</span>
-        </div>
+        <img src="/src/assets/images/jam.png" alt="Jamiat Ahle Hadees Jammu & Kashmir" class="nav-logo-full">
       </div>
       <ul class="nav-links">
         <li><button onclick="go('home')" class="nav-home-btn">Home</button></li>
@@ -4759,6 +5127,7 @@
           <ul class="dropdown">
             <li><button onclick="go('aims')">Aims &amp; Objectives</button></li>
             <li><button onclick="go('about')">About Us</button></li>
+            <li><button onclick="go('executive')">Executive Council</button></li>
             <li><button onclick="go('constitution')">Our Constitution</button></li>
             <li><button onclick="go('events')">Events</button></li>
           </ul>
@@ -4823,9 +5192,9 @@
         </button>
       </ul>
       <div class="google-lang-wrap">
-      <i data-lucide="languages" class="lang-icon"></i>
-      <div id="google_translate_element"></div>
-    </div>
+        <i data-lucide="languages" class="lang-icon"></i>
+        <div id="google_translate_element"></div>
+      </div>
       <button class="nav-ham" id="ham"><span></span><span></span><span></span></button>
     </div>
   </nav>
@@ -4834,7 +5203,7 @@
     <button class="mob-a" onclick="go('home')">Home</button>
     <button class="mob-gb" data-t="m-about">About Jamiat <span>▾</span></button>
     <div class="mob-sub" id="m-about"><button onclick="go('aims')">Aims &amp; Objectives</button><button
-        onclick="go('about')">About Us</button><button onclick="go('constitution')">Our Constitution</button><button
+        onclick="go('about')">About Us</button><button onclick="go('executive')">Executive Council</button><button onclick="go('constitution')">Our Constitution</button><button
         onclick="go('events')">Events</button></div>
     <button class="mob-gb" data-t="m-smert">SMERT <span>▾</span></button>
     <div class="mob-sub" id="m-smert"><button onclick="go('smert')">Structure &amp; Aims</button><button
@@ -4880,7 +5249,7 @@
       <!-- LEFT: Text content -->
       <div class="hero-v2-left">
         <div class="hero-v2-arabic">جمعیت اہل حدیث جموں و کشمیر</div>
-        <h1 class="hero-v2-title">JAMIAT AHLE<br>HADEES JK</h1>
+        <h1 class="hero-v2-title">JAMIAT <br> AHL- e -HADEES JK</h1>
         <p class="hero-v2-desc">Serving the Muslim community of Jammu &amp; Kashmir<br>through education, religious
           guidance, and community<br>welfare, grounded in the Quran and authentic Sunnah.</p>
 
@@ -4897,7 +5266,7 @@
 
             <div>
               <strong>Dr. Abdul Latif Alkindi</strong>
-              <span>Sadr Jamiat Ahle Hadees J&K </span>
+              <span>President Jamiat Ahle Hadees J&K </span>
             </div>
           </div>
 
@@ -5531,7 +5900,7 @@
           <div class="rvr">
             <div class="sh lft"><span class="stag">Our Structure</span>
               <h2 class="stitle">Aims &amp; <em>Goals</em></h2>
-              <p class="sdesc">Jamiat Ahle Hadees J&amp;K, operating under SMERT, is committed to a comprehensive vision
+              <p class="sdesc">Jamiat Ahle Hadees J&amp;K, is committed to a comprehensive vision
                 for the Muslim community of the region.</p>
               <div class="orn lft">
                 <div class="ol"></div>
@@ -5623,75 +5992,117 @@
           </div>
         </div>
         <div class="goals-g">
+
           <div class="goal-card rv-up d1">
             <h4>
               <i data-lucide="sparkles" class="goal-icon"></i>
               Propagation of Tawheed
             </h4>
-            <p>Spreading pure monotheism and the authentic teachings of Islam as understood by the companions and the
-              Salaf-us-Saliheen.</p>
+            <p>
+              Spreading pure monotheism and the authentic teachings of Islam according to the understanding of the
+              Salaf-us-Saliheen.
+            </p>
           </div>
 
           <div class="goal-card rv-up d2">
             <h4>
-              <i data-lucide="graduation-cap" class="goal-icon"></i>
-              Islamic Education
+              <i data-lucide="book-open" class="goal-icon"></i>
+              Quran & Sunnah
             </h4>
-            <p>Establishing and supporting schools, colleges and madarsas that provide quality religious and modern
-              education across J&amp;K.</p>
+            <p>
+              Preaching and propagating the Quran and authentic Hadith in their purest form while encouraging adherence
+              to authentic Islamic teachings.
+            </p>
           </div>
 
           <div class="goal-card rv-up d3">
             <h4>
-              <i data-lucide="handshake" class="goal-icon"></i>
-              Community Unity
+              <i data-lucide="graduation-cap" class="goal-icon"></i>
+              Islamic & Arabic Sciences
             </h4>
-            <p>Fostering unity, brotherhood and cooperation among the Muslim community of Jammu &amp; Kashmir.</p>
+            <p>
+              Promoting Islamic and Arabic sciences and supporting institutions dedicated to religious learning and
+              scholarship.
+            </p>
           </div>
 
           <div class="goal-card rv-up d4">
             <h4>
-              <i data-lucide="landmark" class="goal-icon"></i>
-              Masjid Development
+              <i data-lucide="school" class="goal-icon"></i>
+              Modern Education
             </h4>
-            <p>Building, maintaining and registering mosques as centres of worship, learning and community gathering.
+            <p>
+              Encouraging modern education and strengthening institutions that contribute to academic excellence
+              throughout Jammu & Kashmir.
             </p>
           </div>
 
           <div class="goal-card rv-up d5">
             <h4>
-              <i data-lucide="book-copy" class="goal-icon"></i>
-              Knowledge Dissemination
+              <i data-lucide="megaphone" class="goal-icon"></i>
+              Universal Call of Islam
             </h4>
-            <p>Publishing Islamic literature including books, journals and newspapers to spread authentic religious
-              knowledge.</p>
+            <p>
+              Conveying the universal message of Islam to Muslims and non-Muslims through peaceful, constructive and
+              meaningful engagement.
+            </p>
           </div>
 
           <div class="goal-card rv-up d6">
             <h4>
-              <i data-lucide="scale" class="goal-icon"></i>
-              Religious Guidance
+              <i data-lucide="handshake" class="goal-icon"></i>
+              Brotherhood & Unity
             </h4>
-            <p>Providing authentic Fatawa and religious guidance through a qualified and trusted Ifta Board.</p>
+            <p>
+              Strengthening unity, cooperation and mutual understanding among Muslims while promoting Islamic and human
+              brotherhood.
+            </p>
           </div>
 
           <div class="goal-card rv-up d7">
             <h4>
-              <i data-lucide="heart-handshake" class="goal-icon"></i>
-              Social Welfare
+              <i data-lucide="landmark" class="goal-icon"></i>
+              Protection of Endowments
             </h4>
-            <p>Supporting underprivileged members of the Muslim community through charitable initiatives and welfare
-              programmes.</p>
+            <p>
+              Protecting Muslim endowments and waqf properties and ensuring their proper management for the benefit of
+              the community.
+            </p>
           </div>
 
           <div class="goal-card rv-up d8">
             <h4>
-              <i data-lucide="building" class="goal-icon"></i>
-              Waqf Preservation
+              <i data-lucide="archive" class="goal-icon"></i>
+              Heritage Preservation
             </h4>
-            <p>Protecting Islamic endowment properties through proper registration and management under Waqf-i-Tanzeem.
+            <p>
+              Preserving the educational, cultural and civilizational heritage of the Muslim community and future
+              generations.
             </p>
           </div>
+
+          <div class="goal-card rv-up d9">
+            <h4>
+              <i data-lucide="heart-handshake" class="goal-icon"></i>
+              Social Welfare
+            </h4>
+            <p>
+              Supporting orphans, widows, underprivileged families and victims of natural calamities through charitable
+              and welfare initiatives.
+            </p>
+          </div>
+
+          <div class="goal-card rv-up d10">
+            <h4>
+              <i data-lucide="hospital" class="goal-icon"></i>
+              Healthcare Services
+            </h4>
+            <p>
+              Serving society through medical centres, diagnostic facilities and healthcare projects accessible to all
+              without discrimination.
+            </p>
+          </div>
+
         </div>
       </div>
     </div>
@@ -5704,11 +6115,13 @@
       <div class="pb-title">About Us</div>
       <div class="pb-sub">Our history, mission and commitment to the Muslim community</div>
     </div>
+
     <div class="bgw">
       <div class="sec">
         <div class="about-lay">
           <div class="rvl">
-            <div class="sh lft"><span class="stag">Our Story</span>
+            <div class="sh lft">
+              <span class="stag">Our Story</span>
               <h2 class="stitle">A Legacy of <em>Faith</em></h2>
               <div class="orn lft">
                 <div class="ol"></div>
@@ -5716,52 +6129,376 @@
                 <div class="ol"></div>
               </div>
             </div>
+
             <p
               style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--inkm);line-height:1.85;margin-top:20px;margin-bottom:16px;">
-              Jamiat Ahle Hadees Jammu &amp; Kashmir is a distinguished Islamic organisation dedicated to propagating
-              the teachings of the Quran and authentic Hadees among the Muslim community of the region.</p>
+              The Ahli Hadith Movement in Jammu &amp; Kashmir began in 1858 A.D. as a reform movement dedicated to
+              propagating the teachings of the Quran and authentic Hadith in their purest form.
+            </p>
+
             <p
               style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--inkm);line-height:1.85;margin-bottom:16px;">
-              Founded on the principles of adhering to the Quran and Sunnah as understood by the Salaf-us-Saliheen, we
-              have established a comprehensive network of educational and religious institutions across Jammu &amp;
-              Kashmir.</p>
+              The foundation of the movement was laid by Moulana Sayyid Hussain Shah during the Dogra rule of Maharaja
+              Ranbir Singh. He challenged polytheistic practices, religious innovations and the prevailing culture of
+              Pir-Mureedi.
+            </p>
+
+            <p
+              style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--inkm);line-height:1.85;margin-bottom:16px;">
+              Despite facing strong opposition, the movement continued to grow through the efforts of dedicated scholars
+              and reformers. In 1923 A.D., it was formally named Anjuman-e-Ahle Hadith Kashmir.
+            </p>
+
             <p
               style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--inkm);line-height:1.85;margin-bottom:28px;">
-              Over the decades, we have grown into one of the most influential Islamic organisations in the region, with
-              hundreds of affiliated mosques, schools, colleges and madarsas serving tens of thousands of Muslims.</p>
-            <button class="btn btn-p" onclick="go('smert')">Learn About SMERT</button>
+              In 1940 A.D., the organization was rechristened as Jamiat Ahle-Hadith Jammu &amp; Kashmir. On 20 September
+              1958, it was formally registered as a society by the Government.
+            </p>
           </div>
+
           <div class="rvr">
             <div
               style="background:var(--gm);border-radius:var(--rl);padding:36px;text-align:center;margin-bottom:20px;">
-              <div style="font-family:'Amiri',serif;font-size:2.4rem;color:var(--glt);margin-bottom:12px;">الحديث</div>
+              <div style="font-family:'Amiri',serif;font-size:2.4rem;color:var(--glt);margin-bottom:12px;">
+                الحديث الرسول ﷺ
+              </div>
               <p
                 style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:rgba(255,255,255,.65);font-style:italic;line-height:1.7;">
-                "Whoever Allah intends good for, He gives him understanding in the religion." — Sahih al-Bukhari</p>
+                "Whoever Allah intends good for, He gives him understanding in the religion." — Sahih al-Bukhari
+              </p>
             </div>
+
             <div class="pillars-g" style="grid-template-columns:1fr 1fr;">
               <div class="pillar" style="padding:18px 14px;">
-                <div class="p-t">Est. 1948</div>
-                <p class="p-d" style="font-size:.88rem;">Over 75 years of dedicated service</p>
+                <div class="p-t">1858 A.D.</div>
+                <p class="p-d" style="font-size:.88rem;">Foundation of the Ahli Hadith Movement in Kashmir</p>
               </div>
+
               <div class="pillar" style="padding:18px 14px;">
-                <div class="p-t">120+ Institutions</div>
-                <p class="p-d" style="font-size:.88rem;">Schools, colleges, madarsas &amp; mosques</p>
+                <div class="p-t">1923 A.D.</div>
+                <p class="p-d" style="font-size:.88rem;">Formally named Anjuman-e-Ahle Hadith Kashmir</p>
               </div>
+
               <div class="pillar" style="padding:18px 14px;">
-                <div class="p-t">200+ Masajid</div>
-                <p class="p-d" style="font-size:.88rem;">Registered under Waqf-i-Tanzeem</p>
+                <div class="p-t">1940 A.D.</div>
+                <p class="p-d" style="font-size:.88rem;">Rechristened as Jamiat Ahle-Hadith J&amp;K</p>
               </div>
+
               <div class="pillar" style="padding:18px 14px;">
-                <div class="p-t">All of J&amp;K</div>
-                <p class="p-d" style="font-size:.88rem;">Presence across all districts</p>
+                <div class="p-t">1958 A.D.</div>
+                <p class="p-d" style="font-size:.88rem;">Formally registered as a society</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="bgc">
+      <div class="sec">
+        <div class="sh">
+          <span class="stag">Our Journey</span>
+          <h2 class="stitle">Historical Timeline</h2>
+          <p class="sdesc">
+            From a reform movement in 1858 to a major Islamic organization serving Jammu &amp; Kashmir.
+          </p>
+        </div>
+
+        <div class="history-timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">1858</div>
+            <div class="timeline-card">
+              <h3>Foundation of the Movement</h3>
+              <p>
+                Moulana Sayyid Hussain Shah laid the foundation of the Ahli Hadith Movement in Kashmir and called people
+                towards the Quran and authentic Sunnah.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-year">1923</div>
+            <div class="timeline-card">
+              <h3>Anjuman-e-Ahle Hadith Kashmir</h3>
+              <p>
+                The movement was formally organized and named Anjuman-e-Ahle Hadith Kashmir.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-year">1940</div>
+            <div class="timeline-card">
+              <h3>Jamiat Ahle-Hadith J&amp;K</h3>
+              <p>
+                Anjuman-e-Ahle Hadith Kashmir was rechristened as Jamiat Ahle-Hadith Jammu &amp; Kashmir.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-year">1958</div>
+            <div class="timeline-card">
+              <h3>Official Registration</h3>
+              <p>
+                On 20 September 1958, Jamiat Ahle-Hadith Jammu &amp; Kashmir was formally registered as a society.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-year">Today</div>
+            <div class="timeline-card">
+              <h3>Dawah, Education &amp; Welfare</h3>
+              <p>
+                Today, Jamiat Ahle-Hadith Jammu &amp; Kashmir continues its work in Dawah, education, social welfare and
+                humanitarian service from its headquarters at Jamiat Manzil, Barbar Shah, Srinagar.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="bgc">
+      <div class="sec">
+        <div class="sh">
+          <span class="stag">Serving Humanity</span>
+          <h2 class="stitle">Healthcare &amp; Welfare</h2>
+          <p class="sdesc">
+            Jamiat also serves society through medical, humanitarian and social-welfare initiatives.
+          </p>
+        </div>
+
+        <div class="pillars-g">
+          <div class="pillar">
+            <div class="p-t">TMU Diagnostic Centre</div>
+            <p class="p-d">Affordable diagnostic and medical services for people without discrimination.</p>
+          </div>
+
+          <div class="pillar">
+            <div class="p-t">Collection Centres</div>
+            <p class="p-d">Healthcare collection centres serving people in different locations of the region.</p>
+          </div>
+
+          <div class="pillar">
+            <div class="p-t">Dialysis Centre</div>
+            <p class="p-d">Dialysis services established on a no-profit, no-loss basis.</p>
+          </div>
+
+          <div class="pillar">
+            <div class="p-t">Orphan Support</div>
+            <p class="p-d">Assistance and care for orphaned children and vulnerable families.</p>
+          </div>
+
+          <div class="pillar">
+            <div class="p-t">Widow Assistance</div>
+            <p class="p-d">Welfare support for widows and families in need.</p>
+          </div>
+
+          <div class="pillar">
+            <div class="p-t">Disaster Relief</div>
+            <p class="p-d">Support for victims of natural calamities and other disasters.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bgw">
+      <div class="sec">
+        <div class="sh">
+          <span class="stag">Leadership</span>
+          <h2 class="stitle">Current Leadership</h2>
+          <p class="sdesc">
+            Jamiat Ahle-Hadith Jammu &amp; Kashmir is presently headed by <B>Dr. Abdul Latif Al-Kindi</B>.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <!-- === EXECUTIVE BODY === -->
+
+  <div class="page" id="p-executive">
+  <div class="pb">
+    <div class="pb-ar">نظامہ جمعیت</div>
+    <div class="pb-title">Executive Council</div>
+    <div class="pb-sub">Structure of the Executive Council (Nuzama) of Jamiat Ahle-Hadith Jammu &amp; Kashmir</div>
+  </div>
+
+  <div class="exec-page-bg">
+    <div class="sec">
+
+      <div class="sh rv">
+        <span class="stag">Organizational Structure</span>
+        <h2 class="stitle">Nuzama Jamiat</h2>
+        <p class="sdesc">
+          The working body of Jamiat is organized through designated offices responsible for leadership,
+          administration, finance, education, publication, welfare and public affairs.
+        </p>
+        <div class="orn">
+          <div class="ol"></div>
+          <div class="od"></div>
+          <div class="ol"></div>
+        </div>
+      </div>
+
+      <div class="exec-wrapper">
+
+      <div class="exec-chart">
+
+        <div class="exec-card exec-main rv-up d1">
+
+  <div class="exec-president-photo">
+    <img src="./src/assets/images/sadr.jpg"
+         alt="President Jamiat Ahle Hadees J&K">
+  </div>
+
+  <span class="exec-label">Current President</span>
+
+  <h3>President</h3>
+
+  <p class="exec-president-name">
+    Dr. Abdul Latif Al-Kindi
+  </p>
+
+</div>
+
+        <div class="exec-connector"></div>
+
+        <div class="exec-tier exec-tier-two">
+          <div class="exec-card rv-up d2">
+            <div class="exec-icon"><i data-lucide="badge-check"></i></div>
+            <span class="exec-label">Senior Office</span>
+            <h3>Vice President 1st &amp; Mufti Aam</h3>
+          </div>
+
+          <div class="exec-card rv-up d3">
+            <div class="exec-icon"><i data-lucide="badge-check"></i></div>
+            <span class="exec-label">Senior Office</span>
+            <h3>Vice President 2nd</h3>
+          </div>
+        </div>
+
+        <div class="exec-connector"></div>
+
+        <div class="exec-tier exec-tier-two">
+          <div class="exec-card rv-up d4">
+            <div class="exec-icon"><i data-lucide="file-pen-line"></i></div>
+            <span class="exec-label">Administration</span>
+            <h3>General Secretary</h3>
+          </div>
+
+          <div class="exec-card rv-up d5">
+            <div class="exec-icon"><i data-lucide="files"></i></div>
+            <span class="exec-label">Administration</span>
+            <h3>Joint Secretary</h3>
+          </div>
+        </div>
+
+        <div class="exec-section-title rv-up d6">
+          Departmental Nazims
+        </div>
+
+        <div class="exec-grid">
+
+          <div class="exec-card rv-up d1">
+            <div class="exec-icon"><i data-lucide="megaphone"></i></div>
+            <span class="exec-label">Dawah</span>
+            <h3>Nazim Tableeg</h3>
+          </div>
+
+          <div class="exec-card rv-up d2">
+            <div class="exec-icon"><i data-lucide="wallet"></i></div>
+            <span class="exec-label">Finance</span>
+            <h3>Nazim Maliyaat</h3>
+          </div>
+
+          <div class="exec-card rv-up d3">
+            <div class="exec-icon"><i data-lucide="graduation-cap"></i></div>
+            <span class="exec-label">Education</span>
+            <h3>Nazim Taleemaat</h3>
+          </div>
+
+          <div class="exec-card rv-up d4">
+            <div class="exec-icon"><i data-lucide="newspaper"></i></div>
+            <span class="exec-label">Publication</span>
+            <h3>Nazim Nashr-o-Ishaat</h3>
+          </div>
+
+          <div class="exec-card rv-up d5">
+            <div class="exec-icon"><i data-lucide="building-2"></i></div>
+            <span class="exec-label">Construction</span>
+            <h3>Nazim Tameerat</h3>
+          </div>
+
+          <div class="exec-card rv-up d6">
+            <div class="exec-icon"><i data-lucide="users-round"></i></div>
+            <span class="exec-label">Public Affairs</span>
+            <h3>Nazim Amoor-i-Aama</h3>
+          </div>
+
+          <div class="exec-card rv-up d7">
+            <div class="exec-icon"><i data-lucide="book-marked"></i></div>
+            <span class="exec-label">Library</span>
+            <h3>Nazim Maktabat</h3>
+          </div>
+
+          <div class="exec-card rv-up d8">
+            <div class="exec-icon"><i data-lucide="heart-pulse"></i></div>
+            <span class="exec-label">Health</span>
+            <h3>Nazim Sehet</h3>
+          </div>
+
+        </div>
+
+        <div class="exec-section-title rv-up d7">
+          Editorial, Finance &amp; Operations
+        </div>
+
+        <div class="exec-grid exec-grid-small">
+
+          <div class="exec-card rv-up d1">
+            <div class="exec-icon"><i data-lucide="pen-tool"></i></div>
+            <span class="exec-label">Editorial</span>
+            <h3>Editor Muslim</h3>
+          </div>
+
+          <div class="exec-card rv-up d2">
+            <div class="exec-icon"><i data-lucide="circle-dollar-sign"></i></div>
+            <span class="exec-label">Accounts</span>
+            <h3>Treasurer</h3>
+          </div>
+
+          <div class="exec-card rv-up d3">
+            <div class="exec-icon"><i data-lucide="receipt"></i></div>
+            <span class="exec-label">Accounts</span>
+            <h3>Cashier</h3>
+          </div>
+
+          <div class="exec-card rv-up d4">
+            <div class="exec-icon"><i data-lucide="printer"></i></div>
+            <span class="exec-label">Publication</span>
+            <h3>Printer Publisher Muslim</h3>
+          </div>
+
+          <div class="exec-card rv-up d5">
+            <div class="exec-icon"><i data-lucide="network"></i></div>
+            <span class="exec-label">Coordination</span>
+            <h3>Organizer</h3>
+          </div>
+
+        </div>
+
+      </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
 
   <!-- ═══ CONSTITUTION ═══ -->
   <div class="page" id="p-constitution">
@@ -5913,30 +6650,53 @@
               style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--inkm);line-height:1.8;margin-bottom:28px;">
               Our Ifta Board is composed of qualified Islamic scholars grounded in the Quran and authentic Sunnah.
               Please provide as much context as possible for an accurate response.</p>
-            <div class="ff">
-              <div class="fg"><label class="fl">Your Full Name</label><input type="text" class="fi"
-                  placeholder="Enter your full name"></div>
-              <div class="fg"><label class="fl">Email Address</label><input type="email" class="fi"
-                  placeholder="your@email.com"></div>
-              <div class="fg"><label class="fl">Category</label><select class="fs">
-                  <option>Select a category...</option>
-                  <option>Prayer (Salah)</option>
-                  <option>Fasting (Sawm)</option>
-                  <option>Zakat</option>
-                  <option>Marriage &amp; Family</option>
-                  <option>Business &amp; Finance</option>
-                  <option>Halal &amp; Haram</option>
-                  <option>Other</option>
-                </select></div>
-              <div class="fg"><label class="fl">Your Question</label><textarea class="fta"
-                  placeholder="Describe your question in detail, including all relevant context..."></textarea></div>
-              <div class="fg"><label class="fl">Language Preference</label><select class="fs">
-                  <option>English</option>
-                  <option>Urdu</option>
-                  <option>Kashmiri</option>
-                </select></div>
-              <button class="btn btn-p" style="width:100%;text-align:center;">Submit Question →</button>
+            <div class="fg">
+              <label class="fl">Your Full Name</label>
+              <input type="text" class="fi" placeholder="Enter your full name">
             </div>
+
+            <div class="fg">
+              <label class="fl">Phone Number</label>
+              <input type="tel" class="fi" placeholder="+91 XXXXX XXXXX (Optional)">
+            </div>
+
+            <div class="fg">
+              <label class="fl">Email Address</label>
+              <input type="email" class="fi" placeholder="your@email.com (Optional)">
+            </div>
+
+            <div class="fg">
+              <label class="fl">Category</label>
+              <select class="fs">
+                <option>Select a category...</option>
+                <option>Prayer (Salah)</option>
+                <option>Fasting (Sawm)</option>
+                <option>Zakat</option>
+                <option>Marriage &amp; Family</option>
+                <option>Business &amp; Finance</option>
+                <option>Halal &amp; Haram</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="fg">
+              <label class="fl">Your Question</label>
+              <textarea class="fta"
+                placeholder="Describe your question in detail, including all relevant context..."></textarea>
+            </div>
+
+            <div class="fg">
+              <label class="fl">Language Preference</label>
+              <select class="fs">
+                <option>English</option>
+                <option>Urdu</option>
+                <option>Kashmiri</option>
+              </select>
+            </div>
+
+            <button class="btn btn-p" style="width:100%;text-align:center;">
+              Submit Question →
+            </button>
           </div>
           <div class="rvr">
             <div class="fatwa-recent">
@@ -5978,59 +6738,75 @@
   <!-- ═══ IFTA BOARD ═══ -->
   <div class="page" id="p-ifta-board">
     <div class="pb">
-      <div class="pb-title">Ifta Board</div>
-      <div class="pb-sub">Our qualified scholars and their areas of specialisation</div>
+      <div class="pb-title">Markaz-ul-Iftah</div>
+      <div class="pb-sub">Jamiat Ahlihadees Jammu &amp; Kashmir</div>
     </div>
+
     <div class="bgw">
       <div class="sec">
-        <div class="sh rv"><span class="stag">Our Scholars</span>
-          <h2 class="stitle">The Ifta Board</h2>
-          <p class="sdesc">Fatawa are issued by our panel of qualified scholars, each with advanced training in Islamic
-            jurisprudence and the sciences of Hadees.</p>
+        <div class="sh rv">
+          <span class="stag">Dar-ul-Iftah</span>
+          <h2 class="stitle">Guidance from Quran &amp; Authentic Sunnah</h2>
+          <p class="sdesc">
+            Fatwas derived solely from the Quran and authentic Sunnah, offering clarity and confidence
+            in matters of faith, worship, and everyday life.
+          </p>
           <div class="orn">
             <div class="ol"></div>
             <div class="od"></div>
             <div class="ol"></div>
           </div>
         </div>
+
         <div class="inst-dg">
+
           <div class="idc rv d1">
-            <div class="idc-hdr"><span class="idc-badge">Senior Scholar</span>
-              <div class="idc-t">Mufti Abdul Rashid (Chairman)</div>
+            <div class="idc-hdr">
+              <span class="idc-badge">Mufti Aam</span>
+              <div class="idc-t">Sheikh Mohammad Yakoob Baba Almadani</div>
             </div>
             <div class="idc-body">
-              <p class="idc-d">30+ years of scholarship in Fiqh and Hadees sciences. Trained at prestigious Islamic
-                institutions and author of several published works on Islamic jurisprudence.</p>
-              <div class="idc-more">Specialisation: Fiqh &amp; Family Law →</div>
+              <p class="idc-d">
+                Head of Markaz-ul-Iftah, Jamiat Ahlihadees Jammu &amp; Kashmir.
+              </p>
             </div>
           </div>
+
           <div class="idc rv-tilt d2">
-            <div class="idc-hdr"><span class="idc-badge">Scholar</span>
-              <div class="idc-t">Maulana Muhammad Yusuf</div>
+            <div class="idc-hdr">
+              <span class="idc-badge">Secretary</span>
+              <div class="idc-t">Mohammad Yusuf Bazlavi</div>
             </div>
             <div class="idc-body">
-              <p class="idc-d">Specialist in contemporary financial matters and Islamic economics. Has issued Fatawa on
-                banking, insurance and modern commercial transactions.</p>
-              <div class="idc-more">Specialisation: Finance &amp; Economics →</div>
+              <p class="idc-d">
+                Secretary of Markaz-ul-Iftah, Jamiat Ahlihadees Jammu &amp; Kashmir.
+              </p>
             </div>
           </div>
+
           <div class="idc rv d3">
-            <div class="idc-hdr"><span class="idc-badge">Scholar</span>
-              <div class="idc-t">Sheikh Abdullah Mir</div>
+            <div class="idc-hdr">
+              <span class="idc-badge">Principle</span>
+              <div class="idc-t">Quran &amp; Authentic Sunnah</div>
             </div>
             <div class="idc-body">
-              <p class="idc-d">Expert in the sciences of Hadees and Aqeedah. Specialist in matters of worship, purity
-                and prayer with extensive knowledge of classical Islamic texts.</p>
-              <div class="idc-more">Specialisation: Ibadah &amp; Aqeedah →</div>
+              <p class="idc-d">
+                The Markaz issues guidance and Fatwas rooted in the Quran and authentic Sunnah,
+                helping people seek clarity in religious, personal and everyday matters.
+              </p>
             </div>
           </div>
+
         </div>
-        <div style="text-align:center;margin-top:40px;"><button class="btn btn-p" onclick="go('fatwa-form')">Submit a
-            Question to the Board →</button></div>
+
+        <div style="text-align:center;margin-top:40px;">
+          <button class="btn btn-p" onclick="go('fatwa-form')">
+            Submit a Question to the Board →
+          </button>
+        </div>
       </div>
     </div>
   </div>
-
   <!-- ═══ FATWA STATUS ═══ -->
   <div class="page" id="p-fatwa-status">
     <div class="pb">
@@ -7180,7 +7956,7 @@
     <div class="pb">
       <div class="pb-ar">بِسۡمِ ٱللَّهِ</div>
       <div class="pb-title">Login / Account</div>
-      <div class="pb-sub">Access your Jamiat Ahle Hadees JK member portal</div>
+      <div class="pb-sub">Access your Jamiat Ahl- e -Hadees JK member portal</div>
     </div>
     <div class="bgc">
       <div class="sec" style="max-width:1000px;">
@@ -7440,7 +8216,7 @@
   <footer>
     <div class="ft-in">
       <div>
-        <div class="ft-name">Jamiat Ahle Hadees JK</div>
+        <div class="ft-name">Jamiat Ahl- e -Hadees JK</div>
         <div class="ft-tag">جمعیت اہل حدیث جموں و کشمیر</div>
         <p class="ft-desc">Serving the Muslim community of Jammu &amp; Kashmir through education, religious guidance,
           and community welfare, grounded in the Quran and authentic Sunnah.</p>
@@ -7730,18 +8506,18 @@
 
       const carouselSection = track.closest('.car-sec');
 
-if (carouselSection) {
-  const carObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        carouselSection.classList.add('in');
-        carObserver.unobserve(carouselSection);
-      }
-    });
-  }, { threshold: 0.22 });
+      if (carouselSection) {
+        const carObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              carouselSection.classList.add('in');
+              carObserver.unobserve(carouselSection);
+            }
+          });
+        }, { threshold: 0.22 });
 
-  carObserver.observe(carouselSection);
-}
+        carObserver.observe(carouselSection);
+      }
 
       const slides = track.querySelectorAll('.car-slide');
       const N = slides.length;
@@ -7768,37 +8544,37 @@ if (carouselSection) {
       }
 
       function goSlide(idx) {
-  if (idx >= N) {
-    cur = 0;
-  } else if (idx < 0) {
-    cur = (pageCount() - 1) * stepBy();
-  } else {
-    cur = idx;
-  }
+        if (idx >= N) {
+          cur = 0;
+        } else if (idx < 0) {
+          cur = (pageCount() - 1) * stepBy();
+        } else {
+          cur = idx;
+        }
 
-  const gap = 20;
-  const w = slides[0].getBoundingClientRect().width + gap;
+        const gap = 20;
+        const w = slides[0].getBoundingClientRect().width + gap;
 
-  track.style.transform = `translateX(-${cur * w}px)`;
+        track.style.transform = `translateX(-${cur * w}px)`;
 
-  slides.forEach((slide, i) => {
-    slide.classList.remove('is-active', 'is-near');
+        slides.forEach((slide, i) => {
+          slide.classList.remove('is-active', 'is-near');
 
-    if (i >= cur && i < cur + vis()) {
-      slide.classList.add('is-active');
-    }
+          if (i >= cur && i < cur + vis()) {
+            slide.classList.add('is-active');
+          }
 
-    if (i === cur - 1 || i === cur + vis()) {
-      slide.classList.add('is-near');
-    }
-  });
+          if (i === cur - 1 || i === cur + vis()) {
+            slide.classList.add('is-near');
+          }
+        });
 
-  const activePage = Math.floor(cur / stepBy());
+        const activePage = Math.floor(cur / stepBy());
 
-  document.querySelectorAll('.c-dot').forEach((d, i) => {
-    d.classList.toggle('active', i === activePage);
-  });
-}
+        document.querySelectorAll('.c-dot').forEach((d, i) => {
+          d.classList.toggle('active', i === activePage);
+        });
+      }
 
       const prevBtn = document.getElementById('cp');
       const nextBtn = document.getElementById('cn');
