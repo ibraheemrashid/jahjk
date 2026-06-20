@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Markaz Aisha | Jamiat Ahl-e-Hadees JK</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Cinzel:wght@400;500;600;700&amp;family=Amiri:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<link href="main.css" rel="stylesheet"/></head>
+<body>
+<div class="geo-bg"></div>
+<nav>
+<div class="nav-in">
+<div class="nav-logo" onclick="go('home')">
+<img alt="Jamiat Ahle Hadees Jammu &amp; Kashmir" class="nav-logo-full" src="/src/assets/images/jam.png"/>
+</div>
+<ul class="nav-links">
+<li><button class="nav-home-btn" onclick="go('home')">Home</button></li>
+<li aria-hidden="true" class="nav-sep"></li>
+<li>
+<button>About Jamiat <span class="chevron">▼</span></button>
+<ul class="dropdown">
+<li><button onclick="go('aims')">Aims &amp; Objectives</button></li>
+<li><button onclick="go('about')">About Us</button></li>
+<li><button onclick="go('executive')">Executive Council</button></li>
+<li><button onclick="go('constitution')">Our Constitution</button></li>
+<li><button onclick="go('events')">Events</button></li>
+</ul>
+</li>
+<li>
+<button>SMERT <span class="chevron">▼</span></button>
+<ul class="dropdown">
+<li><button onclick="go('smert')">Structure &amp; Aims</button></li>
+<li><button onclick="go('schools')">Schools</button></li>
+<li><button onclick="go('colleges')">Colleges</button></li>
+<li><button onclick="go('madarsa')">Madarsas</button></li>
+<li><button onclick="go('masjid')">Masjids</button></li>
+<li><button onclick="go('kuliyat-boys')">Al Kulyat us Salafia (Boys)</button></li>
+<li><button onclick="go('kuliyat-girls')">Al Kulyat us Salafia (Girls)</button></li>
+<li><button onclick="go('markaz-ibn')">Markaz Ibn Masood</button></li>
+<li><button onclick="go('markaz-aisha')">Markaz Aisha</button></li>
+<li><button onclick="go('sunday')">Sunday / Vocational Classes</button></li>
+</ul>
+</li>
+<li>
+<button>Fatwa / Q&amp;A <span class="chevron">▼</span></button>
+<ul class="dropdown">
+<li><button onclick="go('ifta-board')">Ifta Board</button></li>
+<li><button onclick="go('fatwa-form')">Submit a Question</button></li>
+<li><button onclick="go('fatwa-status')">Check Status</button></li>
+</ul>
+</li>
+<li>
+<button>Waqf-I-Tanzeem <span class="chevron">▼</span></button>
+<ul class="dropdown">
+<li><button onclick="go('waqf')">Register Property</button></li>
+<li><button onclick="go('waqf-reg')">Registered Masajid</button></li>
+<li><button onclick="go('waqf-unreg')">Unregistered Masajid</button></li>
+<li><button onclick="go('waqf-darasgah')">Darasgah &amp; Institutions</button></li>
+<li><button onclick="go('waqf-other')">Other Properties</button></li>
+</ul>
+</li>
+<li>
+<button>Publications <span class="chevron">▼</span></button>
+<ul class="dropdown">
+<li><a href="https://mmtt.blob.core.windows.net/jahjk/PublicationsPDF/aceda4e8-c80f-4654-82f0-2524fa0ca2c8.pdf" target="_blank">Download Meeqat ↓</a></li>
+<li><button onclick="go('books')">Books Published</button></li>
+<li><button onclick="go('new-pub')">New Publications</button></li>
+<li><button onclick="go('weekly')">Weekly Muslim Archive</button></li>
+</ul>
+</li>
+<li><button class="nav-cta" onclick="go('login')">Login / Account</button></li>
+<button aria-label="Toggle Theme" class="smart-theme-toggle" id="themeToggle">
+<div class="toggle-track">
+<i class="toggle-moon" data-lucide="moon"></i>
+<div class="toggle-thumb"></div>
+<i class="toggle-sun" data-lucide="sun-medium"></i>
+</div>
+</button>
+</ul>
+<div class="google-lang-wrap">
+<i class="lang-icon" data-lucide="languages"></i>
+<div id="google_translate_element"></div>
+</div>
+<button class="nav-ham" id="ham"><span></span><span></span><span></span></button>
+</div>
+</nav>
+<div class="mob-drawer" id="drawer">
+<button class="mob-a" onclick="go('home')">Home</button>
+<button class="mob-gb" data-t="m-about">About Jamiat <span>▾</span></button>
+<div class="mob-sub" id="m-about"><button onclick="go('aims')">Aims &amp; Objectives</button><button onclick="go('about')">About Us</button><button onclick="go('executive')">Executive Council</button><button onclick="go('constitution')">Our Constitution</button><button onclick="go('events')">Events</button></div>
+<button class="mob-gb" data-t="m-smert">SMERT <span>▾</span></button>
+<div class="mob-sub" id="m-smert"><button onclick="go('smert')">Structure &amp; Aims</button><button onclick="go('schools')">Schools</button><button onclick="go('colleges')">Colleges</button><button onclick="go('madarsa')">Madarsas</button><button onclick="go('masjid')">Masjids</button><button onclick="go('kuliyat-boys')">Al Kulyat us Salafia (Boys)</button><button onclick="go('kuliyat-girls')">Al Kulyat
+        us Salafia (Girls)</button><button onclick="go('markaz-ibn')">Markaz Ibn Masood</button><button onclick="go('markaz-aisha')">Markaz Aisha</button><button onclick="go('sunday')">Sunday / Vocational
+        Classes</button></div>
+<button class="mob-gb" data-t="m-fatwa">Fatwa / Q&amp;A <span>▾</span></button>
+<div class="mob-sub" id="m-fatwa"><button onclick="go('ifta-board')">Ifta Board</button><button onclick="go('fatwa-form')">Submit a Question</button><button onclick="go('fatwa-status')">Check Status</button>
+</div>
+<button class="mob-gb" data-t="m-waqf">Waqf-I-Tanzeem <span>▾</span></button>
+<div class="mob-sub" id="m-waqf"><button onclick="go('waqf')">Register Property</button><button onclick="go('waqf-reg')">Registered Masajid</button><button onclick="go('waqf-unreg')">Unregistered
+        Masajid</button><button onclick="go('waqf-darasgah')">Darasgah &amp; Institutions</button><button onclick="go('waqf-other')">Other Properties</button></div>
+<button class="mob-gb" data-t="m-pub">Publications <span>▾</span></button>
+<div class="mob-sub" id="m-pub"><a href="https://mmtt.blob.core.windows.net/jahjk/PublicationsPDF/aceda4e8-c80f-4654-82f0-2524fa0ca2c8.pdf" target="_blank">Download Meeqat ↓</a><button onclick="go('books')">Books Published</button><button onclick="go('new-pub')">New Publications</button><button onclick="go('weekly')">Weekly Muslim Archive</button>
+</div>
+<div class="mob-cta-w"><button class="mob-cta" onclick="go('fatwa-form')" style="margin-bottom:10px;background:var(--gm);">Ask a Question</button>
+<button class="mob-cta" onclick="go('login')" style="margin-top:0;">🔑 Login / Account</button>
+</div>
+</div>
+<div class="page active" id="p-markaz-aisha">
+<div class="pb">
+<div class="pb-ar">مرکز عائشہ</div>
+<div class="pb-title">Markaz Aisha</div>
+<div class="pb-sub">A centre for Islamic education and guidance for women</div>
+</div>
+<div class="bgw">
+<div class="sec" style="max-width:900px;">
+<div class="sh rv"><span class="stag">Women's Centre</span>
+<h2 class="stitle">Markaz <em>Aisha</em></h2>
+<p class="sdesc">Named after Aisha bint Abi Bakr (رضي الله عنها) — Mother of the Believers — this centre is
+            dedicated to the Islamic education and empowerment of Muslim women.</p>
+<div class="orn">
+<div class="ol"></div>
+<div class="od"></div>
+<div class="ol"></div>
+</div>
+</div>
+<div class="goals-g">
+<div class="goal-card rv d1">
+<h4><i class="goal-icon" data-lucide="book-open"></i> Women's Quran Classes</h4>
+<p>Dedicated Quran recitation, Tajweed and Hifz classes for women in a comfortable, women-only setting.</p>
+</div>
+<div class="goal-card rv d2">
+<h4><i class="goal-icon" data-lucide="library"></i> Islamic Studies</h4>
+<p>Courses in Islamic jurisprudence relevant to women's daily life, family matters and Islamic etiquette.
+            </p>
+</div>
+<div class="goal-card rv d3">
+<h4><i class="goal-icon" data-lucide="message-circle-heart"></i> Counselling</h4>
+<p>Islamic counselling and guidance for Muslim women on matters of family, marriage, parenting and community
+              life.</p>
+</div>
+<div class="goal-card rv d4">
+<h4><i class="goal-icon" data-lucide="presentation"></i> Talks &amp; Programmes</h4>
+<p>Regular talks, workshops and Islamic programmes specifically designed for the needs of Muslim women and
+              young girls.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<button aria-label="Back to top" class="back-to-top" id="backToTop">
+<i data-lucide="arrow-up"></i>
+</button>
+<footer>
+<div class="ft-in">
+<div>
+<div class="ft-name">Jamiat Ahl- e -Hadees JK</div>
+<div class="ft-tag">جمعیت اہل حدیث جموں و کشمیر</div>
+<p class="ft-desc">Serving the Muslim community of Jammu &amp; Kashmir through education, religious guidance,
+          and community welfare, grounded in the Quran and authentic Sunnah.</p>
+</div>
+<div>
+<div class="ft-ct">Organisation</div>
+<ul class="ft-lks">
+<li><button onclick="go('aims')">Aims &amp; Objectives</button></li>
+<li><button onclick="go('about')">About Us</button></li>
+<li><button onclick="go('constitution')">Constitution</button></li>
+<li><button onclick="go('smert')">SMERT</button></li>
+<li><button onclick="go('events')">Events</button></li>
+<li><button onclick="go('login')">Login / Account</button></li>
+<li><button onclick="go('register')">Register</button></li>
+</ul>
+</div>
+<div>
+<div class="ft-ct">Services</div>
+<ul class="ft-lks">
+<li><button onclick="go('fatwa-form')">Submit Fatwa</button></li>
+<li><button onclick="go('ifta-board')">Ifta Board</button></li>
+<li><button onclick="go('waqf')">Waqf Registration</button></li>
+<li><button onclick="go('friday')">Friday List</button></li>
+<li><button onclick="go('fatwa-status')">Check Status</button></li>
+</ul>
+</div>
+<div>
+<div class="ft-ct">Publications</div>
+<ul class="ft-lks">
+<li><a href="https://mmtt.blob.core.windows.net/jahjk/PublicationsPDF/aceda4e8-c80f-4654-82f0-2524fa0ca2c8.pdf" target="_blank">Download Meeqat</a></li>
+<li><button onclick="go('books')">Books</button></li>
+<li><button onclick="go('new-pub')">New Publications</button></li>
+<li><button onclick="go('weekly')">Weekly Muslim</button></li>
+</ul>
+</div>
+</div>
+<div class="ft-div"></div>
+<div class="ft-bot"><span class="ft-copy">© 2025 Jamiat Ahle Hadees JK. All rights reserved.</span>
+<ul class="ft-blks">
+<li><a href="#">Privacy Policy</a></li>
+<li><a href="#">Terms</a></li>
+</ul>
+</div>
+</footer>
+
+
+
+
+
+<script src="main.js"></script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script></body>
+</html>
